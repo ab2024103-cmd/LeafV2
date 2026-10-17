@@ -145,7 +145,7 @@ object XlsxParser {
         val out = mutableListOf<String>()
         val parser = Ooxml.newParser(stream)
         var inItem = false
-        val buffer = StringBuilder()
+        var buffer = StringBuilder()
         var inText = false
         var event = parser.eventType
         while (event != XmlPullParser.END_DOCUMENT) {

@@ -303,9 +303,9 @@ data class LeafSettings(
     val keepAwake: Boolean = false,
     val destination: LeafDestination = LeafDestination.LIBRARY,
     val librarySortField: SortField = SortField.DATE_ADDED,
-    val librarySortDirection: SortDirection = DESCENDING,
+    val librarySortDirection: SortDirection = SortDirection.DESCENDING,
     val favoritesSortField: SortField = SortField.DATE_ADDED,
-    val favoritesSortDirection: SortDirection = DESCENDING,
+    val favoritesSortDirection: SortDirection = SortDirection.DESCENDING,
     val groupByType: Boolean = false,
     val searchHistory: List<String> = emptyList()
 )

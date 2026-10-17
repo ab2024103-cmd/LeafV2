@@ -65,7 +65,7 @@ private sealed interface HighlightOp {
     data class Add(val highlight: LeafHighlight) : HighlightOp
     data class Remove(val highlight: LeafHighlight) : HighlightOp
     data class Recolor(val before: LeafHighlight, val after: LeafHighlight) : HighlightOp
-    data class ClearAll(val highlights: List<LeafHighlight>) : HighlightOp
+    data class ClearAll(val documentId: String, val highlights: List<LeafHighlight>) : HighlightOp
 }
 
 class ReaderViewModel(private val container: AppContainer) : ViewModel() {
@@ -427,7 +427,7 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
         viewModelScope.launch {
             val removed = repository.highlightsFor(document.id)
             repository.clearHighlights(document.id)
-            pushUndo(HighlightOp.ClearAll(removed))
+            pushUndo(HighlightOp.ClearAll(document.id, removed))
             _state.value = _state.value.copy(
                 highlights = emptyList(),
                 activeHighlightId = null
@@ -456,7 +456,7 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
                 is HighlightOp.Add -> repository.addHighlight(op.highlight)
                 is HighlightOp.Remove -> repository.removeHighlight(op.highlight.id)
                 is HighlightOp.Recolor -> repository.updateHighlight(op.after)
-                is HighlightOp.ClearAll -> repository.clearHighlights(op.highlight.documentId)
+                is HighlightOp.ClearAll -> repository.clearHighlights(op.documentId)
             }
             undoStack.addLast(op)
             refreshHighlights()

@@ -34,7 +34,8 @@ data class PdfPageText(
     val textStart: Int,
     val pageWidth: Float,
     val pageHeight: Float,
-    val glyphs: List<PdfGlyph>
+    val glyphs: List<PdfGlyph>,
+    val lineHeight: Float = 12f
 )
 
 data class PdfMatch(
@@ -78,8 +79,8 @@ class PdfTextIndex(val pages: List<PdfPageText>) {
             val glyphStart = glyph.offset
             val glyphEnd = glyph.offset + 1
             if (glyphEnd <= start || glyphStart >= end) return@forEach
-            val top = glyph.y - glyph.h * 0.82f
-            val bottom = glyph.y + glyph.h * 0.18f
+            val top = glyph.y - page.lineHeight * 0.80f
+            val bottom = glyph.y + page.lineHeight * 0.20f
             rects.add(
                 NormRect(
                     left = (glyph.x / page.pageWidth).coerceIn(0f, 1f),
@@ -99,8 +100,8 @@ class PdfTextIndex(val pages: List<PdfPageText>) {
         page.glyphs.forEach { glyph ->
             val left = glyph.x / page.pageWidth
             val right = (glyph.x + glyph.w) / page.pageWidth
-            val top = (glyph.y - glyph.h * 0.82f) / page.pageHeight
-            val bottom = (glyph.y + glyph.h * 0.18f) / page.pageHeight
+            val top = (glyph.y - page.lineHeight * 0.80f) / page.pageHeight
+            val bottom = (glyph.y + page.lineHeight * 0.20f) / page.pageHeight
             if (left < rect.right && right > rect.left && top < rect.bottom && bottom > rect.top) {
                 if (!lastY.isNaN() && abs(glyph.y - lastY) > 1.5f) builder.append(' ')
                 builder.append(glyph.ch)
@@ -114,8 +115,8 @@ class PdfTextIndex(val pages: List<PdfPageText>) {
         val chars = page.glyphs.filter { glyph ->
             val left = glyph.x / page.pageWidth
             val right = (glyph.x + glyph.w) / page.pageWidth
-            val top = (glyph.y - glyph.h * 0.82f) / page.pageHeight
-            val bottom = (glyph.y + glyph.h * 0.18f) / page.pageHeight
+            val top = (glyph.y - page.lineHeight * 0.80f) / page.pageHeight
+            val bottom = (glyph.y + page.lineHeight * 0.20f) / page.pageHeight
             left < rect.right && right > rect.left && top < rect.bottom && bottom > rect.top
         }
         if (chars.isEmpty()) return null
@@ -238,7 +239,8 @@ class PdfSession(context: Context, private val uri: Uri) {
                             textStart = globalOffset,
                             pageWidth = pageWidth,
                             pageHeight = pageHeight,
-                            glyphs = builder?.glyphs ?: emptyList()
+                            glyphs = builder?.glyphs ?: emptyList(),
+                            lineHeight = builder?.lineHeight() ?: 12f
                         )
                     )
                     globalOffset += text.length + 2
@@ -259,6 +261,7 @@ class PdfSession(context: Context, private val uri: Uri) {
     private class PageBuilder {
         val sb = StringBuilder()
         val glyphs = mutableListOf<PdfGlyph>()
+        val baselines = mutableListOf<Float>()
         var lastY: Float? = null
 
         val text: String get() = sb.toString()
@@ -268,7 +271,17 @@ class PdfSession(context: Context, private val uri: Uri) {
             val offset = sb.length
             sb.append(ch)
             glyphs.add(PdfGlyph(ch, x, y, w, h, offset))
+            baselines.add(y)
             lastY = y
+        }
+
+        /** Median distance between baselines, used to size highlight rectangles. */
+        fun lineHeight(): Float {
+            val distinct = baselines.distinct().sorted()
+            if (distinct.size < 2) return 12f
+            val deltas = distinct.zipWithNext { a, b -> abs(b - a) }.filter { it > 0.5f }.sorted()
+            if (deltas.isEmpty()) return 12f
+            return deltas[deltas.size / 2]
         }
 
         fun newLine() {
@@ -293,7 +306,7 @@ class PdfSession(context: Context, private val uri: Uri) {
                     text.getXDirAdj(),
                     y,
                     text.getWidthDirAdj(),
-                    text.getHeightDirAdj()
+                    0f
                 )
             }
         }

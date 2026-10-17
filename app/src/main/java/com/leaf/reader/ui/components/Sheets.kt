@@ -95,8 +95,8 @@ fun LeafBottomSheet(
 fun SheetAction(
     title: String,
     icon: androidx.compose.ui.graphics.vector.ImageVector,
-    onClick: () -> Unit,
-    tint: Color = MaterialTheme.colorScheme.onSurface
+    tint: Color = MaterialTheme.colorScheme.onSurface,
+    onClick: () -> Unit
 ) {
     Row(
         modifier = Modifier

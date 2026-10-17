@@ -6,7 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.getValue
-import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.compose.runtime.collectAsState
 import com.leaf.reader.model.AppThemeMode
 import com.leaf.reader.ui.LeafApp
 import com.leaf.reader.ui.theme.LeafTheme
@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         val container = (application as LeafApp).container
         setContent {
-            val settings by container.settingsStore.settings.collectAsStateWithLifecycle()
+            val settings by container.settingsStore.settings.collectAsState(initial = com.leaf.reader.model.LeafSettings())
             val dark = when (settings.themeMode) {
                 AppThemeMode.LIGHT -> false
                 AppThemeMode.DARK -> true

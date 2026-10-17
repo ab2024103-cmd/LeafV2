@@ -64,36 +64,60 @@ class LibraryViewModel(private val container: AppContainer) : ViewModel() {
     private val events = Channel<LibraryEvent>(Channel.BUFFERED)
     val eventFlow: Flow<LibraryEvent> = events.receiveAsFlow()
 
-    private val extraBookmarks = MutableStateFlow<List<LeafBookmark>>(emptyList())
-
-    val state: StateFlow<LibraryState> = combine(
+    private val baseState = combine(
         repository.documents,
         repository.folders,
         repository.tags,
         repository.collections,
-        repository.recents,
+        repository.recents
+    ) { documents, folders, tags, collections, recents ->
+        BaseState(documents, folders, tags, collections, recents)
+    }
+
+    private val metaState = combine(
         repository.documentTags,
         repository.highlights,
-        extraBookmarks,
-        settingsStore.settings,
+        repository.bookmarks,
+        settingsStore.settings
+    ) { documentTags, highlights, bookmarks, settings ->
+        MetaState(documentTags, highlights, bookmarks, settings)
+    }
+
+    val state: StateFlow<LibraryState> = combine(
+        baseState,
+        metaState,
         settingsStore.tabs,
         settingsStore.activeTab
-    ) { values ->
-        @Suppress("UNCHECKED_CAST")
+    ) { base, meta, tabs, activeTabId ->
         LibraryState(
-            documents = values[0] as List<LeafDocument>,
-            folders = values[1] as List<LeafFolder>,
-            tags = values[2] as List<LeafTag>,
-            collections = values[3] as List<LeafCollection>,
-            recents = values[4] as List<RecentEntry>,
-            documentTags = values[5] as Map<String, List<LeafTag>>,
-            highlights = values[6] as List<LeafHighlight>,
-            bookmarks = values[7] as List<LeafBookmark>,
-            settings = values[8] as LeafSettings,
-            tabs = values[9] as List<OpenTab>,
-            activeTabId = values[10] as String?
+            documents = base.documents,
+            folders = base.folders,
+            tags = base.tags,
+            collections = base.collections,
+            recents = base.recents,
+            documentTags = meta.documentTags,
+            highlights = meta.highlights,
+            bookmarks = meta.bookmarks,
+            settings = meta.settings,
+            tabs = tabs,
+            activeTabId = activeTabId
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), LibraryState())
+
+    private data class BaseState(
+        val documents: List<LeafDocument>,
+        val folders: List<LeafFolder>,
+        val tags: List<LeafTag>,
+        val collections: List<LeafCollection>,
+        val recents: List<RecentEntry>
+    )
+
+    private data class MetaState(
+        val documentTags: Map<String, List<LeafTag>>,
+        val highlights: List<LeafHighlight>,
+        val bookmarks: List<LeafBookmark>,
+        val settings: LeafSettings
+    )
 
     // ------------------------------------------------------------- documents
 

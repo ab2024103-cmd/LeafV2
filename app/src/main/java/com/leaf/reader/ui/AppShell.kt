@@ -209,9 +209,13 @@ fun LeafApp(container: AppContainer) {
                 NavHost(
                     navController = navController,
                     startDestination = Routes.LIBRARY,
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(if (inReader) 0.dp else padding)
+                    modifier = if (inReader) {
+                        Modifier.fillMaxSize()
+                    } else {
+                        Modifier
+                            .fillMaxSize()
+                            .padding(padding)
+                    }
                 ) {
                     composable(Routes.LIBRARY) {
                         LibraryScreen(
@@ -372,9 +376,14 @@ fun LeafApp(container: AppContainer) {
     if (folderManagerOpen) {
         FolderManagerSheet(
             folders = state.folders,
-            documentCounts = state.documents.groupBy { it.folderId }
-                .mapValues { entry -> entry.value.size },
-            childCounts = state.folders.groupBy { it.parentId }.mapValues { it.value.size },
+            documentCounts = state.documents
+                .mapNotNull { doc -> doc.folderId?.let { it to 1 } }
+                .groupingBy { it }
+                .eachCount(),
+            childCounts = state.folders
+                .mapNotNull { folder -> folder.parentId?.let { it to 1 } }
+                .groupingBy { it }
+                .eachCount(),
             onCreate = { name, parent -> viewModel.createFolder(name, parent, 0) },
             onRename = { folder, name, color -> viewModel.renameFolder(folder, name, color) },
             onDelete = { folder -> viewModel.deleteFolder(folder) },

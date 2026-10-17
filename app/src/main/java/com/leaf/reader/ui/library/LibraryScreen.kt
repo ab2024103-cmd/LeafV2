@@ -23,7 +23,7 @@ import androidx.compose.material.icons.outlined.Add
 import androidx.compose.material.icons.outlined.Groups
 import androidx.compose.material.icons.outlined.MoreVert
 import androidx.compose.material.icons.outlined.PlayArrow
-import androidx.compose.material.icons.outlined.Tabs
+import androidx.compose.material.icons.outlined.FolderOpen
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Card
@@ -137,7 +137,7 @@ fun LibraryScreen(
                         }
                     ) {
                         IconButton(onClick = onOpenTabs) {
-                            Icon(Icons.Outlined.Tabs, contentDescription = "Open documents")
+                            Icon(Icons.Outlined.FolderOpen, contentDescription = "Open documents")
                         }
                     }
                     IconButton(onClick = { menuOpen = true }) {

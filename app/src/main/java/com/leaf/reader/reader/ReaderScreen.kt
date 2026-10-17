@@ -33,16 +33,16 @@ import androidx.compose.material.icons.filled.Redo
 import androidx.compose.material.icons.filled.Undo
 import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material.icons.outlined.FormatColorFill
+import androidx.compose.material.icons.outlined.FolderOpen
 import androidx.compose.material.icons.outlined.Fullscreen
 import androidx.compose.material.icons.outlined.FullscreenExit
 import androidx.compose.material.icons.outlined.MoreVert
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.SwapVert
-import androidx.compose.material.icons.outlined.Tabs
 import androidx.compose.material.icons.outlined.ZoomIn
 import androidx.compose.material.icons.outlined.ZoomOut
 import androidx.compose.material3.CircularProgressIndicator
-import androidx.compose.material3.ExperimentalFoundationApi
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -86,7 +86,7 @@ fun ReaderScreen(
 ) {
     val viewModel: ReaderViewModel = viewModel(factory = LeafViewModelFactory(container))
     val state by viewModel.state.collectAsStateWithLifecycle()
-    val settings by container.settingsStore.settings.collectAsStateWithLifecycle()
+    val settings by container.settingsStore.settings.collectAsState(initial = com.leaf.reader.model.LeafSettings())
     val context = LocalContext.current
     val activity = context as? Activity
     val colors = readerColors(state.theme, androidx.compose.foundation.isSystemInDarkTheme())
@@ -225,7 +225,7 @@ fun ReaderScreen(
                 viewModel.setPage(highlight.page)
                 viewModel.setShowHighlights(false)
             },
-            onDelete = { viewModel.removeHighlight(it) },
+            onDelete = { viewModel.removeHighlight(it.id) },
             onClear = { viewModel.clearHighlights() }
         )
     }
@@ -490,7 +490,7 @@ private fun TextPageList(
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height((layout?.height ?: heightPx).toDp())
+                    .height(((layout?.height ?: heightPx).toFloat() / density.density).dp)
             )
         }
         return
@@ -610,7 +610,7 @@ private fun ReaderTopBar(
                 Icon(Icons.Outlined.FormatColorFill, contentDescription = "Highlights", tint = colors.text)
             }
             IconButton(onClick = onTabs) {
-                Icon(Icons.Outlined.Tabs, contentDescription = "Open documents", tint = colors.text)
+                Icon(Icons.Outlined.FolderOpen, contentDescription = "Open documents", tint = colors.text)
             }
             IconButton(onClick = onMore) {
                 Icon(Icons.Outlined.MoreVert, contentDescription = "More options", tint = colors.text)

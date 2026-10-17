@@ -19,7 +19,7 @@ object DemoLibrary {
     const val FOLDER_STUDY = "study"
     const val FOLDER_PERSONAL = "personal"
 
-    fun ensureSeeded(context: Context, repository: DocumentRepository) {
+    suspend fun ensureSeeded(context: Context, repository: DocumentRepository) {
         val dir = File(context.filesDir, "documents").apply { mkdirs() }
         val samples = listOf(
             Sample(
