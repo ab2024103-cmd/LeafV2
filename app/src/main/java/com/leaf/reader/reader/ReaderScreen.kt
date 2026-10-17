@@ -357,7 +357,7 @@ private fun PdfPageList(
     val pageCount = state.pageCount.coerceAtLeast(1)
 
     LaunchedEffect(listState, vertical) {
-        listState.snapshotFlow { listState.firstVisibleItemIndex }
+        snapshotFlow { listState.firstVisibleItemIndex }
             .collect { viewModel.setPage(it) }
     }
     LaunchedEffect(state.page, vertical) {
@@ -472,7 +472,7 @@ private fun TextPageList(
     val pageHeight = with(density) { heightPx.toDp() }
 
     LaunchedEffect(listState, vertical) {
-        listState.snapshotFlow { listState.firstVisibleItemIndex }
+        snapshotFlow { listState.firstVisibleItemIndex }
             .collect { viewModel.setPage(it) }
     }
     LaunchedEffect(state.page, vertical) {

@@ -4,12 +4,14 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -94,6 +96,7 @@ fun LibraryScreen(
     var selectedTagIds by remember { mutableStateOf<Set<String>>(emptySet()) }
     var menuOpen by remember { mutableStateOf(false) }
     var sortOpen by remember { mutableStateOf(false) }
+    var selectedId by remember { mutableStateOf<String?>(null) }
 
     val documents = remember(state.documents, selectedFolder, selectedCollection, selectedTagIds) {
         var list = state.documents
@@ -190,12 +193,18 @@ fun LibraryScreen(
             )
         }
     ) { padding ->
-        LazyColumn(
+        BoxWithConstraints(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding),
-            contentPadding = PaddingValues(bottom = 24.dp)
+                .padding(padding)
         ) {
+            val wide = maxWidth >= 840.dp
+            val selectedDocument = state.documents.firstOrNull { it.id == selectedId }
+            Row(modifier = Modifier.fillMaxSize()) {
+            LazyColumn(
+                modifier = Modifier.weight(1f),
+                contentPadding = PaddingValues(bottom = 24.dp)
+            ) {
             if (pickMode) {
                 item {
                     Surface(
@@ -311,7 +320,11 @@ fun LibraryScreen(
                     folderName = state.folderName(document.folderId),
                     tags = state.tagsFor(document.id),
                     onClick = {
-                        if (pickMode && onPickDocument != null) onPickDocument(document) else onOpen(document)
+                        when {
+                            pickMode && onPickDocument != null -> onPickDocument(document)
+                            wide -> selectedId = document.id
+                            else -> onOpen(document)
+                        }
                     },
                     onLongClick = { onDocumentActions(document) },
                     onToggleFavorite = { onToggleFavorite(document) },
@@ -335,6 +348,20 @@ fun LibraryScreen(
                     )
                 }
             }
+            }
+                if (wide) {
+                    DocumentDetailPane(
+                        state = state,
+                        document = selectedDocument,
+                        onOpen = { onOpen(it) },
+                        onToggleFavorite = onToggleFavorite,
+                        onDocumentActions = onDocumentActions,
+                        modifier = Modifier
+                            .width(340.dp)
+                            .fillMaxHeight()
+                    )
+                }
+            }
         }
     }
 
@@ -345,6 +372,88 @@ fun LibraryScreen(
             onSelect = { field, direction -> onSort(field, direction) },
             onDismiss = { sortOpen = false }
         )
+    }
+}
+
+@Composable
+private fun DocumentDetailPane(
+    state: LibraryState,
+    document: LeafDocument?,
+    onOpen: (LeafDocument) -> Unit,
+    onToggleFavorite: (LeafDocument) -> Unit,
+    onDocumentActions: (LeafDocument) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    Surface(
+        modifier = modifier.padding(8.dp),
+        shape = RoundedCornerShape(18.dp),
+        color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.45f)
+    ) {
+        if (document == null) {
+            Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+                Text(
+                    text = "Select a document to see its details",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+            return@Surface
+        }
+        Column(modifier = Modifier.padding(16.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                FileTypeIcon(kind = document.kind, size = 44)
+                Spacer(Modifier.width(12.dp))
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        text = document.name,
+                        style = MaterialTheme.typography.titleMedium,
+                        maxLines = 2,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                    Text(
+                        text = document.kind.label,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            }
+            Spacer(Modifier.height(12.dp))
+            Text("Size: ${Formatters.fileSize(document.sizeBytes)}")
+            Text("Added: ${Formatters.relativeTime(document.dateAdded)}")
+            Text(
+                text = if (document.lastOpened != null) {
+                    "Last opened: ${Formatters.relativeTime(document.lastOpened ?: 0L)}"
+                } else {
+                    "Never opened"
+                }
+            )
+            Text("Pages: ${document.pageCount}")
+            Text("Folder: ${state.folderName(document.folderId) ?: "None"}")
+            val tags = state.tagsFor(document.id)
+            if (tags.isNotEmpty()) {
+                Spacer(Modifier.height(6.dp))
+                Text("Tags: ${tags.joinToString(", ") { it.name }}")
+            }
+            if (document.currentPage > 0 && document.pageCount > 0) {
+                Spacer(Modifier.height(8.dp))
+                ProgressBar(
+                    percent = document.progressPercent,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            }
+            Spacer(Modifier.height(12.dp))
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                androidx.compose.material3.Button(onClick = { onOpen(document) }) {
+                    Text("Open")
+                }
+                androidx.compose.material3.OutlinedButton(onClick = { onToggleFavorite(document) }) {
+                    Text(if (document.isFavorite) "Unstar" else "Star")
+                }
+                androidx.compose.material3.TextButton(onClick = { onDocumentActions(document) }) {
+                    Text("More")
+                }
+            }
+        }
     }
 }
 
