@@ -339,8 +339,7 @@ fun CoverTile(
                     text = document.name,
                     style = MaterialTheme.typography.labelMedium,
                     maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                    minLines = 2
+                    overflow = TextOverflow.Ellipsis
                 )
                 if (document.startedReading) {
                     Spacer(Modifier.height(6.dp))

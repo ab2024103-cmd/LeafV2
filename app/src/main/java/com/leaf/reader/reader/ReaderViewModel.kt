@@ -149,7 +149,11 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
             // Warm the text index in the background so in-page search and
             // geometry highlights are instant later on.
             viewModelScope.launch {
-                runCatching { session.textIndex() }
+                try {
+                    session.textIndex()
+                } catch (error: Throwable) {
+                    // Indexing is best effort; the reader still works without it.
+                }
             }
         } else {
             val parsed = com.leaf.reader.engine.TextExtractor.parseDocument(

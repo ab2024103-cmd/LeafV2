@@ -80,6 +80,19 @@ jobs:
             build-log.txt
             sdk-setup.log
 
+      - name: Publish compiler errors (on failure)
+        if: failure()
+        run: |
+          set -e
+          mkdir -p .ci
+          grep -E "^e: |error:|FAILURE|Execution failed|Caused by:" build-log.txt > .ci/errors.txt || true
+          tail -n 400 build-log.txt > .ci/build-log.txt || true
+          git config user.name "Leaf CI"
+          git config user.email "ci@leaf.local"
+          git add -f .ci/errors.txt .ci/build-log.txt
+          git commit -m "ci: compiler errors for ${GITHUB_SHA::8}" || true
+          git push origin HEAD:"${GITHUB_REF_NAME}" || true
+
       - name: Publish release (tag builds only)
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
