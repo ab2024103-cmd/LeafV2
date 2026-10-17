@@ -62,23 +62,32 @@ object TextExtractor {
     /** Parses a text-like document into blocks (used by the reader). */
     suspend fun parseDocument(context: Context, uri: Uri, kind: FileKind): ParsedDocument =
         withContext(Dispatchers.IO) {
-            when (kind) {
-                FileKind.TXT -> {
-                    val text = readText(context, uri)
-                    val blocks = text.split("\n\n").map { it.trim() }.filter { it.isNotEmpty() }
-                        .map { TextBlock(it, BlockStyle.BODY) }
-                    ParsedDocument(
-                        FileKind.TXT,
-                        "Text document",
-                        if (blocks.isEmpty()) listOf(TextBlock("Empty document")) else blocks
-                    )
-                }
-                FileKind.DOCX -> openStream(context, uri) { DocxParser.parse(it) }
-                FileKind.EPUB -> openStream(context, uri) { EpubParser.parse(it) }
-                FileKind.XLSX -> openStream(context, uri) { XlsxParser.parse(it) }
-                FileKind.PPTX -> openStream(context, uri) { PptxParser.parse(it) }
-                FileKind.PDF -> ParsedDocument(FileKind.PDF, "PDF", listOf(TextBlock("")))
+            runCatching { parseOrThrow(context, uri, kind) }.getOrElse { error ->
+                ParsedDocument(
+                    kind,
+                    kind.label,
+                    listOf(TextBlock("This document could not be opened: ${error.message ?: "unknown error"}"))
+                )
             }
+        }
+
+    private suspend fun parseOrThrow(context: Context, uri: Uri, kind: FileKind): ParsedDocument =
+        when (kind) {
+            FileKind.TXT -> {
+                val text = readText(context, uri)
+                val blocks = text.split("\n\n").map { it.trim() }.filter { it.isNotEmpty() }
+                    .map { TextBlock(it, BlockStyle.BODY) }
+                ParsedDocument(
+                    FileKind.TXT,
+                    "Text document",
+                    if (blocks.isEmpty()) listOf(TextBlock("Empty document")) else blocks
+                )
+            }
+            FileKind.DOCX -> openStream(context, uri) { DocxParser.parse(it) }
+            FileKind.EPUB -> openStream(context, uri) { EpubParser.parse(it) }
+            FileKind.XLSX -> openStream(context, uri) { XlsxParser.parse(it) }
+            FileKind.PPTX -> openStream(context, uri) { PptxParser.parse(it) }
+            FileKind.PDF -> ParsedDocument(FileKind.PDF, "PDF", listOf(TextBlock("")))
         }
 
     private suspend fun <T> openStream(
