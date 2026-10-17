@@ -3,7 +3,6 @@ package com.leaf.reader.engine
 import android.text.Layout
 import android.text.StaticLayout
 import android.text.TextPaint
-import androidx.core.text.TextCompat
 import com.leaf.reader.model.FileKind
 import com.leaf.reader.model.ReadingTypeface
 
@@ -29,10 +28,11 @@ class TextSession(
     private val paint = TextPaint().apply {
         textSize = DEFAULT_TEXT_SIZE
         isAntiAlias = true
-        this.typeface = TextCompat.create(
-            android.graphics.Typeface.SERIF,
-            if (typeface == ReadingTypeface.SERIF) android.graphics.Typeface.NORMAL else android.graphics.Typeface.SANS_SERIF
-        )
+        this.typeface = if (typeface == ReadingTypeface.SERIF) {
+            android.graphics.Typeface.SERIF
+        } else {
+            android.graphics.Typeface.SANS_SERIF
+        }
     }
 
     private var layout: StaticLayout? = null

@@ -388,7 +388,3 @@ fun ColorDot(index: Int, modifier: Modifier = Modifier, size: Int = 16) {
             .clearAndSetSemantics { }
     )
 }
-
-            .clearAndSetSemantics { }
-    )
-}
