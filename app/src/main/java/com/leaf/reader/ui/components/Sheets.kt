@@ -20,11 +20,13 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
-import androidx.compose.material.icons.outlined.CreateNewFolder
 import androidx.compose.material.icons.outlined.Delete
+import androidx.compose.material.icons.outlined.ContentCopy
+import androidx.compose.material.icons.outlined.CreateNewFolder
 import androidx.compose.material.icons.outlined.DriveFileMove
-import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Folder
+import androidx.compose.material.icons.outlined.FolderOpen
+import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.Label
 import androidx.compose.material.icons.outlined.OpenInNew
@@ -229,7 +231,7 @@ fun DocumentActionsSheet(
         SheetAction("Tags", Icons.Outlined.Label) { onTags(); onDismiss() }
         SheetAction("File info", Icons.Outlined.Info) { onInfo(); onDismiss() }
         SheetAction("Share", Icons.Outlined.Share) { onShare(); onDismiss() }
-        SheetAction("Copy path", Icons.Outlined.CreateNewFolder) { onCopyPath(); onDismiss() }
+        SheetAction("Copy path", Icons.Outlined.ContentCopy) { onCopyPath(); onDismiss() }
         SheetAction("Delete", Icons.Outlined.Delete, MaterialTheme.colorScheme.error) { onDelete(); onDismiss() }
     }
 }
@@ -466,11 +468,15 @@ fun FolderManagerSheet(
     onCreate: (String, String?) -> Unit,
     onRename: (LeafFolder, String, Int) -> Unit,
     onDelete: (LeafFolder) -> Unit,
+    onMove: (LeafFolder, String?) -> Unit = { _, _ -> },
     onDismiss: () -> Unit
 ) {
     var newFolderName by remember { mutableStateOf("") }
+    var newParentId by remember { mutableStateOf<String?>(null) }
     var renaming by remember { mutableStateOf<LeafFolder?>(null) }
     var deleting by remember { mutableStateOf<LeafFolder?>(null) }
+    var moving by remember { mutableStateOf<LeafFolder?>(null) }
+    var parentMenuOpen by remember { mutableStateOf(false) }
 
     LeafBottomSheet(title = "Folders", onDismiss = onDismiss) {
         Row(
@@ -487,10 +493,40 @@ fun FolderManagerSheet(
                 modifier = Modifier.weight(1f)
             )
             Spacer(Modifier.width(8.dp))
+            Box {
+                androidx.compose.material3.FilledTonalButton(onClick = { parentMenuOpen = true }) {
+                    Text(
+                        text = folders.firstOrNull { it.id == newParentId }?.name ?: "Top level",
+                        style = MaterialTheme.typography.labelMedium
+                    )
+                }
+                androidx.compose.material3.DropdownMenu(
+                    expanded = parentMenuOpen,
+                    onDismissRequest = { parentMenuOpen = false }
+                ) {
+                    androidx.compose.material3.DropdownMenuItem(
+                        text = { Text("Top level") },
+                        onClick = {
+                            newParentId = null
+                            parentMenuOpen = false
+                        }
+                    )
+                    folders.forEach { candidate ->
+                        androidx.compose.material3.DropdownMenuItem(
+                            text = { Text(candidate.name) },
+                            onClick = {
+                                newParentId = candidate.id
+                                parentMenuOpen = false
+                            }
+                        )
+                    }
+                }
+            }
+            Spacer(Modifier.width(8.dp))
             IconButton(
                 onClick = {
                     if (newFolderName.isNotBlank()) {
-                        onCreate(newFolderName.trim(), null)
+                        onCreate(newFolderName.trim(), newParentId)
                         newFolderName = ""
                     }
                 }
@@ -518,6 +554,21 @@ fun FolderManagerSheet(
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
+                    IconButton(onClick = {
+                        newParentId = folder.id
+                        newFolderName = ""
+                    }) {
+                        Icon(
+                            Icons.Outlined.CreateNewFolder,
+                            contentDescription = "New subfolder inside ${folder.name}"
+                        )
+                    }
+                    IconButton(onClick = { moving = folder }) {
+                        Icon(
+                            Icons.Outlined.DriveFileMove,
+                            contentDescription = "Move ${folder.name}"
+                        )
+                    }
                     IconButton(onClick = { renaming = folder }) {
                         Icon(Icons.Outlined.Edit, contentDescription = "Rename ${folder.name}")
                     }
@@ -541,6 +592,29 @@ fun FolderManagerSheet(
             onConfirm = { name -> onRename(folder, name, folder.colorIndex) },
             onDismiss = { renaming = null }
         )
+    }
+
+    moving?.let { folder ->
+        LeafBottomSheet(title = "Move ${folder.name}", onDismiss = { moving = null }) {
+            folders.filter { it.id != folder.id && it.id != folder.parentId }.forEach { candidate ->
+                SheetAction(
+                    title = candidate.name,
+                    icon = Icons.Outlined.Folder,
+                    onClick = {
+                        onMove(folder, candidate.id)
+                        moving = null
+                    }
+                )
+            }
+            SheetAction(
+                title = "Top level",
+                icon = Icons.Outlined.FolderOpen,
+                onClick = {
+                    onMove(folder, null)
+                    moving = null
+                }
+            )
+        }
     }
 
     deleting?.let { folder ->

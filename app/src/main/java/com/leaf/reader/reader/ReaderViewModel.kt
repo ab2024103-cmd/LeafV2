@@ -138,7 +138,9 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
         )
 
         if (document.kind == com.leaf.reader.model.FileKind.PDF) {
-            val session = PdfSession(container.appContext, android.net.Uri.parse(document.uri))
+            val session = withContext(Dispatchers.IO) {
+                PdfSession(container.appContext, android.net.Uri.parse(document.uri))
+            }
             pdfSession = session
             if (!session.isValid()) {
                 _state.value = _state.value.copy(loading = false, message = "This PDF could not be opened")
@@ -148,7 +150,7 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
             repository.setPageCount(documentId, session.pageCount)
             // Warm the text index in the background so in-page search and
             // geometry highlights are instant later on.
-            viewModelScope.launch {
+            viewModelScope.launch(Dispatchers.IO) {
                 try {
                     session.textIndex()
                 } catch (error: Throwable) {
@@ -156,11 +158,13 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
                 }
             }
         } else {
-            val parsed = com.leaf.reader.engine.TextExtractor.parseDocument(
-                container.appContext,
-                android.net.Uri.parse(document.uri),
-                document.kind
-            )
+            val parsed = withContext(Dispatchers.IO) {
+                com.leaf.reader.engine.TextExtractor.parseDocument(
+                    container.appContext,
+                    android.net.Uri.parse(document.uri),
+                    document.kind
+                )
+            }
             val session = TextSession(
                 document.kind,
                 parsed,

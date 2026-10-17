@@ -276,6 +276,12 @@ class DocumentRepository(
     suspend fun renameFolder(id: String, name: String, colorIndex: Int) =
         folderDao.rename(id, name, colorIndex)
 
+    /** Moves a folder under a new parent (or to the top level). */
+    suspend fun moveFolder(id: String, newParentId: String?) {
+        val folder = folderDao.byId(id) ?: return
+        folderDao.upsert(folder.copy(parentId = newParentId))
+    }
+
     /** Deletes a folder and re-parents its documents and children (spec 2.18). */
     suspend fun deleteFolder(id: String) {
         val children = folderDao.all().filter { it.parentId == id }

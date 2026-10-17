@@ -227,6 +227,13 @@ class LibraryViewModel(private val container: AppContainer) : ViewModel() {
         }
     }
 
+    fun moveFolder(folder: LeafFolder, newParentId: String?) {
+        viewModelScope.launch {
+            repository.moveFolder(folder.id, newParentId)
+            events.send(LibraryEvent.Message("Folder moved"))
+        }
+    }
+
     fun deleteFolder(folder: LeafFolder) {
         viewModelScope.launch {
             repository.deleteFolder(folder.id)

@@ -397,6 +397,7 @@ fun LeafApp(container: AppContainer) {
                 .groupingBy { it }
                 .eachCount(),
             onCreate = { name, parent -> viewModel.createFolder(name, parent, 0) },
+            onMove = { folder, parent -> viewModel.moveFolder(folder, parent) },
             onRename = { folder, name, color -> viewModel.renameFolder(folder, name, color) },
             onDelete = { folder -> viewModel.deleteFolder(folder) },
             onDismiss = { folderManagerOpen = false }
