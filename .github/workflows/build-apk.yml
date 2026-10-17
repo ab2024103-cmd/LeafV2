@@ -23,6 +23,7 @@ jobs:
     timeout-minutes: 45
     permissions:
       contents: write
+      gists: write
 
     steps:
       - name: Checkout
