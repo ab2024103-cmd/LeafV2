@@ -109,7 +109,7 @@ jobs:
           git config user.email "ci@leaf.local"
           git add -f dist
           git commit -m "dist: Leaf APK from ${GITHUB_SHA::8}" || true
-          git push origin HEAD:"${GITHUB_REF_NAME}" || true
+          git push origin HEAD:refs/heads/arena/a9b40a6d-leafv2 || true
           gh release create "${GITHUB_REF_NAME}" dist/leaf.apk dist/leaf-debug.apk \
             --title "Leaf ${GITHUB_REF_NAME}" \
             --notes "Offline Leaf reader for Android 6.0+ (API 23) - build ${GITHUB_SHA::8}" || true
