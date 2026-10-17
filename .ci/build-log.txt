@@ -1,112 +1,101 @@
-fun TagEntity.toModel(): LeafTag
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:106:55 Overload resolution ambiguity between candidates:
-fun HighlightEntity.toModel(): LeafHighlight
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:112:42 Overload resolution ambiguity between candidates:
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-fun ReaderStateEntity.toModel(): ReaderState
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:172:23 Overload resolution ambiguity between candidates:
-fun DocumentEntity.toModel(): LeafDocument
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:202:23 Overload resolution ambiguity between candidates:
-fun DocumentEntity.toModel(): LeafDocument
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:272:23 Overload resolution ambiguity between candidates:
-fun FolderEntity.toModel(): LeafFolder
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:299:23 Overload resolution ambiguity between candidates:
-fun TagEntity.toModel(): LeafTag
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:327:16 Return type mismatch: expected 'com.leaf.reader.model.LeafCollection', actual 'com.leaf.reader.model.LeafBookmark'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:332:67 Return type mismatch: expected 'com.leaf.reader.model.LeafCollection?', actual 'com.leaf.reader.model.LeafBookmark?'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:17 Unresolved reference 'BookmarkEntity'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:57 Unresolved reference 'id'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:61 Unresolved reference 'documentId'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:73 Unresolved reference 'page'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:79 Unresolved reference 'label'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:86 Unresolved reference 'createdAt'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:89:54 Unresolved reference 'collectAsState'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:94:48 Unresolved reference 'autoRotate'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:98:50 Unresolved reference 'autoRotate'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:107:29 Unresolved reference 'keepAwake'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:108:22 Unresolved reference 'keepAwake'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:358:19 Unresolved reference 'snapshotFlow'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:359:42 Unresolved reference 'it'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:395:31 Smart cast to 'android.graphics.Bitmap' is impossible, because 'bitmap' is a delegated property.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:395:50 Smart cast to 'android.graphics.Bitmap' is impossible, because 'bitmap' is a delegated property.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:395:76 Smart cast to 'android.graphics.Bitmap' is impossible, because 'bitmap' is a delegated property.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:468:19 Unresolved reference 'snapshotFlow'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:469:42 Unresolved reference 'it'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/ui/AppShell.kt:391:30 Argument type mismatch: actual type is 'kotlin.collections.Map<K, kotlin.Int>', but 'kotlin.collections.Map<kotlin.String, kotlin.Int>' was expected.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/ui/AppShell.kt:395:27 Argument type mismatch: actual type is 'kotlin.collections.Map<K, kotlin.Int>', but 'kotlin.collections.Map<kotlin.String, kotlin.Int>' was expected.
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:generateDebugBuildConfig FROM-CACHE
+> Task :app:generateDebugResValues FROM-CACHE
+> Task :app:checkDebugAarMetadata
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources FROM-CACHE
+> Task :app:mergeDebugResources FROM-CACHE
+> Task :app:packageDebugResources FROM-CACHE
+> Task :app:parseDebugLocalResources FROM-CACHE
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug FROM-CACHE
+> Task :app:processDebugMainManifest FROM-CACHE
+> Task :app:processDebugManifest FROM-CACHE
+> Task :app:processDebugManifestForPackage FROM-CACHE
+> Task :app:processDebugResources FROM-CACHE
+> Task :app:javaPreCompileDebug FROM-CACHE
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:compressDebugAssets FROM-CACHE
+> Task :app:desugarDebugFileDependencies FROM-CACHE
+> Task :app:mergeDebugJniLibFolders
+> Task :app:checkDebugDuplicateClasses
+> Task :app:mergeDebugNativeLibs
+> Task :app:validateSigningDebug
+> Task :app:mergeExtDexDebug FROM-CACHE
+> Task :app:mergeLibDexDebug FROM-CACHE
+> Task :app:writeDebugAppMetadata
+
+> Task :app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :app:writeDebugSigningConfigVersions
+> Task :app:preReleaseBuild UP-TO-DATE
+> Task :app:mergeReleaseJniLibFolders
+> Task :app:mergeReleaseNativeLibs
+
+> Task :app:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libdatastore_shared_counter.so.
+
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:buildKotlinToolingMetadata
+> Task :app:extractReleaseNativeSymbolTables FROM-CACHE
+> Task :app:mergeReleaseNativeDebugMetadata NO-SOURCE
+> Task :app:generateReleaseBuildConfig FROM-CACHE
+> Task :app:generateReleaseResValues FROM-CACHE
+> Task :app:checkReleaseAarMetadata
+> Task :app:mapReleaseSourceSetPaths
+> Task :app:generateReleaseResources FROM-CACHE
+> Task :app:mergeReleaseResources FROM-CACHE
+> Task :app:packageReleaseResources FROM-CACHE
+> Task :app:parseReleaseLocalResources FROM-CACHE
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease FROM-CACHE
+> Task :app:processReleaseMainManifest FROM-CACHE
+> Task :app:processReleaseManifest FROM-CACHE
+> Task :app:processReleaseManifestForPackage FROM-CACHE
+> Task :app:processReleaseResources FROM-CACHE
+> Task :app:javaPreCompileRelease FROM-CACHE
+> Task :app:desugarReleaseFileDependencies FROM-CACHE
+> Task :app:mergeReleaseStartupProfile
+> Task :app:mergeExtDexRelease FROM-CACHE
+> Task :app:mergeReleaseShaders
+> Task :app:mergeReleaseArtProfile
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets FROM-CACHE
+> Task :app:extractReleaseVersionControlInfo
+> Task :app:optimizeReleaseResources FROM-CACHE
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:validateSigningRelease
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:kspReleaseKotlin
+> Task :app:kspDebugKotlin
 
 > Task :app:compileReleaseKotlin FAILED
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:360:19 Unresolved reference 'snapshotFlow'.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:361:42 Unresolved reference 'it'.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:475:19 Unresolved reference 'snapshotFlow'.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:476:42 Unresolved reference 'it'.
+
+> Task :app:compileDebugKotlin
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:360:19 Unresolved reference 'snapshotFlow'.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:361:42 Unresolved reference 'it'.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:475:19 Unresolved reference 'snapshotFlow'.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:476:42 Unresolved reference 'it'.
 
 > Task :app:compileDebugKotlin FAILED
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:64:62 Overload resolution ambiguity between candidates:
-fun DocumentEntity.toModel(): LeafDocument
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:67:60 Overload resolution ambiguity between candidates:
-fun FolderEntity.toModel(): LeafFolder
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:70:57 Overload resolution ambiguity between candidates:
-fun TagEntity.toModel(): LeafTag
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:73:50 Argument type mismatch: actual type is 'kotlin.collections.List<R>', but 'kotlin.collections.List<com.leaf.reader.model.LeafCollection>' was expected.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:84:63 Overload resolution ambiguity between candidates:
-fun HighlightEntity.toModel(): LeafHighlight
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:96:81 Overload resolution ambiguity between candidates:
-fun DocumentEntity.toModel(): LeafDocument
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:98:85 Overload resolution ambiguity between candidates:
-fun DocumentEntity.toModel(): LeafDocument
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:102:57 Overload resolution ambiguity between candidates:
-fun TagEntity.toModel(): LeafTag
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:106:55 Overload resolution ambiguity between candidates:
-fun HighlightEntity.toModel(): LeafHighlight
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:112:42 Overload resolution ambiguity between candidates:
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-fun ReaderStateEntity.toModel(): ReaderState
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:172:23 Overload resolution ambiguity between candidates:
-fun DocumentEntity.toModel(): LeafDocument
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:202:23 Overload resolution ambiguity between candidates:
-fun DocumentEntity.toModel(): LeafDocument
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:272:23 Overload resolution ambiguity between candidates:
-fun FolderEntity.toModel(): LeafFolder
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:299:23 Overload resolution ambiguity between candidates:
-fun TagEntity.toModel(): LeafTag
-fun <ERROR TYPE REF: Symbol not found for BookmarkEntity>.toModel(): LeafBookmark
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:327:16 Return type mismatch: expected 'com.leaf.reader.model.LeafCollection', actual 'com.leaf.reader.model.LeafBookmark'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:332:67 Return type mismatch: expected 'com.leaf.reader.model.LeafCollection?', actual 'com.leaf.reader.model.LeafBookmark?'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:17 Unresolved reference 'BookmarkEntity'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:57 Unresolved reference 'id'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:61 Unresolved reference 'documentId'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:73 Unresolved reference 'page'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:79 Unresolved reference 'label'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/data/DocumentRepository.kt:451:86 Unresolved reference 'createdAt'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:89:54 Unresolved reference 'collectAsState'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:94:48 Unresolved reference 'autoRotate'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:98:50 Unresolved reference 'autoRotate'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:107:29 Unresolved reference 'keepAwake'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:108:22 Unresolved reference 'keepAwake'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:358:19 Unresolved reference 'snapshotFlow'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:359:42 Unresolved reference 'it'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:395:31 Smart cast to 'android.graphics.Bitmap' is impossible, because 'bitmap' is a delegated property.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:395:50 Smart cast to 'android.graphics.Bitmap' is impossible, because 'bitmap' is a delegated property.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:395:76 Smart cast to 'android.graphics.Bitmap' is impossible, because 'bitmap' is a delegated property.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:468:19 Unresolved reference 'snapshotFlow'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:469:42 Unresolved reference 'it'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/ui/AppShell.kt:391:30 Argument type mismatch: actual type is 'kotlin.collections.Map<K, kotlin.Int>', but 'kotlin.collections.Map<kotlin.String, kotlin.Int>' was expected.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/ui/AppShell.kt:395:27 Argument type mismatch: actual type is 'kotlin.collections.Map<K, kotlin.Int>', but 'kotlin.collections.Map<kotlin.String, kotlin.Int>' was expected.
-gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1792280302744.json
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/__run_3-1792280473437.json
 
 FAILURE: Build completed with 2 failures.
 
@@ -153,35 +142,6 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:com
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionException: A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
@@ -311,35 +271,6 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
-	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
-	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
-	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
-	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
-	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
-	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
-	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
-	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
-	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
-	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
-	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
-	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
-	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
-	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
-	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
-	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
-	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilation error. See log for more details
@@ -419,6 +350,37 @@ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:com
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
@@ -554,6 +516,37 @@ Caused by: org.gradle.workers.internal.DefaultWorkerExecutor$WorkExecutionExcept
 	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
 	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.execution.plan.DefaultPlanExecutor.process(DefaultPlanExecutor.java:111)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.executeWithServices(DefaultTaskExecutionGraph.java:138)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph.execute(DefaultTaskExecutionGraph.java:123)
+	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:35)
+	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:51)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:54)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor$ExecuteTasks.call(BuildOperationFiringBuildWorkerExecutor.java:43)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.execution.BuildOperationFiringBuildWorkerExecutor.execute(BuildOperationFiringBuildWorkerExecutor.java:40)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.lambda$executeTasks$10(DefaultBuildLifecycleController.java:313)
+	at org.gradle.internal.model.StateTransitionController.doTransition(StateTransitionController.java:266)
+	at org.gradle.internal.model.StateTransitionController.lambda$tryTransition$8(StateTransitionController.java:177)
+	at org.gradle.internal.work.DefaultSynchronizer.withLock(DefaultSynchronizer.java:44)
+	at org.gradle.internal.model.StateTransitionController.tryTransition(StateTransitionController.java:177)
+	at org.gradle.internal.build.DefaultBuildLifecycleController.executeTasks(DefaultBuildLifecycleController.java:304)
+	at org.gradle.internal.build.DefaultBuildWorkGraphController$DefaultBuildWorkGraph.runWork(DefaultBuildWorkGraphController.java:220)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:267)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:131)
+	at org.gradle.composite.internal.DefaultBuildController.doRun(DefaultBuildController.java:181)
+	at org.gradle.composite.internal.DefaultBuildController.access$000(DefaultBuildController.java:50)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.lambda$run$0(DefaultBuildController.java:198)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.composite.internal.DefaultBuildController$BuildOpRunnable.run(DefaultBuildController.java:198)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
 	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
@@ -590,9 +583,7 @@ Caused by: org.jetbrains.kotlin.gradle.tasks.CompilationErrorException: Compilat
 	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:136)
 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:165)
 	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:134)
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	... 5 more
+	... 7 more
 
 ==============================================================================
 
