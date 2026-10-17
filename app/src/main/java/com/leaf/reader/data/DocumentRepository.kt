@@ -5,6 +5,7 @@ import android.net.Uri
 import com.leaf.reader.core.FileUtils
 import com.leaf.reader.core.Formatters
 import com.leaf.reader.data.db.BookmarkDao
+import com.leaf.reader.data.db.BookmarkEntity
 import com.leaf.reader.data.db.CollectionDao
 import com.leaf.reader.data.db.CollectionEntity
 import com.leaf.reader.data.db.DocumentDao
@@ -422,7 +423,7 @@ class DocumentRepository(
 
     private fun TagEntity.toModel() = LeafTag(id, name, colorIndex, createdAt)
 
-    private fun LeafCollection.toModel() = LeafCollection(id, name, rule, builtin, createdAt)
+    private fun CollectionEntity.toModel() = LeafCollection(id, name, rule, builtin, createdAt)
 
     private fun LeafHighlight.toEntity() = HighlightEntity(
         id = id,

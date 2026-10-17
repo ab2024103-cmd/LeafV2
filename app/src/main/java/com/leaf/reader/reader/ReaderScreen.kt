@@ -52,9 +52,11 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.produceState
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
@@ -391,8 +393,13 @@ private fun PdfPageItem(
     val bitmap by produceState<Bitmap?>(null, page, renderWidth) {
         value = viewModel.renderPdfPage(page, renderWidth)
     }
-    val aspect = remember(bitmap) {
-        if (bitmap != null && bitmap.height > 0) bitmap.height.toFloat() / bitmap.width else 1.414f
+    val rendered = bitmap
+    val aspect = remember(rendered) {
+        if (rendered != null && rendered.height > 0) {
+            rendered.height.toFloat() / rendered.width
+        } else {
+            1.414f
+        }
     }
     val density = LocalDensity.current
     val itemHeight = with(density) { (widthPx * aspect).toDp() }

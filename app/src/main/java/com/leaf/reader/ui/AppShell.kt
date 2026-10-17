@@ -389,11 +389,11 @@ fun LeafApp(container: AppContainer) {
         FolderManagerSheet(
             folders = state.folders,
             documentCounts = state.documents
-                .mapNotNull { doc -> doc.folderId?.let { it to 1 } }
+                .mapNotNull { doc -> doc.folderId }
                 .groupingBy { it }
                 .eachCount(),
             childCounts = state.folders
-                .mapNotNull { folder -> folder.parentId?.let { it to 1 } }
+                .mapNotNull { folder -> folder.parentId }
                 .groupingBy { it }
                 .eachCount(),
             onCreate = { name, parent -> viewModel.createFolder(name, parent, 0) },
