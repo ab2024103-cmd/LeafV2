@@ -247,6 +247,13 @@ class DocumentRepository(
 
     suspend fun removeRecent(documentId: String) = recentDao.delete(documentId)
 
+    /** Restores a recent entry (undo). */
+    suspend fun restoreRecent(documentId: String) {
+        val existing = recentDao.all().firstOrNull { it.documentId == documentId }
+        val openedAt = existing?.openedAt ?: System.currentTimeMillis()
+        recentDao.upsert(RecentEntity(documentId, openedAt))
+    }
+
     suspend fun clearRecents() = recentDao.clearAll()
 
     suspend fun clearTodayRecents() = recentDao.clearBefore(Formatters.startOfToday())

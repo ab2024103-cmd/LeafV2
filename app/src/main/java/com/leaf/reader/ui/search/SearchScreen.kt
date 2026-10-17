@@ -18,6 +18,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Close
 import androidx.compose.material.icons.outlined.FilterList
 import androidx.compose.material.icons.outlined.History
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Card
@@ -42,10 +44,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.leaf.reader.AppContainer
 import com.leaf.reader.model.FileKind
@@ -79,18 +83,17 @@ fun SearchScreen(
     container: AppContainer,
     state: LibraryState,
     onOpen: (LeafDocument, Int, String) -> Unit,
-    onDocumentActions: (LeafDocument) -> Unit
+    onDocumentActions: (LeafDocument) -> Unit,
+    onRecordSearch: (String) -> Unit = {},
+    onRemoveHistory: (String) -> Unit = {},
+    onClearHistory: () -> Unit = {}
 ) {
     var query by remember { mutableStateOf("") }
     var filters by remember { mutableStateOf(SearchFilters()) }
     var outcome by remember { mutableStateOf(SearchOutcome()) }
     var searching by remember { mutableStateOf(false) }
     var filterSheetOpen by remember { mutableStateOf(false) }
-    var history by remember { mutableStateOf(state.settings.searchHistory) }
-
-    LaunchedEffect(state.settings.searchHistory) {
-        history = state.settings.searchHistory
-    }
+    val history = state.settings.searchHistory
 
     LaunchedEffect(query, filters, state.documents) {
         if (query.isBlank()) {
@@ -137,7 +140,11 @@ fun SearchScreen(
                         }
                     }
                 },
-                singleLine = true
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
+                keyboardActions = KeyboardActions(onSearch = {
+                    onRecordSearch(query)
+                })
             )
 
             if (filters.kind != null || filters.folderId != null || filters.tagIds.isNotEmpty() || filters.addedWithinDays != null) {
@@ -172,8 +179,8 @@ fun SearchScreen(
                 SearchHistory(
                     history = history,
                     onRun = { query = it },
-                    onRemove = { history = history - it },
-                    onClear = { history = emptyList() }
+                    onRemove = { onRemoveHistory(it) },
+                    onClear = { onClearHistory() }
                 )
             } else {
                 LazyColumn(contentPadding = PaddingValues(bottom = 24.dp)) {

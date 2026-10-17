@@ -281,6 +281,11 @@ class LibraryViewModel(private val container: AppContainer) : ViewModel() {
         viewModelScope.launch { repository.removeRecent(documentId) }
     }
 
+    /** Puts a removed recent entry back (undo, spec 2.5). */
+    fun restoreRecent(documentId: String) {
+        viewModelScope.launch { repository.restoreRecent(documentId) }
+    }
+
     fun clearRecents() {
         viewModelScope.launch {
             repository.clearRecents()

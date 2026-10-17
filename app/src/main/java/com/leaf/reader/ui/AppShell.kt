@@ -22,6 +22,7 @@ import androidx.compose.material3.NavigationRailItem
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -240,9 +241,17 @@ fun LeafApp(container: AppContainer) {
                         RecentsScreen(
                             state = state,
                             onOpen = { viewModel.openDocument(it) },
-                            onRemove = {
-                                viewModel.removeRecent(it)
-                                scope.launch { snackbarHostState.showSnackbar("Removed from recents · Undo") }
+                            onRemove = { documentId ->
+                                viewModel.removeRecent(documentId)
+                                scope.launch {
+                                    val result = snackbarHostState.showSnackbar(
+                                        message = "Removed from recents",
+                                        actionLabel = "Undo"
+                                    )
+                                    if (result == SnackbarResult.ActionPerformed) {
+                                        viewModel.restoreRecent(documentId)
+                                    }
+                                }
                             },
                             onClearAll = { viewModel.clearRecents() },
                             onClearToday = { viewModel.clearTodayRecents() },
@@ -266,7 +275,10 @@ fun LeafApp(container: AppContainer) {
                                 container.pendingFind = document.id to query
                                 viewModel.openDocument(document)
                             },
-                            onDocumentActions = { actionDocument = it }
+                            onDocumentActions = { actionDocument = it },
+                            onRecordSearch = { viewModel.recordSearch(it) },
+                            onRemoveHistory = { viewModel.removeSearchHistory(it) },
+                            onClearHistory = { viewModel.clearSearchHistory() }
                         )
                     }
                     composable(Routes.SETTINGS) {

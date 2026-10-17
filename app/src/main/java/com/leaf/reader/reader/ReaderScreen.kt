@@ -176,6 +176,22 @@ fun ReaderScreen(
                 )
             }
 
+            state.activeHighlightId?.let { activeId ->
+                val highlight = state.highlights.firstOrNull { it.id == activeId }
+                HighlightContextBar(
+                    colors = colors,
+                    onColor = { viewModel.recolorHighlight(activeId, it) },
+                    onCopy = {
+                        val clipboard = context.getSystemService(android.content.ClipboardManager::class.java)
+                        clipboard?.setPrimaryClip(
+                            android.content.ClipData.newPlainText("Leaf highlight", highlight?.quote.orEmpty())
+                        )
+                    },
+                    onRemove = { viewModel.removeHighlight(activeId) },
+                    onDone = { viewModel.setActiveHighlight(null) }
+                )
+            }
+
             if (!state.fullScreen) {
                 ReaderBottomBar(
                     state = state,
@@ -702,6 +718,46 @@ private fun HighlightBar(
             }
             IconButton(onClick = onRedo, enabled = canRedo) {
                 Icon(Icons.Filled.Redo, contentDescription = "Redo highlight")
+            }
+            TextButton(onClick = onDone) { Text("Done") }
+        }
+    }
+}
+
+@Composable
+private fun HighlightContextBar(
+    colors: ReaderColors,
+    onColor: (HighlightColor) -> Unit,
+    onCopy: () -> Unit,
+    onRemove: () -> Unit,
+    onDone: () -> Unit
+) {
+    Surface(color = colors.toolbar) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 12.dp, vertical = 6.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            HighlightColor.values().forEach { color ->
+                Box(
+                    modifier = Modifier
+                        .size(30.dp)
+                        .padding(end = 4.dp)
+                        .clickable { onColor(color) },
+                    contentAlignment = Alignment.Center
+                ) {
+                    Box(
+                        modifier = Modifier
+                            .size(18.dp)
+                            .background(colors.tint(color), RoundedCornerShape(50))
+                    )
+                }
+            }
+            Spacer(Modifier.weight(1f))
+            TextButton(onClick = onCopy) { Text("Copy") }
+            TextButton(onClick = onRemove) {
+                Text("Remove", color = MaterialTheme.colorScheme.error)
             }
             TextButton(onClick = onDone) { Text("Done") }
         }
