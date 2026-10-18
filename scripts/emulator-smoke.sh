@@ -90,6 +90,17 @@ echo "== 5. logs =="
 adb logcat -d -v threadtime > "${OUT}/logcat.txt" 2>/dev/null || true
 adb shell dumpsys activity activities 2>/dev/null | head -60 > "${OUT}/activities.txt" || true
 
+echo "== 6. native crash reports =="
+adb root >/dev/null 2>&1 || true
+sleep 2
+adb wait-for-device
+adb shell 'ls -t /data/tombstones/ 2>/dev/null | head -3' > "${OUT}/tombstones.txt" 2>/dev/null || true
+for stone in $(cat "${OUT}/tombstones.txt" 2>/dev/null); do
+  echo "--- tombstone ${stone} ---" >> "${OUT}/tombstone.txt"
+  adb shell "cat /data/tombstones/${stone} 2>/dev/null" >> "${OUT}/tombstone.txt" 2>/dev/null || true
+done
+adb shell dumpsys dropbox --print SYSTEM_TOMBSTONE 2>/dev/null | head -200 > "${OUT}/dropbox.txt" || true
+
 {
   echo "package: ${PKG}"
   echo "apk: ${APK}"
@@ -106,6 +117,8 @@ adb shell dumpsys activity activities 2>/dev/null | head -60 > "${OUT}/activitie
   fi
   echo "--- leaf log lines ---"
   grep -iE "leaf|AndroidRuntime|FATAL|PdfRenderer" "${OUT}/logcat.txt" | grep -v "uiautomator" | head -80
+  echo "--- native crash (tombstone) ---"
+  head -80 "${OUT}/tombstone.txt" 2>/dev/null || echo "(none)"
   echo "--- script log ---"
   cat "${OUT}/script.log" 2>/dev/null
 } > "${OUT}/report.txt" 2>&1
