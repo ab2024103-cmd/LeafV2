@@ -6,6 +6,33 @@ works entirely on-device: **no account, no cloud, no sign-in, no network permiss
 
 ---
 
+## What 2.1.0 fixes
+
+Feedback from an Android 6 phone led to four concrete fixes:
+
+1. **No permission prompt any more.** Leaf now declares **no permissions at all** — the
+   optional “scan the whole storage” request was removed. Everything happens through the
+   system folder picker, which grants access without a runtime dialog.
+2. **All files on the device are listed.** The new **Device** tab (bottom navigation, and
+   “Device files” in the library menu) walks the folder you pick with the system picker and
+   lists every PDF, DOCX, XLSX, PPTX, TXT and EPUB below it, with its size and type icon.
+   On Android 10+ Leaf additionally lists media-store documents without any permission.
+3. **Files open again.** Two bugs stopped every document from opening: rows swallowed the
+   tap, and `file://` uris were handed to the content resolver. Both are fixed, and the
+   reader now repaints correctly (the pages used to stay blank because the custom views
+   never invalidated themselves).
+4. **The app is tested on an emulator in CI.** Every push installs the APK on an Android 6
+   (API 23) emulator, opens a Word document and a PDF, searches inside the PDF, visits the
+   device browser and every tab, and commits the screenshots, the UI hierarchy and the
+   logcat back into the repository (`.ci/smoke/`).
+
+In addition the PDF pipeline was made memory aware (the page size adapts to the free heap,
+the bitmap cache holds two pages and the text index is only built when you actually search
+inside a file) and PDFBox now runs on a thread with a large stack, so searching inside a
+PDF with standard fonts no longer overflows the stack.
+
+---
+
 ## Install
 
 Grab `leaf.apk` (release, signed) from the `dist/` folder of this repository or from the

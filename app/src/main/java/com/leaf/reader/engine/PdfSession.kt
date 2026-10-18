@@ -168,7 +168,7 @@ class PdfSession(private val context: Context, private val uri: Uri) {
          */
         private val pdfBoxDispatcher: CoroutineDispatcher =
             Executors.newSingleThreadExecutor { runnable ->
-                Thread(runnable, "leaf-pdfbox", 8 * 1024 * 1024)
+                Thread(null, runnable, "leaf-pdfbox", 8L * 1024 * 1024)
             }.asCoroutineDispatcher()
     }
 
