@@ -105,11 +105,35 @@ sleep 4
 capture 06-device
 echo "   visible: $(texts "${OUT}/06-device.xml")"
 
-echo "== 6. logs =="
+echo "== 6. the other tabs =="
+capture 06b-library
+tap "Search" || true
+sleep 3
+capture 07-search
+tap "Recents" || true
+sleep 3
+capture 08-recents
+tap "Favorites" || true
+sleep 3
+capture 09-favorites
+tap "Settings" || true
+sleep 3
+capture 10-settings
+tap "Search" || true
+sleep 3
+capture 11-search
+tap "the" 0 || true
+sleep 1
+adb shell input text "the" || true
+sleep 6
+capture 12-search-results
+echo "   visible: $(texts "${OUT}/12-search-results.xml")"
+
+echo "== 7. logs =="
 adb logcat -d -v threadtime > "${OUT}/logcat.txt" 2>/dev/null || true
 adb shell dumpsys activity activities 2>/dev/null | head -60 > "${OUT}/activities.txt" || true
 
-echo "== 7. native crash reports =="
+echo "== 8. native crash reports =="
 adb root >/dev/null 2>&1 || true
 sleep 2
 adb wait-for-device
@@ -123,8 +147,8 @@ adb shell dumpsys dropbox --print SYSTEM_TOMBSTONE 2>/dev/null | head -200 > "${
 {
   echo "package: ${PKG}"
   echo "apk: ${APK}"
-  echo "screens: 01-library 02-reader-docx 03-scrolled 04-reader-pdf 05-find 06-device"
-  for screen in 01-library 02-reader-docx 04-reader-pdf 05-find 06-device; do
+  echo "screens: 01-library 02-reader-docx 03-scrolled 04-reader-pdf 05-find 06-device 07-search 08-recents 09-favorites 10-settings 12-search-results"
+  for screen in 01-library 02-reader-docx 04-reader-pdf 05-find 06-device 07-search 08-recents 09-favorites 10-settings 12-search-results; do
     echo "--- ${screen} ---"
     texts "${OUT}/${screen}.xml"
   done

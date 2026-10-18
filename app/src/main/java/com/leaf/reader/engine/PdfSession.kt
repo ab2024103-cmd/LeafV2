@@ -157,6 +157,7 @@ class PdfSession(private val context: Context, private val uri: Uri) {
     companion object {
         /** Upper bound for the rendered page width — keeps the memory footprint small. */
         const val MAX_RENDER_WIDTH = 1600
+        private const val TAG = "LeafPdf"
     }
 
     private val resolver: ContentResolver = context.contentResolver
@@ -189,25 +190,34 @@ class PdfSession(private val context: Context, private val uri: Uri) {
             pdf.openPage(pageIndex).use { page ->
                 val aspect = if (page.width > 0) page.height.toFloat() / page.width else 1.414f
                 val width = renderWidth(targetWidth, aspect)
-                val height = max(1, (width * aspect).toInt())
-                val scale = if (page.width > 0) width.toFloat() / page.width else 1f
-                val bitmap = try {
-                    Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-                } catch (error: OutOfMemoryError) {
-                    // Half the size still shows the page and keeps the device alive.
-                    Bitmap.createBitmap(
-                        max(1, width / 2),
-                        max(1, height / 2),
-                        Bitmap.Config.ARGB_8888
-                    )
-                }
-                bitmap.eraseColor(Color.WHITE)
-                val matrix = Matrix()
-                matrix.postScale(scale, scale)
-                page.render(bitmap, null, matrix, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
+                val bitmap = drawPage(page, width, aspect)
+                android.util.Log.i(TAG, "rendered page $pageIndex as ${bitmap.width}x${bitmap.height}")
                 bitmap
             }
+        }.onFailure { error ->
+            android.util.Log.e(TAG, "pdf render failed for page $pageIndex", error)
         }.getOrNull()
+    }
+
+    /** Draws one page into a bitmap; halves the size when the device runs out of memory. */
+    private fun drawPage(page: PdfRenderer.Page, width: Int, aspect: Float): Bitmap {
+        val height = max(1, (width * aspect).toInt())
+        val bitmap = try {
+            Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        } catch (error: OutOfMemoryError) {
+            // Half the size still shows the page and keeps the device alive.
+            Bitmap.createBitmap(
+                max(1, width / 2),
+                max(1, height / 2),
+                Bitmap.Config.ARGB_8888
+            )
+        }
+        bitmap.eraseColor(Color.WHITE)
+        val scale = if (page.width > 0) width.toFloat() / page.width else 1f
+        val matrix = Matrix()
+        matrix.postScale(scale, scale)
+        page.render(bitmap, null, matrix, PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY)
+        return bitmap
     }
 
     /** Width that still fits into the memory the device can spare for one page. */
