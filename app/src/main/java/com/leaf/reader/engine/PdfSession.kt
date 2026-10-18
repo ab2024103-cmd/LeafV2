@@ -12,8 +12,11 @@ import com.leaf.reader.model.NormRect
 import com.tom_roush.pdfbox.pdmodel.PDDocument
 import com.tom_roush.pdfbox.text.PDFTextStripper
 import com.tom_roush.pdfbox.text.TextPosition
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.withContext
+import java.util.concurrent.Executors
 import java.io.InputStream
 import kotlin.math.abs
 import kotlin.math.max
@@ -158,6 +161,15 @@ class PdfSession(private val context: Context, private val uri: Uri) {
         /** Upper bound for the rendered page width — keeps the memory footprint small. */
         const val MAX_RENDER_WIDTH = 1600
         private const val TAG = "LeafPdf"
+
+        /**
+         * PDFBox loads the metrics of the standard PDF fonts, which needs far more stack
+         * than Android gives a thread by default (a StackOverflowError otherwise).
+         */
+        private val pdfBoxDispatcher: CoroutineDispatcher =
+            Executors.newSingleThreadExecutor { runnable ->
+                Thread(runnable, "leaf-pdfbox", 8 * 1024 * 1024)
+            }.asCoroutineDispatcher()
     }
 
     private val resolver: ContentResolver = context.contentResolver
@@ -190,9 +202,7 @@ class PdfSession(private val context: Context, private val uri: Uri) {
             pdf.openPage(pageIndex).use { page ->
                 val aspect = if (page.width > 0) page.height.toFloat() / page.width else 1.414f
                 val width = renderWidth(targetWidth, aspect)
-                val bitmap = drawPage(page, width, aspect)
-                android.util.Log.i(TAG, "rendered page $pageIndex as ${bitmap.width}x${bitmap.height}")
-                bitmap
+                drawPage(page, width, aspect)
             }
         }.onFailure { error ->
             android.util.Log.e(TAG, "pdf render failed for page $pageIndex", error)
@@ -235,7 +245,7 @@ class PdfSession(private val context: Context, private val uri: Uri) {
     /** Builds (once) the text + geometry index used for search and highlighting. */
     suspend fun textIndex(): PdfTextIndex {
         index?.let { return it }
-        return withContext(Dispatchers.IO) {
+        return withContext(pdfBoxDispatcher) {
             val built = buildIndex()
             index = built
             built
@@ -267,7 +277,7 @@ class PdfSession(private val context: Context, private val uri: Uri) {
                     stripper.setStartPage(i + 1)
                     stripper.setEndPage(i + 1)
                     runCatching { stripper.getText(document) }.onFailure { error ->
-                        android.util.Log.e("LeafPdf", "pdf text extraction failed on page $i", error)
+                        android.util.Log.e(TAG, "pdf text extraction failed on page $i", error)
                     }
                     val builder = stripper.builder
                     val pdPage = document.getPage(i)
@@ -298,7 +308,7 @@ class PdfSession(private val context: Context, private val uri: Uri) {
                 runCatching { stream.close() }
             }
         }.getOrElse { error ->
-            android.util.Log.e("LeafPdf", "pdf text index failed", error)
+            android.util.Log.e(TAG, "pdf text index failed", error)
             PdfTextIndex(emptyList())
         }
     }

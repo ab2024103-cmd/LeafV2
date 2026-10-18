@@ -128,10 +128,6 @@ class LeafTextView(context: Context) : View(context) {
 
     override fun onDraw(canvas: Canvas) {
         canvas.drawColor(colors.background.toArgbCompat())
-        android.util.Log.i(
-            "LeafText",
-            "onDraw size=${width}x$height pos=${left},${top} lines=${textLayout?.lineCount}"
-        )
         val layout = textLayout ?: return
         canvas.save()
         canvas.translate(panX, panY)
