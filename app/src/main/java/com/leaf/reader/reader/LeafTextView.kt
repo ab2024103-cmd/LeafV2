@@ -127,7 +127,7 @@ class LeafTextView(context: Context) : View(context) {
     )
 
     override fun onDraw(canvas: Canvas) {
-        canvas.drawColor(android.graphics.Color.MAGENTA)
+        canvas.drawColor(colors.background.toArgbCompat())
         android.util.Log.i(
             "LeafText",
             "onDraw size=${width}x$height pos=${left},${top} lines=${textLayout?.lineCount}"

@@ -4,6 +4,8 @@ import android.app.Activity
 import android.content.pm.ActivityInfo
 import android.graphics.Bitmap
 import android.view.WindowManager
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -22,6 +24,10 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
+import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.gestures.detectTransformGestures
+import androidx.compose.foundation.layout.ContentScale
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -61,7 +67,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
@@ -73,6 +83,7 @@ import com.leaf.reader.AppContainer
 import com.leaf.reader.model.FileKind
 import com.leaf.reader.model.HighlightColor
 import com.leaf.reader.model.LeafHighlight
+import com.leaf.reader.model.NormRect
 import com.leaf.reader.model.OrientationLock
 import com.leaf.reader.model.ReadingTheme
 import com.leaf.reader.model.ScrollDirection
@@ -386,6 +397,13 @@ private fun PdfPageList(
     }
 }
 
+/** A highlight painted on top of a rendered PDF page. */
+private data class PdfHighlightRect(
+    val rect: NormRect,
+    val color: HighlightColor
+)
+
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 private fun PdfPageItem(
     page: Int,
@@ -408,6 +426,7 @@ private fun PdfPageItem(
     }
     val density = LocalDensity.current
     val itemHeight = with(density) { (widthPx * aspect).toDp() }
+    val heightPx = with(density) { itemHeight.toPx() }.toInt().coerceAtLeast(1)
 
     val pageHighlights = state.highlights.filter { it.page == page && it.rects.isNotEmpty() }
     val flatRects = remember(pageHighlights) {
@@ -417,49 +436,95 @@ private fun PdfPageItem(
         pageHighlights.flatMap { highlight -> highlight.rects.map { highlight.id } }
     }
 
+    var selection by remember(page) { mutableStateOf<NormRect?>(null) }
+    var dragStart by remember(page) { mutableStateOf<Offset?>(null) }
+
     Box(
         modifier = Modifier
             .fillMaxWidth()
             .height(itemHeight)
             .background(colors.background)
-    ) {
-        AndroidView(
-            factory = { ctx ->
-                LeafPdfView(ctx).apply {
-                    onSelection = { rect ->
-                        val index = viewModel.pdfTextIndex()?.pageOf(page)
-                        if (index != null) {
-                            val text = viewModel.pdfTextIndex()?.textInRect(index, rect).orEmpty()
-                            val range = viewModel.pdfTextIndex()?.offsetOfRect(index, rect)
-                            viewModel.addPdfHighlight(
-                                rect = rect,
-                                quote = text,
-                                start = range?.first ?: 0,
-                                end = (range?.last ?: 0) + 1
-                            )
-                        } else {
-                            viewModel.addPdfHighlight(rect, "", 0, 0)
+            .pointerInput(page) {
+                detectTapGestures(
+                    onTap = { offset ->
+                        val hit = flatRects.indexOfFirst { entry ->
+                            val rect = entry.rect
+                            offset.x / size.width.toFloat() in rect.left..rect.right &&
+                                offset.y / size.height.toFloat() in rect.top..rect.bottom
                         }
-                    }
-                    onTap = { x, y ->
-                        if (x < 0f) {
-                            viewModel.setActiveHighlight(flatIds.getOrNull(y.toInt()))
+                        if (hit >= 0) {
+                            viewModel.setActiveHighlight(flatIds.getOrNull(hit))
                         } else {
                             viewModel.setActiveHighlight(null)
                         }
-                    }
+                    },
                     onDoubleTap = { viewModel.toggleZoom() }
-                    onScaleChanged = { factor -> viewModel.setZoom(state.zoom * factor) }
+                )
+            }
+            .pointerInput(page, state.zoom) {
+                detectTransformGestures { _, _, zoom, _ ->
+                    if (zoom != 1f) {
+                        viewModel.setZoom((state.zoom * zoom).coerceIn(0.7f, 2.5f))
+                    }
                 }
-            },
-            update = { view ->
-                view.colors = colors
-                view.bitmap = bitmap
-                view.highlightRects = flatRects
-                android.util.Log.i("LeafPdf", "pdf view update bitmap=${bitmap?.width}x${bitmap?.height}")
-            },
-            modifier = Modifier.fillMaxSize()
-        )
+            }
+            .pointerInput(page) {
+                detectDragGesturesAfterLongPress(
+                    onDragStart = { start ->
+                        dragStart = start
+                        selection = null
+                    },
+                    onDrag = { change, _ ->
+                        val start = dragStart ?: return@detectDragGesturesAfterLongPress
+                        val end = change.position
+                        selection = NormRect(
+                            left = minOf(start.x, end.x) / widthPx.toFloat(),
+                            top = minOf(start.y, end.y) / heightPx.toFloat(),
+                            right = maxOf(start.x, end.x) / widthPx.toFloat(),
+                            bottom = maxOf(start.y, end.y) / heightPx.toFloat()
+                        )
+                    },
+                    onDragEnd = {
+                        val rect = selection
+                        selection = null
+                        dragStart = null
+                        if (rect != null && rect.right - rect.left > 0.01f && rect.bottom - rect.top > 0.01f) {
+                            viewModel.highlightPdfRect(page, rect)
+                        }
+                    }
+                )
+            }
+    ) {
+        if (rendered != null) {
+            Image(
+                bitmap = rendered.asImageBitmap(),
+                contentDescription = null,
+                contentScale = ContentScale.FillWidth,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
+        Canvas(modifier = Modifier.fillMaxSize()) {
+            flatRects.forEach { entry ->
+                drawRect(
+                    color = colors.tint(entry.color),
+                    topLeft = Offset(entry.rect.left * size.width, entry.rect.top * size.height),
+                    size = Size(
+                        (entry.rect.right - entry.rect.left) * size.width,
+                        (entry.rect.bottom - entry.rect.top) * size.height
+                    )
+                )
+            }
+            selection?.let { rect ->
+                drawRect(
+                    color = colors.selection,
+                    topLeft = Offset(rect.left * size.width, rect.top * size.height),
+                    size = Size(
+                        (rect.right - rect.left) * size.width,
+                        (rect.bottom - rect.top) * size.height
+                    )
+                )
+            }
+        }
     }
 }
 

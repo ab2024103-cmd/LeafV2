@@ -390,14 +390,20 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
     }
 
     /** Adds a highlight from a rectangle drawn on a PDF page. */
-    fun addPdfHighlight(rect: NormRect, quote: String, start: Int, end: Int) {
+    fun addPdfHighlight(
+        rect: NormRect,
+        quote: String,
+        start: Int,
+        end: Int,
+        page: Int = _state.value.page
+    ) {
         val state = _state.value
         val document = state.document ?: return
         val highlight = LeafHighlight(
             id = UUID.randomUUID().toString(),
             documentId = document.id,
             color = state.lastColor,
-            page = state.page,
+            page = page,
             rects = listOf(rect),
             textStart = start,
             textEnd = end,
@@ -590,6 +596,27 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
     fun sessionText(): String = textSession?.plainText ?: ""
 
     fun textLayout(): android.text.StaticLayout? = textSession?.layout()
+
+    /** Turns a dragged rectangle on a PDF page into a highlight. */
+    fun highlightPdfRect(page: Int, rect: com.leaf.reader.model.NormRect) {
+        viewModelScope.launch {
+            val session = pdfSession
+            val index = session?.textIndex()?.pageOf(page)
+            if (index != null) {
+                val quote = session.textIndex().textInRect(index, rect).orEmpty()
+                val range = session.textIndex().offsetOfRect(index, rect)
+                addPdfHighlight(
+                    rect = rect,
+                    quote = quote,
+                    start = range?.first ?: 0,
+                    end = (range?.last ?: 0) + 1,
+                    page = page
+                )
+            } else {
+                addPdfHighlight(rect, "", 0, 0, page = page)
+            }
+        }
+    }
 
     fun pageSlice(page: Int): com.leaf.reader.engine.PageSlice? = textSession?.slice(page)
 

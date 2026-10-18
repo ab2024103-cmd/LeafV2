@@ -266,7 +266,9 @@ class PdfSession(private val context: Context, private val uri: Uri) {
                     stripper.setSortByPosition(true)
                     stripper.setStartPage(i + 1)
                     stripper.setEndPage(i + 1)
-                    runCatching { stripper.getText(document) }
+                    runCatching { stripper.getText(document) }.onFailure { error ->
+                        android.util.Log.e("LeafPdf", "pdf text extraction failed on page $i", error)
+                    }
                     val builder = stripper.builder
                     val pdPage = document.getPage(i)
                     val crop = runCatching { pdPage.cropBox }.getOrNull()
@@ -295,7 +297,10 @@ class PdfSession(private val context: Context, private val uri: Uri) {
                 runCatching { document.close() }
                 runCatching { stream.close() }
             }
-        }.getOrElse { PdfTextIndex(emptyList()) }
+        }.getOrElse { error ->
+            android.util.Log.e("LeafPdf", "pdf text index failed", error)
+            PdfTextIndex(emptyList())
+        }
     }
 
     fun close() {
