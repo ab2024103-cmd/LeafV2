@@ -59,7 +59,9 @@ data class ReaderUiState(
     val lastColor: HighlightColor = HighlightColor.YELLOW,
     val canUndo: Boolean = false,
     val canRedo: Boolean = false,
-    val activeHighlightId: String? = null
+    val activeHighlightId: String? = null,
+    /** Bumped whenever the text layout is rebuilt so the reader repaints. */
+    val layoutVersion: Int = 0
 )
 
 private sealed interface HighlightOp {
@@ -179,7 +181,10 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
             )
             if (viewportWidth > 0 && viewportHeight > 0) {
                 session.configure(viewportWidth, viewportHeight, textSizeFor(zoom))
-                _state.value = _state.value.copy(pageCount = session.pageCount)
+                _state.value = _state.value.copy(
+                    pageCount = session.pageCount,
+                    layoutVersion = _state.value.layoutVersion + 1
+                )
             }
         }
 
@@ -215,7 +220,10 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
         val session = textSession ?: return
         val zoom = _state.value.zoom
         session.configure(width, height, textSizeFor(zoom))
-        _state.value = _state.value.copy(pageCount = session.pageCount)
+        _state.value = _state.value.copy(
+            pageCount = session.pageCount,
+            layoutVersion = _state.value.layoutVersion + 1
+        )
         if (_state.value.page >= session.pageCount) {
             setPage((session.pageCount - 1).coerceAtLeast(0))
         }
@@ -243,6 +251,7 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
         textSession?.let { session ->
             if (viewportWidth > 0 && viewportHeight > 0) {
                 session.configure(viewportWidth, viewportHeight, textSizeFor(clamped))
+                _state.value = _state.value.copy(layoutVersion = _state.value.layoutVersion + 1)
                 _state.value = _state.value.copy(pageCount = session.pageCount)
             }
         }

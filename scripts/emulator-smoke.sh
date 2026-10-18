@@ -122,9 +122,9 @@ capture 10-settings
 tap "Search" || true
 sleep 3
 capture 11-search
-tap "the" 0 || true
+tap "Search names, tags, folders and file contents" 0 || true
 sleep 1
-adb shell input text "the" || true
+adb shell input text "leaf" || true
 sleep 6
 capture 12-search-results
 echo "   visible: $(texts "${OUT}/12-search-results.xml")"

@@ -119,8 +119,11 @@ class LeafPdfView(context: Context) : View(context) {
     )
 
     override fun onDraw(canvas: Canvas) {
-        canvas.drawColor(colors.background.toArgbCompat())
-        android.util.Log.i("LeafPdf", "onDraw size=${width}x$height hasBitmap=${bitmap != null}")
+        canvas.drawColor(android.graphics.Color.MAGENTA)
+        android.util.Log.i(
+            "LeafPdf",
+            "onDraw size=${width}x$height pos=${left},${top} hasBitmap=${bitmap != null}"
+        )
         val image = bitmap ?: return
         baseX = (width - image.width) / 2f
         baseY = (height - image.height) / 2f
