@@ -115,3 +115,55 @@ jobs:
           gh release create "${GITHUB_REF_NAME}" dist/leaf.apk dist/leaf-debug.apk \
             --title "Leaf ${GITHUB_REF_NAME}" \
             --notes "Offline Leaf reader for Android 6.0+ (API 23) - build ${GITHUB_SHA::8}" || true
+
+  emulator:
+    name: Emulator smoke test (Android 6 / API 23)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Download APKs
+        uses: actions/download-artifact@v4
+        with:
+          name: leaf-apk
+          path: apks
+
+      - name: Run emulator smoke test
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 23
+          arch: x86
+          target: default
+          profile: Nexus 6
+          disable-animations: true
+          emulator-options: -no-window -no-snapshot -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: bash scripts/emulator-smoke.sh
+
+      - name: Publish smoke results
+        if: always()
+        run: |
+          set +e
+          mkdir -p .ci/smoke
+          cp -r smoke/* .ci/smoke/ 2>/dev/null
+          git config user.name "Leaf CI"
+          git config user.email "ci@leaf.local"
+          git add -f .ci/smoke
+          git commit -m "ci: emulator smoke results for ${GITHUB_SHA::8}" || true
+          git push origin HEAD:refs/heads/arena/a9b40a6d-leafv2 || true
+          {
+            echo "### Emulator smoke test"
+            echo '```'
+            cat .ci/smoke/report.txt 2>/dev/null || echo "(no report)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
