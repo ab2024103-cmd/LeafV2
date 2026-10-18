@@ -95,13 +95,13 @@ object TextExtractor {
         uri: Uri,
         block: (InputStream) -> T
     ): T = withContext(Dispatchers.IO) {
-        val stream = context.contentResolver.openInputStream(uri)
+        val stream = com.leaf.reader.core.FileUtils.openInputStream(context, uri)
             ?: throw IllegalStateException("Cannot open $uri")
         stream.use { block(it) }
     }
 
     fun readText(context: Context, uri: Uri): String {
-        val stream = context.contentResolver.openInputStream(uri) ?: return ""
+        val stream = com.leaf.reader.core.FileUtils.openInputStream(context, uri) ?: return ""
         return stream.use { readAll(it) }
     }
 

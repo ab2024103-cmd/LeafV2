@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
 import com.leaf.reader.AppContainer
+import com.leaf.reader.core.DeviceFile
 import com.leaf.reader.data.DocumentRepository
 import com.leaf.reader.data.prefs.SettingsStore
 import com.leaf.reader.model.LeafBookmark
@@ -130,6 +131,30 @@ class LibraryViewModel(private val container: AppContainer) : ViewModel() {
                 events.send(
                     LibraryEvent.Message("Added ${imported.size} document${if (imported.size == 1) "" else "s"}")
                 )
+            }
+        }
+    }
+
+    /** Adds a document that already lives on the device to the library (no copy is made). */
+    fun addDeviceFile(file: DeviceFile) {
+        viewModelScope.launch {
+            val imported = repository.importDocuments(listOf(Uri.parse(file.uri))).firstOrNull()
+            events.send(
+                LibraryEvent.Message(
+                    if (imported != null) "Added ${file.name}" else "Could not add ${file.name}"
+                )
+            )
+        }
+    }
+
+    /** Adds a device document and opens it straight away. */
+    fun addAndOpenDeviceFile(file: DeviceFile) {
+        viewModelScope.launch {
+            val imported = repository.importDocuments(listOf(Uri.parse(file.uri))).firstOrNull()
+            if (imported == null) {
+                events.send(LibraryEvent.Message("Could not open ${file.name}"))
+            } else {
+                openDocument(imported)
             }
         }
     }

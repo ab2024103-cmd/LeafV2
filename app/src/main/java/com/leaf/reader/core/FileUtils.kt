@@ -3,9 +3,12 @@ package com.leaf.reader.core
 import android.content.ContentResolver
 import android.content.Context
 import android.net.Uri
+import android.os.ParcelFileDescriptor
 import android.provider.DocumentsContract
 import android.provider.OpenableColumns
 import java.io.File
+import java.io.FileInputStream
+import java.io.InputStream
 import java.util.Locale
 
 /** Metadata resolved from a content uri. */
@@ -17,6 +20,35 @@ data class FileMeta(
 )
 
 object FileUtils {
+
+    /**
+     * Opens a document for reading. `file://` uris are opened directly, every other uri goes
+     * through the content resolver — this keeps the demo library and the device browser working
+     * on every Android release.
+     */
+    fun openInputStream(context: Context, uri: Uri): InputStream? {
+        if (uri.scheme == "file") {
+            val path = uri.path ?: return null
+            return runCatching { FileInputStream(File(path)) }.getOrNull()
+        }
+        return runCatching { context.contentResolver.openInputStream(uri) }.getOrNull()
+    }
+
+    /** Opens a seekable descriptor (needed by the platform PDF renderer). */
+    fun openFileDescriptor(context: Context, uri: Uri, mode: String = "r"): ParcelFileDescriptor? {
+        if (uri.scheme == "file") {
+            val path = uri.path ?: return null
+            val flags = if (mode.contains('w')) {
+                ParcelFileDescriptor.MODE_READ_WRITE or
+                    ParcelFileDescriptor.MODE_CREATE or
+                    ParcelFileDescriptor.MODE_TRUNCATE
+            } else {
+                ParcelFileDescriptor.MODE_READ_ONLY
+            }
+            return runCatching { ParcelFileDescriptor.open(File(path), flags) }.getOrNull()
+        }
+        return runCatching { context.contentResolver.openFileDescriptor(uri, mode) }.getOrNull()
+    }
 
     fun queryMeta(context: Context, uri: Uri): FileMeta {
         val resolver = context.contentResolver

@@ -1,5 +1,7 @@
 package com.leaf.reader.ui
 
+import android.Manifest
+import android.content.Intent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -42,10 +44,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.leaf.reader.AppContainer
+import com.leaf.reader.core.DeviceFile
+import com.leaf.reader.core.DeviceScanner
 import com.leaf.reader.model.LeafDocument
-import com.leaf.reader.model.LeafDestination
 import com.leaf.reader.reader.ReaderScreen
 import com.leaf.reader.ui.components.ConfirmDialog
+import com.leaf.reader.ui.device.DeviceScreen
 import com.leaf.reader.ui.components.DocumentActionsSheet
 import com.leaf.reader.ui.components.FolderManagerSheet
 import com.leaf.reader.ui.components.MoveToFolderSheet
@@ -68,6 +72,7 @@ object Routes {
     const val SETTINGS = "settings"
     const val ABOUT = "about"
     const val GROUP = "group"
+    const val DEVICE = "device"
     const val READER = "reader"
 }
 
@@ -101,10 +106,54 @@ fun LeafApp(container: AppContainer) {
     var tagManagerOpen by remember { mutableStateOf(false) }
     var tabsSheetOpen by remember { mutableStateOf(false) }
     var tabsHintShown by rememberSaveable { mutableStateOf(false) }
+    var deviceFiles by remember { mutableStateOf<List<DeviceFile>>(emptyList()) }
+    var deviceScanning by remember { mutableStateOf(false) }
+    var deviceMessage by remember { mutableStateOf<String?>(null) }
 
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = backStackEntry?.destination?.route
     val inReader = currentRoute == Routes.READER
+
+    fun runDeviceScan(job: suspend () -> List<DeviceFile>) {
+        scope.launch {
+            deviceScanning = true
+            deviceMessage = null
+            val found = runCatching { job() }.getOrElse { emptyList() }
+            deviceFiles = found
+            deviceScanning = false
+            deviceMessage = if (found.isEmpty()) {
+                "No supported documents found yet"
+            } else {
+                "${found.size} document${if (found.size == 1) "" else "s"} found on this device"
+            }
+        }
+    }
+
+    /** Folder browsing through the system picker — no runtime permission is ever requested. */
+    val treePicker = rememberLauncherForActivityResult(
+        ActivityResultContracts.OpenDocumentTree()
+    ) { uri ->
+        if (uri == null) return@rememberLauncherForActivityResult
+        runCatching {
+            context.contentResolver.takePersistableUriPermission(
+                uri,
+                Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+            )
+        }
+        deviceMessage = "Reading the folder…"
+        runDeviceScan { DeviceScanner.scanTree(context, uri) }
+    }
+
+    /** Full device scan — on Android 6-9 this asks for storage access once, on purpose. */
+    val storagePermission = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) {
+            runDeviceScan { DeviceScanner.scanStorage(context) }
+        } else {
+            deviceMessage = "Storage access declined — use \"Choose folder\" instead, it never asks."
+        }
+    }
 
     val picker = rememberLauncherForActivityResult(
         ActivityResultContracts.OpenMultipleDocuments()
@@ -133,22 +182,23 @@ fun LeafApp(container: AppContainer) {
     }
 
     val destinations = listOf(
-        Triple(LeafDestination.LIBRARY, Icons.Outlined.LibraryBooks, "Library"),
-        Triple(LeafDestination.RECENTS, Icons.Outlined.History, "Recents"),
-        Triple(LeafDestination.FAVORITES, Icons.Outlined.Favorite, "Favorites"),
-        Triple(LeafDestination.SEARCH, Icons.Outlined.Search, "Search"),
-        Triple(LeafDestination.SETTINGS, Icons.Outlined.Settings, "Settings")
+        Triple(Routes.LIBRARY, Icons.Outlined.LibraryBooks, "Library"),
+        Triple(Routes.RECENTS, Icons.Outlined.History, "Recents"),
+        Triple(Routes.FAVORITES, Icons.Outlined.Favorite, "Favorites"),
+        Triple(Routes.SEARCH, Icons.Outlined.Search, "Search"),
+        Triple(Routes.DEVICE, Icons.Outlined.Folder, "Device"),
+        Triple(Routes.SETTINGS, Icons.Outlined.Settings, "Settings")
     )
 
     val recentBadge = state.recents.count {
         System.currentTimeMillis() - it.openedAt < 24 * 60 * 60 * 1000L
     }
 
-    fun navigateTo(destination: LeafDestination) {
-        if (destination == LeafDestination.LIBRARY && currentRoute?.startsWith(Routes.GROUP) == true) {
+    fun navigateTo(route: String) {
+        if (route == Routes.LIBRARY && currentRoute?.startsWith(Routes.GROUP) == true) {
             navController.popBackStack(Routes.LIBRARY, inclusive = false)
         } else {
-            navController.navigate(destination.key) {
+            navController.navigate(route) {
                 popUpTo(Routes.LIBRARY) { inclusive = false; saveState = true }
                 launchSingleTop = true
                 restoreState = true
@@ -164,13 +214,13 @@ fun LeafApp(container: AppContainer) {
             bottomBar = {
                 if (!inReader && !wide) {
                     NavigationBar {
-                        destinations.forEach { (destination, icon, label) ->
+                        destinations.forEach { (route, icon, label) ->
                             NavigationBarItem(
-                                selected = currentRoute == destination.key ||
-                                    (destination == LeafDestination.LIBRARY && currentRoute?.startsWith(Routes.GROUP) == true),
-                                onClick = { navigateTo(destination) },
+                                selected = currentRoute == route ||
+                                    (route == Routes.LIBRARY && currentRoute?.startsWith(Routes.GROUP) == true),
+                                onClick = { navigateTo(route) },
                                 icon = {
-                                    if (destination == LeafDestination.RECENTS && recentBadge > 0) {
+                                    if (route == Routes.RECENTS && recentBadge > 0) {
                                         BadgedBox(badge = { Badge { Text("$recentBadge") } }) {
                                             Icon(icon, contentDescription = label)
                                         }
@@ -188,13 +238,13 @@ fun LeafApp(container: AppContainer) {
             Row(modifier = Modifier.fillMaxSize()) {
                 if (!inReader && wide) {
                     NavigationRail {
-                        destinations.forEach { (destination, icon, label) ->
+                        destinations.forEach { (route, icon, label) ->
                             NavigationRailItem(
-                                selected = currentRoute == destination.key ||
-                                    (destination == LeafDestination.LIBRARY && currentRoute?.startsWith(Routes.GROUP) == true),
-                                onClick = { navigateTo(destination) },
+                                selected = currentRoute == route ||
+                                    (route == Routes.LIBRARY && currentRoute?.startsWith(Routes.GROUP) == true),
+                                onClick = { navigateTo(route) },
                                 icon = {
-                                    if (destination == LeafDestination.RECENTS && recentBadge > 0) {
+                                    if (route == Routes.RECENTS && recentBadge > 0) {
                                         BadgedBox(badge = { Badge { Text("$recentBadge") } }) {
                                             Icon(icon, contentDescription = label)
                                         }
@@ -230,6 +280,7 @@ fun LeafApp(container: AppContainer) {
                             onToggleGroupMode = { viewModel.setGroupByType(it) },
                             onSort = { field, direction -> viewModel.setLibrarySort(field, direction) },
                             onManageFolders = { folderManagerOpen = true },
+                            onOpenDevice = { navController.navigate(Routes.DEVICE) },
                             onManageTags = { tagManagerOpen = true },
                             onOpenSettings = { navController.navigate(Routes.SETTINGS) },
                             pickMode = pickMode,
@@ -279,6 +330,24 @@ fun LeafApp(container: AppContainer) {
                             onRecordSearch = { viewModel.recordSearch(it) },
                             onRemoveHistory = { viewModel.removeSearchHistory(it) },
                             onClearHistory = { viewModel.clearSearchHistory() }
+                        )
+                    }
+                    composable(Routes.DEVICE) {
+                        DeviceScreen(
+                            files = deviceFiles,
+                            scanning = deviceScanning,
+                            message = deviceMessage,
+                            addedUris = state.documents.map { it.uri }.toSet(),
+                            onBrowseFolder = { treePicker.launch(null) },
+                            onScanStorage = {
+                                if (DeviceScanner.canScanWithoutPermission()) {
+                                    runDeviceScan { DeviceScanner.scanMediaStore(context) }
+                                } else {
+                                    storagePermission.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
+                                }
+                            },
+                            onAdd = { file -> viewModel.addDeviceFile(file) },
+                            onOpen = { file -> viewModel.addAndOpenDeviceFile(file) }
                         )
                     }
                     composable(Routes.SETTINGS) {

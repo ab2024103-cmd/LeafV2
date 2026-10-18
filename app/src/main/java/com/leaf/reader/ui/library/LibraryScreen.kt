@@ -86,6 +86,7 @@ fun LibraryScreen(
     onSort: (SortField, SortDirection) -> Unit,
     onManageFolders: () -> Unit,
     onManageTags: () -> Unit,
+    onOpenDevice: () -> Unit = {},
     onOpenSettings: () -> Unit,
     pickMode: Boolean = false,
     onPickDocument: ((LeafDocument) -> Unit)? = null,
@@ -175,6 +176,10 @@ fun LibraryScreen(
                                 menuOpen = false
                                 sortOpen = true
                             }
+                        )
+                        DropdownMenuItem(
+                            text = { Text("Device files") },
+                            onClick = { menuOpen = false; onOpenDevice() }
                         )
                         DropdownMenuItem(
                             text = { Text("Manage folders") },

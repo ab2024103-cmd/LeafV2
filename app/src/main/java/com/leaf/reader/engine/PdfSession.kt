@@ -151,12 +151,12 @@ class PdfTextIndex(val pages: List<PdfPageText>) {
 }
 
 /** Reads and renders a PDF document. */
-class PdfSession(context: Context, private val uri: Uri) {
+class PdfSession(private val context: Context, private val uri: Uri) {
 
     private val resolver: ContentResolver = context.contentResolver
 
     private val descriptor: ParcelFileDescriptor? =
-        runCatching { resolver.openFileDescriptor(uri, "r") }.getOrNull()
+        com.leaf.reader.core.FileUtils.openFileDescriptor(context, uri, "r")
 
     private val renderer: PdfRenderer? = descriptor?.let {
         runCatching { PdfRenderer(it) }.getOrNull()
@@ -209,7 +209,7 @@ class PdfSession(context: Context, private val uri: Uri) {
     fun cachedTextIndex(): PdfTextIndex? = index
 
     private fun buildIndex(): PdfTextIndex {
-        val stream: InputStream = runCatching { resolver.openInputStream(uri) }.getOrNull()
+        val stream: InputStream = com.leaf.reader.core.FileUtils.openInputStream(context, uri)
             ?: return PdfTextIndex(emptyList())
         return runCatching {
             val document = PDDocument.load(stream)

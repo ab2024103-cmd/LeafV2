@@ -3,6 +3,15 @@
 
     <!-- Leaf is fully offline: no INTERNET permission, no analytics, no tracking. -->
 
+    <!--
+      Only used by the optional "Scan storage" action on Android 6-9 so the device can be
+      searched directly. It is never requested on Android 10+ (maxSdkVersion) and Leaf works
+      without it: the folder browser uses the system picker and asks for no permission at all.
+    -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
     <application
         android:name=".LeafApp"
         android:allowBackup="true"
