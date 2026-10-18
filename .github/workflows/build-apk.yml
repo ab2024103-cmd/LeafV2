@@ -104,14 +104,18 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           set -e
+          git config user.name "Leaf CI"
+          git config user.email "ci@leaf.local"
+          # The apk is committed on top of the current branch head, so the commit never
+          # clashes with work that was pushed while this build was running.
+          git fetch origin arena/a9b40a6d-leafv2
+          git checkout -B arena/a9b40a6d-leafv2 origin/arena/a9b40a6d-leafv2
           mkdir -p dist
           cp app/build/outputs/apk/release/*.apk dist/leaf.apk
           cp app/build/outputs/apk/debug/*.apk dist/leaf-debug.apk
-          git config user.name "Leaf CI"
-          git config user.email "ci@leaf.local"
           git add -f dist
           git commit -m "dist: Leaf APK from ${GITHUB_SHA::8}" || true
-          git push origin HEAD:refs/heads/arena/a9b40a6d-leafv2 || true
+          git push origin arena/a9b40a6d-leafv2
           gh release create "${GITHUB_REF_NAME}" dist/leaf.apk dist/leaf-debug.apk \
             --title "Leaf ${GITHUB_REF_NAME}" \
             --notes "Offline Leaf reader for Android 6.0+ (API 23) - build ${GITHUB_SHA::8}" || true
