@@ -1,7 +1,9 @@
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:30:43 Unresolved reference 'ContentScale'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:502:32 Unresolved reference 'ContentScale'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:30:43 Unresolved reference 'ContentScale'.
-e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/reader/ReaderScreen.kt:502:32 Unresolved reference 'ContentScale'.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/engine/PdfSession.kt:171:24 Argument type mismatch: actual type is 'java.lang.Runnable!', but 'java.lang.ThreadGroup!' was expected.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/engine/PdfSession.kt:171:34 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.Runnable!' was expected.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/engine/PdfSession.kt:171:49 Argument type mismatch: actual type is 'kotlin.Int', but 'kotlin.String!' was expected.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/engine/PdfSession.kt:171:24 Argument type mismatch: actual type is 'java.lang.Runnable!', but 'java.lang.ThreadGroup!' was expected.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/engine/PdfSession.kt:171:34 Argument type mismatch: actual type is 'kotlin.String', but 'java.lang.Runnable!' was expected.
+e: file:///home/runner/work/LeafV2/LeafV2/app/src/main/java/com/leaf/reader/engine/PdfSession.kt:171:49 Argument type mismatch: actual type is 'kotlin.Int', but 'kotlin.String!' was expected.
 FAILURE: Build completed with 2 failures.
 Execution failed for task ':app:compileDebugKotlin'.
 org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:compileDebugKotlin'.
