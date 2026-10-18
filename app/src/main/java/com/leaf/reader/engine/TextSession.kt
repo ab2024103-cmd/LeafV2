@@ -67,8 +67,15 @@ class TextSession(
 
     val pageCount: Int get() = slices.size.coerceAtLeast(1)
 
-    fun slice(page: Int): PageSlice = slices.getOrNull(page.coerceIn(0, slices.lastIndex))
-        ?: PageSlice(0, parsed.plainText.length, 0, viewportHeight)
+    fun slice(page: Int): PageSlice {
+        // The layout is built as soon as the viewport is measured. Before that (or for a
+        // document without a single line) the session still has to answer with a valid slice.
+        if (slices.isEmpty()) {
+            return PageSlice(0, parsed.plainText.length, 0, viewportHeight.coerceAtLeast(1))
+        }
+        val index = page.coerceIn(0, slices.lastIndex)
+        return slices.getOrNull(index) ?: slices.first()
+    }
 
     fun layout(): StaticLayout? = layout
 

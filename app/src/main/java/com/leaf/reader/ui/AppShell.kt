@@ -334,6 +334,15 @@ fun LeafApp(container: AppContainer) {
                         )
                     }
                     composable(Routes.DEVICE) {
+                        LaunchedEffect(Unit) {
+                            // Android 10+ can list documents without any permission, so the
+                            // device screen is populated straight away.
+                            if (deviceFiles.isEmpty() && !deviceScanning &&
+                                DeviceScanner.canScanWithoutPermission()
+                            ) {
+                                runDeviceScan { DeviceScanner.scanMediaStore(context) }
+                            }
+                        }
                         DeviceScreen(
                             files = deviceFiles,
                             scanning = deviceScanning,
