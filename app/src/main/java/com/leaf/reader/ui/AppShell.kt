@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Favorite
+import androidx.compose.material.icons.outlined.Folder
 import androidx.compose.material.icons.outlined.History
 import androidx.compose.material.icons.outlined.LibraryBooks
 import androidx.compose.material.icons.outlined.Search
