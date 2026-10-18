@@ -1,326 +1,491 @@
---------- beginning of system
-10-18 18:36:49.390  1584  1599 W VoiceInteractionManagerService: no available voice recognition services found for user 0
-10-18 18:36:49.618  1584  2295 I ActivityManager: Killing 2096:com.android.settings:CryptKeeper/1000 (adj 15): empty #17
 --------- beginning of main
-10-18 18:36:50.754  2697  2697 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:36:50.767  2697  2697 D AndroidRuntime: CheckJNI is OFF
-10-18 18:36:50.882  2697  2697 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:36:50.972  2697  2697 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:36:50.972  2697  2697 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:36:50.980  2697  2697 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:36:51.061  2697  2697 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 18:36:51.081  1584  2255 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2697
-10-18 18:36:51.091  2697  2697 D AndroidRuntime: Shutting down VM
-10-18 18:36:52.420  2706  2706 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:36:52.432  2706  2706 D AndroidRuntime: CheckJNI is OFF
-10-18 18:36:52.497  2706  2706 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:36:52.581  2706  2706 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:36:52.583  2706  2706 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:36:52.590  2706  2706 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:36:52.661  2706  2706 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 18:36:52.682  1584  1798 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
-10-18 18:36:52.883  2715  2715 I art     : Late-enabling -Xcheck:jni
-10-18 18:36:52.900  1584  2295 I ActivityManager: Start proc 2715:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
-10-18 18:36:53.009  1256  2108 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:36:53.340  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 4649(235KB) AllocSpace objects, 0(0B) LOS objects, 28% free, 2MB/3MB, paused 27.141ms total 65.539ms
-10-18 18:36:53.352  2296  2351 D EGL_emulation: eglMakeCurrent: 0xaa46b3e0: ver 3 0 (tinfo 0xaa02a3a0)
-10-18 18:36:53.360  2296  2351 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bdde0
-10-18 18:36:54.368  1256  2108 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:36:54.374  2715  2733 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
-10-18 18:36:54.390  2715  2715 D         : HostConnection::get() New Host Connection established 0xad1bfbc0, tid 2715
-10-18 18:36:56.136  2715  2725 I art     : Background partial concurrent mark sweep GC freed 1757(130KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 5MB/8MB, paused 3.419ms total 118.518ms
-10-18 18:36:56.355  2715  2733 D         : HostConnection::get() New Host Connection established 0xaa2ba500, tid 2733
-10-18 18:36:56.364  2715  2733 I OpenGLRenderer: Initialized EGL, version 1.4
-10-18 18:36:56.372  2715  2733 D EGL_emulation: eglCreateContext: 0xae464ae0: maj 3 min 0 rcv 3
-10-18 18:36:56.384  2715  2733 D EGL_emulation: eglMakeCurrent: 0xae464ae0: ver 3 0 (tinfo 0xae57e600)
-10-18 18:36:56.396  2715  2733 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
-10-18 18:36:56.396  2715  2733 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
-10-18 18:36:56.418  2715  2733 D EGL_emulation: eglMakeCurrent: 0xae464ae0: ver 3 0 (tinfo 0xae57e600)
-10-18 18:36:56.920  2715  2715 I Choreographer: Skipped 141 frames!  The application may be doing too much work on its main thread.
-10-18 18:36:57.907  1584  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s95ms
-10-18 18:36:58.000  2706  2706 D AndroidRuntime: Shutting down VM
-10-18 18:36:58.260  2715  2715 I Choreographer: Skipped 77 frames!  The application may be doing too much work on its main thread.
-10-18 18:36:58.299  1808  1808 W PathParser: Points are too far apart 4.030360828967057
-10-18 18:36:58.373  1808  1808 W PathParser: Points are too far apart 4.030360538880159
-10-18 18:36:58.409  1808  1808 W PathParser: Points are too far apart 4.030360828967057
-10-18 18:36:58.410  1808  1808 W PathParser: Points are too far apart 4.030360538880159
-10-18 18:37:00.137  1256  1300 D hwcomposer: hw_composer sent 81 syncs in 60s
-10-18 18:37:10.852  1256  1290 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:37:10.874  1256  2046 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:37:10.911  2743  2743 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2743
-10-18 18:37:13.826  2746  2746 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:13.839  2746  2746 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:13.954  2746  2746 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:37:14.055  2746  2746 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:37:14.056  2746  2746 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:37:14.062  2746  2746 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:37:14.149  2746  2746 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 18:37:15.758  2746  2746 W AccessibilityNodeInfoDumper: Fetch time: 183ms
-10-18 18:37:15.763  1584  1799 W WindowManager: Attempted to remove non-existing token: android.os.Binder@9d7bddc
-10-18 18:37:15.907  2746  2746 D AndroidRuntime: Shutting down VM
-10-18 18:37:17.303  2758  2758 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:17.315  2758  2758 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:17.448  2758  2758 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:37:17.557  2758  2758 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:37:17.557  2758  2758 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:37:17.567  2758  2758 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:37:17.652  2758  2758 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:37:17.669  2758  2758 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1690.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=390036, downTime=390036, deviceId=0, source=0x1002 }
-10-18 18:37:17.768  2758  2758 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1690.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=390036, downTime=390036, deviceId=0, source=0x1002 }
-10-18 18:37:17.804  2758  2758 D AndroidRuntime: Shutting down VM
-10-18 18:37:19.312  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 32975(1806KB) AllocSpace objects, 0(0B) LOS objects, 23% free, 6MB/8MB, paused 2.148ms total 103.570ms
-10-18 18:37:24.306  1256  2108 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:37:24.320  1256  2046 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:37:24.333  2771  2771 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 2771
-10-18 18:37:27.313  2774  2774 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:27.323  2774  2774 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:27.389  2774  2774 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:37:27.471  2774  2774 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:37:27.471  2774  2774 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:37:27.478  2774  2774 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:37:27.548  2774  2774 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 18:37:28.708  2774  2774 W AccessibilityNodeInfoDumper: Fetch time: 30ms
-10-18 18:37:28.711  1584  2255 W WindowManager: Attempted to remove non-existing token: android.os.Binder@dd0ee5
-10-18 18:37:28.849  2774  2774 D AndroidRuntime: Shutting down VM
-10-18 18:37:30.216  2785  2785 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:30.229  2785  2785 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:30.357  2785  2785 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:37:30.457  2785  2785 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:37:30.457  2785  2785 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:37:30.466  2785  2785 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:37:30.545  2785  2785 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:37:30.562  2785  2785 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=402929, downTime=402929, deviceId=-1, source=0x101 }
-10-18 18:37:30.589  2785  2785 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=402929, downTime=402929, deviceId=-1, source=0x101 }
-10-18 18:37:30.604  2785  2785 D AndroidRuntime: Shutting down VM
-10-18 18:37:31.009  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 17101(931KB) AllocSpace objects, 1(20KB) LOS objects, 11% free, 7MB/8MB, paused 1.397ms total 116.670ms
-10-18 18:37:31.927  2715  2715 I Choreographer: Skipped 58 frames!  The application may be doing too much work on its main thread.
-10-18 18:37:35.042  2795  2795 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:35.056  2795  2795 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:35.189  2795  2795 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:37:35.314  2795  2795 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:37:35.314  2795  2795 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:37:35.324  2795  2795 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:37:35.421  2795  2795 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:37:35.448  2795  2795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=407807, downTime=407807, deviceId=0, source=0x1002 }
-10-18 18:37:35.517  2795  2795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=407807, downTime=407807, deviceId=0, source=0x1002 }
-10-18 18:37:35.533  2795  2795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1366.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=407907, downTime=407907, deviceId=0, source=0x1002 }
-10-18 18:37:35.576  2795  2795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1223.3334, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=407950, downTime=407950, deviceId=0, source=0x1002 }
-10-18 18:37:35.685  2795  2795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=860.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=408059, downTime=408059, deviceId=0, source=0x1002 }
-10-18 18:37:35.743  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 3238(169KB) AllocSpace objects, 0(0B) LOS objects, 3% free, 8MB/8MB, paused 6.452ms total 49.063ms
-10-18 18:37:35.811  2795  2795 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=408185, downTime=408185, deviceId=0, source=0x1002 }
-10-18 18:37:35.981  2795  2795 D AndroidRuntime: Shutting down VM
-10-18 18:37:36.106  2715  2725 I art     : Background partial concurrent mark sweep GC freed 31762(1429KB) AllocSpace objects, 0(0B) LOS objects, 35% free, 7MB/11MB, paused 1.621ms total 170.431ms
-10-18 18:37:39.361  2805  2805 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:39.373  2805  2805 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:39.503  2805  2805 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:37:39.609  2805  2805 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:37:39.610  2805  2805 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:37:39.619  2805  2805 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:37:39.698  2805  2805 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:37:39.718  2805  2805 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412085, downTime=412085, deviceId=0, source=0x1002 }
-10-18 18:37:39.744  2805  2805 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412085, downTime=412085, deviceId=0, source=0x1002 }
-10-18 18:37:39.756  2805  2805 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1550.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412130, downTime=412130, deviceId=0, source=0x1002 }
-10-18 18:37:39.786  2805  2805 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1446.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412161, downTime=412161, deviceId=0, source=0x1002 }
-10-18 18:37:39.820  2805  2805 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1336.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412194, downTime=412194, deviceId=0, source=0x1002 }
-10-18 18:37:39.894  2805  2805 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1090.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412268, downTime=412268, deviceId=0, source=0x1002 }
-10-18 18:37:39.981  2805  2805 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=800.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412355, downTime=412355, deviceId=0, source=0x1002 }
-10-18 18:37:40.075  2805  2805 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412449, downTime=412449, deviceId=0, source=0x1002 }
-10-18 18:37:40.101  2805  2805 D AndroidRuntime: Shutting down VM
-10-18 18:37:43.637  1256  1634 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:37:43.656  1256  2046 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:37:43.687  2817  2817 D         : HostConnection::get() New Host Connection established 0xb654d2c0, tid 2817
-10-18 18:37:46.587  2820  2820 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:46.600  2820  2820 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:46.717  2820  2820 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:37:46.815  2820  2820 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:37:46.815  2820  2820 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:37:46.822  2820  2820 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:37:46.898  2820  2820 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 18:37:48.315  2820  2820 W AccessibilityNodeInfoDumper: Fetch time: 166ms
-10-18 18:37:48.319  1584  2094 W WindowManager: Attempted to remove non-existing token: android.os.Binder@2c74dba
-10-18 18:37:48.482  2820  2820 D AndroidRuntime: Shutting down VM
-10-18 18:37:49.908  2831  2831 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:49.919  2831  2831 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:49.987  2831  2831 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:37:50.069  2831  2831 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:37:50.069  2831  2831 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:37:50.076  2831  2831 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:37:50.148  2831  2831 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:37:50.152  2831  2831 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1461.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=422524, downTime=422524, deviceId=0, source=0x1002 }
-10-18 18:37:50.189  2831  2831 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1461.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=422524, downTime=422524, deviceId=0, source=0x1002 }
-10-18 18:37:50.226  2831  2831 D AndroidRuntime: Shutting down VM
-10-18 18:37:52.465  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 32752(1579KB) AllocSpace objects, 0(0B) LOS objects, 0% free, 28MB/28MB, paused 769us total 135.966ms
-10-18 18:37:59.840  1256  1290 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:37:59.852  1256  2046 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:37:59.866  2843  2843 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2843
-10-18 18:38:00.283  1256  1300 D hwcomposer: hw_composer sent 149 syncs in 60s
-10-18 18:38:02.920  2846  2846 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:02.933  2846  2846 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:03.060  2846  2846 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:03.186  2846  2846 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:03.186  2846  2846 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:03.196  2846  2846 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:03.282  2846  2846 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 18:38:04.853  2846  2846 W AccessibilityNodeInfoDumper: Fetch time: 59ms
-10-18 18:38:04.866  1584  2116 W WindowManager: Attempted to remove non-existing token: android.os.Binder@66f46b
-10-18 18:38:05.091  2846  2846 D AndroidRuntime: Shutting down VM
-10-18 18:38:06.588  2857  2857 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:06.603  2857  2857 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:06.724  2857  2857 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:06.832  2857  2857 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:06.832  2857  2857 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:06.839  2857  2857 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:06.930  2857  2857 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:38:06.941  2857  2857 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=670.0, y[0]=105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=439307, downTime=439307, deviceId=0, source=0x1002 }
-10-18 18:38:07.027  2857  2857 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=670.0, y[0]=105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=439307, downTime=439307, deviceId=0, source=0x1002 }
-10-18 18:38:07.086  2857  2857 D AndroidRuntime: Shutting down VM
-10-18 18:38:07.795  2715  2715 I Choreographer: Skipped 38 frames!  The application may be doing too much work on its main thread.
-10-18 18:38:09.568  1256  1288 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:38:09.585  1256  1290 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:38:09.603  2868  2868 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 2868
-10-18 18:38:12.491  2871  2871 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:12.503  2871  2871 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:12.635  2871  2871 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:12.745  2871  2871 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:12.745  2871  2871 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:12.754  2871  2871 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:12.833  2871  2871 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 18:38:14.098  2871  2871 W AccessibilityNodeInfoDumper: Fetch time: 70ms
-10-18 18:38:14.100  1584  2255 W WindowManager: Attempted to remove non-existing token: android.os.Binder@10dbc8
-10-18 18:38:14.238  2871  2871 D AndroidRuntime: Shutting down VM
-10-18 18:38:15.611  2882  2882 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:15.624  2882  2882 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:15.753  2882  2882 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:15.859  2882  2882 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:15.859  2882  2882 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:15.868  2882  2882 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:15.949  2882  2882 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:38:15.961  2882  2882 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=331.0, y[0]=322.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=448328, downTime=448328, deviceId=0, source=0x1002 }
-10-18 18:38:16.011  2882  2882 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=331.0, y[0]=322.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=448328, downTime=448328, deviceId=0, source=0x1002 }
-10-18 18:38:16.086  2882  2882 D AndroidRuntime: Shutting down VM
-10-18 18:38:16.694  2048  2048 W RichInputMethodSubtype: Can't find emoji subtype
-10-18 18:38:16.695  2048  2048 W RichInputMethodSubtype: No input method subtype found; returning dummy subtype: Multi-lingual subtype: android.view.inputmethod.InputMethodSubtype@d78b2ed0, zz
-10-18 18:38:16.904  2048  2058 I art     : Background partial concurrent mark sweep GC freed 3428(442KB) AllocSpace objects, 2(72KB) LOS objects, 39% free, 2MB/4MB, paused 1.362ms total 117.115ms
-10-18 18:38:17.070  2048  2048 W ViewPager: Requested offscreen page limit 0 too small; defaulting to 1
-10-18 18:38:17.130  2048  2048 I LatinIME: Starting input. Cursor position = 0,0
-10-18 18:38:17.292  1808  2045 D EGL_emulation: eglMakeCurrent: 0xae464d20: ver 3 0 (tinfo 0xae452630)
-10-18 18:38:17.309  1256  1634 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:38:17.324  2048  2897 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
-10-18 18:38:17.367  2048  2048 D         : HostConnection::get() New Host Connection established 0xaaaaf180, tid 2048
-10-18 18:38:17.542  2048  2897 D         : HostConnection::get() New Host Connection established 0xaaaaf480, tid 2897
-10-18 18:38:17.567  2048  2897 I OpenGLRenderer: Initialized EGL, version 1.4
-10-18 18:38:17.592  2048  2897 D EGL_emulation: eglCreateContext: 0xae4646c0: maj 3 min 0 rcv 3
-10-18 18:38:17.605  2048  2897 D EGL_emulation: eglMakeCurrent: 0xae4646c0: ver 3 0 (tinfo 0xae452880)
-10-18 18:38:17.626  2048  2897 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
-10-18 18:38:17.627  2048  2897 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
-10-18 18:38:17.756  2048  2897 D EGL_emulation: eglMakeCurrent: 0xae4646c0: ver 3 0 (tinfo 0xae452880)
-10-18 18:38:18.994  2899  2899 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:19.014  2899  2899 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:19.089  2899  2899 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:19.347  2899  2899 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:19.348  2899  2899 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:19.361  2899  2899 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:19.527  2899  2899 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:38:19.562  2899  2899 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_P, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451934, downTime=451934, deviceId=-1, source=0x101 }
-10-18 18:38:19.625  2899  2899 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_P, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451934, downTime=451934, deviceId=-1, source=0x101 }
-10-18 18:38:19.819  2899  2899 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451934, downTime=451934, deviceId=-1, source=0x101 }
-10-18 18:38:19.837  2899  2899 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451934, downTime=451934, deviceId=-1, source=0x101 }
-10-18 18:38:19.984  2899  2899 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_G, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451934, downTime=451934, deviceId=-1, source=0x101 }
-10-18 18:38:20.077  2899  2899 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_G, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451934, downTime=451934, deviceId=-1, source=0x101 }
-10-18 18:38:20.345  2899  2899 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451934, downTime=451934, deviceId=-1, source=0x101 }
-10-18 18:38:20.470  2899  2899 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451934, downTime=451934, deviceId=-1, source=0x101 }
-10-18 18:38:20.556  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 40719(1729KB) AllocSpace objects, 1(16KB) LOS objects, 1% free, 31MB/31MB, paused 4.542ms total 194.018ms
-10-18 18:38:20.674  2899  2899 D AndroidRuntime: Shutting down VM
-10-18 18:38:20.786  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 14048(447KB) AllocSpace objects, 0(0B) LOS objects, 1% free, 31MB/31MB, paused 4.385ms total 154.540ms
-10-18 18:38:21.076  2715  2725 W art     : Suspending all threads took: 8.837ms
-10-18 18:38:21.186  2715  2725 I art     : Background partial concurrent mark sweep GC freed 26582(1282KB) AllocSpace objects, 8(200KB) LOS objects, 11% free, 30MB/34MB, paused 12.205ms total 327.418ms
-10-18 18:38:21.492  2715  2736 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
-10-18 18:38:21.492  2715  2736 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
-10-18 18:38:21.492  2715  2736 D PdfBox-Android: Type 6 GSUB lookup table is not supported and will be ignored
-10-18 18:38:21.492  2715  2736 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
-10-18 18:38:21.492  2715  2736 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
-10-18 18:38:21.650  2715  2910 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 18:38:21.653  2715  2910 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 18:38:21.658  2715  2736 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 18:38:21.664  2715  2737 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 18:38:21.667  2715  2738 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 18:38:21.671  2715  2738 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 18:38:21.679  2715  2736 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 18:38:21.686  2715  2737 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 18:38:28.207  1256  1290 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:38:28.222  1256  2046 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:38:28.236  2913  2913 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2913
-10-18 18:38:31.731  2916  2916 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:31.772  2916  2916 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:32.075  2916  2916 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:32.247  2916  2916 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:32.247  2916  2916 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:32.256  2916  2916 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:32.373  2916  2916 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 18:38:33.857  2916  2916 W AccessibilityNodeInfoDumper: Fetch time: 91ms
-10-18 18:38:33.860  1584  1799 W WindowManager: Attempted to remove non-existing token: android.os.Binder@4869d3f
-10-18 18:38:34.074  2916  2916 D AndroidRuntime: Shutting down VM
-10-18 18:38:35.664  2927  2927 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:35.677  2927  2927 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:35.803  2927  2927 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:35.946  2927  2927 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:35.946  2927  2927 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:35.956  2927  2927 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:36.061  2927  2927 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:38:36.074  2927  2927 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=468446, downTime=468446, deviceId=-1, source=0x101 }
-10-18 18:38:36.101  2927  2927 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=468446, downTime=468446, deviceId=-1, source=0x101 }
-10-18 18:38:36.128  2927  2927 D AndroidRuntime: Shutting down VM
-10-18 18:38:36.266  2048  2897 D EGL_emulation: eglMakeCurrent: 0xae4646c0: ver 3 0 (tinfo 0xae452880)
-10-18 18:38:36.274  2048  2897 E Surface : getSlotFromBufferLocked: unknown buffer: 0xaaac9460
-10-18 18:38:39.654  2937  2937 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:39.665  2937  2937 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:39.731  2937  2937 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:39.808  2937  2937 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:39.808  2937  2937 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:39.814  2937  2937 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:39.884  2937  2937 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:38:39.893  2937  2937 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=472266, downTime=472266, deviceId=-1, source=0x101 }
-10-18 18:38:39.927  2937  2937 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=472266, downTime=472266, deviceId=-1, source=0x101 }
-10-18 18:38:39.961  2937  2937 D AndroidRuntime: Shutting down VM
-10-18 18:38:40.867  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 29507(1294KB) AllocSpace objects, 10(848KB) LOS objects, 6% free, 32MB/34MB, paused 3.565ms total 163.210ms
-10-18 18:38:41.168  2715  2715 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
-10-18 18:38:43.464  1256  1288 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:38:43.479  1256  1290 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:38:43.496  2948  2948 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2948
-10-18 18:38:46.426  2951  2951 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:46.439  2951  2951 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:46.566  2951  2951 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:46.677  2951  2951 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:46.677  2951  2951 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:46.687  2951  2951 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:46.772  2951  2951 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 18:38:48.156  2951  2951 W AccessibilityNodeInfoDumper: Fetch time: 125ms
-10-18 18:38:48.159  1584  1726 W WindowManager: Attempted to remove non-existing token: android.os.Binder@cd1ce5b
-10-18 18:38:48.306  2951  2951 D AndroidRuntime: Shutting down VM
-10-18 18:38:49.708  2962  2962 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:49.720  2962  2962 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:49.850  2962  2962 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:49.956  2962  2962 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:49.956  2962  2962 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:49.964  2962  2962 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:50.045  2962  2962 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:38:50.065  2962  2962 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=1086.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=482433, downTime=482433, deviceId=0, source=0x1002 }
-10-18 18:38:50.125  2962  2962 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1086.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=482433, downTime=482433, deviceId=0, source=0x1002 }
-10-18 18:38:50.196  2962  2962 D AndroidRuntime: Shutting down VM
-10-18 18:38:50.839  2715  2725 I art     : Background sticky concurrent mark sweep GC freed 29068(1342KB) AllocSpace objects, 0(0B) LOS objects, 4% free, 33MB/34MB, paused 821us total 139.077ms
-10-18 18:38:54.707  1256  1634 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 18:38:54.721  1256  2108 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 18:38:54.733  2973  2973 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 2973
-10-18 18:38:57.800  2976  2976 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:38:57.833  2976  2976 D AndroidRuntime: CheckJNI is OFF
-10-18 18:38:57.974  2976  2976 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 18:38:58.121  2976  2976 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 18:38:58.121  2976  2976 E android.os.Debug: failed to load memtrack module: -2
-10-18 18:38:58.131  2976  2976 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 18:38:58.230  2976  2976 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 18:38:58.568  1584  1594 I art     : Background partial concurrent mark sweep GC freed 13462(1098KB) AllocSpace objects, 4(76KB) LOS objects, 33% free, 5MB/8MB, paused 11.034ms total 176.093ms
-10-18 18:38:59.704  2976  2976 W AccessibilityNodeInfoDumper: Fetch time: 37ms
-10-18 18:38:59.709  1584  2094 W WindowManager: Attempted to remove non-existing token: android.os.Binder@796c6f8
-10-18 18:38:59.806  1256  1300 D hwcomposer: hw_composer sent 200 syncs in 60s
-10-18 18:38:59.919  2976  2976 D AndroidRuntime: Shutting down VM
-10-18 18:39:00.097  1808  2045 D EGL_emulation: eglMakeCurrent: 0xae464d20: ver 3 0 (tinfo 0xae452630)
+10-18 18:50:40.512  2066  2066 D CarrierServiceBindHelper: Receive action: android.intent.action.PACKAGE_ADDED
+10-18 18:50:40.524  2066  2066 D CarrierServiceBindHelper: mHandler: 3
+10-18 18:50:40.524  2066  2066 D CarrierConfigLoader: mHandler: 9 phoneId: 0
+--------- beginning of system
+10-18 18:50:40.662  1584  2373 I ActivityManager: Start proc 2690:com.svox.pico/u0a40 for broadcast com.svox.pico/.VoiceDataInstallerReceiver
+10-18 18:50:40.857  2360  2370 I art     : Background partial concurrent mark sweep GC freed 11369(760KB) AllocSpace objects, 19(2MB) LOS objects, 17% free, 19MB/23MB, paused 678us total 127.156ms
+10-18 18:50:41.183  1584  2215 W BackupManagerService: dataChanged but no participant pkg='com.android.launcher3' uid=10008
+10-18 18:50:41.447  1584  1725 I ActivityManager: Killing 2081:com.android.settings:CryptKeeper/1000 (adj 15): empty #17
+10-18 18:50:41.879  1584  1597 W art     : Long monitor contention event with owner method=void com.android.server.appwidget.AppWidgetServiceImpl$SaveStateRunnable.run() from AppWidgetServiceImpl.java:3574 waiters=0 for 218ms
+10-18 18:50:42.499  1584  1599 W VoiceInteractionManagerService: no available voice recognition services found for user 0
+10-18 18:50:42.867  2688  2688 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:50:42.882  2688  2688 D AndroidRuntime: CheckJNI is OFF
+10-18 18:50:43.036  2688  2688 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:50:43.131  2688  2688 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:50:43.131  2688  2688 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:50:43.138  2688  2688 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:50:43.217  2688  2688 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 18:50:43.237  1584  2218 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2688
+10-18 18:50:43.246  2688  2688 D AndroidRuntime: Shutting down VM
+10-18 18:50:44.583  2712  2712 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:50:44.595  2712  2712 D AndroidRuntime: CheckJNI is OFF
+10-18 18:50:44.751  2712  2712 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:50:44.857  2712  2712 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:50:44.857  2712  2712 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:50:44.866  2712  2712 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:50:44.943  2712  2712 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 18:50:44.971  1584  1597 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 18:50:45.167  1584  2374 I ActivityManager: Start proc 2721:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 18:50:45.177  2721  2721 I art     : Late-enabling -Xcheck:jni
+10-18 18:50:45.276  1248  1747 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:50:45.496  2360  2405 D EGL_emulation: eglMakeCurrent: 0xaaa0f200: ver 3 0 (tinfo 0xaaa168e0)
+10-18 18:50:45.514  2360  2405 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40fdb60
+10-18 18:50:46.541  1248  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:50:46.546  2721  2738 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+10-18 18:50:46.611  2721  2731 I art     : Background partial concurrent mark sweep GC freed 4235(353KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 3MB/5MB, paused 2.463ms total 136.897ms
+10-18 18:50:46.644  2721  2721 D         : HostConnection::get() New Host Connection established 0xaab68a00, tid 2721
+10-18 18:50:48.752  2721  2731 I art     : Background partial concurrent mark sweep GC freed 1490(97KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 5MB/8MB, paused 5.213ms total 158.616ms
+10-18 18:50:49.098  2721  2738 D         : HostConnection::get() New Host Connection established 0xaa2d04c0, tid 2738
+10-18 18:50:49.108  2721  2738 I OpenGLRenderer: Initialized EGL, version 1.4
+10-18 18:50:49.115  2721  2738 D EGL_emulation: eglCreateContext: 0xae494c60: maj 3 min 0 rcv 3
+10-18 18:50:49.118  2721  2738 D EGL_emulation: eglMakeCurrent: 0xae494c60: ver 3 0 (tinfo 0xaa26b360)
+10-18 18:50:49.124  2721  2738 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
+10-18 18:50:49.124  2721  2738 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
+10-18 18:50:49.182  2721  2738 D EGL_emulation: eglMakeCurrent: 0xae494c60: ver 3 0 (tinfo 0xaa26b360)
+10-18 18:50:49.583  2721  2721 I Choreographer: Skipped 164 frames!  The application may be doing too much work on its main thread.
+10-18 18:50:50.436  1584  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s307ms
+10-18 18:50:50.526  2712  2712 D AndroidRuntime: Shutting down VM
+10-18 18:50:50.698  2721  2721 I Choreographer: Skipped 65 frames!  The application may be doing too much work on its main thread.
+10-18 18:50:50.824  1810  1810 W PathParser: Points are too far apart 4.030360828967057
+10-18 18:50:50.834  1810  1810 W PathParser: Points are too far apart 4.030360538880159
+10-18 18:50:50.913  1810  1810 W PathParser: Points are too far apart 4.030360828967057
+10-18 18:50:50.913  1810  1810 W PathParser: Points are too far apart 4.030360538880159
+10-18 18:51:03.129  1248  2058 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:51:03.145  1248  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:51:03.180  2747  2747 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2747
+10-18 18:51:06.209  2750  2750 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:06.228  2750  2750 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:06.359  2750  2750 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:06.472  2750  2750 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:06.472  2750  2750 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:06.481  2750  2750 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:06.573  2750  2750 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:51:06.705  1248  1299 D hwcomposer: hw_composer sent 89 syncs in 66s
+10-18 18:51:08.156  2750  2750 W AccessibilityNodeInfoDumper: Fetch time: 179ms
+10-18 18:51:08.161  1584  2218 W WindowManager: Attempted to remove non-existing token: android.os.Binder@a36b5b1
+10-18 18:51:08.314  2750  2750 D AndroidRuntime: Shutting down VM
+10-18 18:51:09.693  2761  2761 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:09.705  2761  2761 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:09.821  2761  2761 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:09.910  2761  2761 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:09.911  2761  2761 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:09.916  2761  2761 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:09.989  2761  2761 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:51:10.010  2761  2761 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1690.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=392799, downTime=392799, deviceId=0, source=0x1002 }
+10-18 18:51:10.116  2761  2761 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1690.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=392799, downTime=392799, deviceId=0, source=0x1002 }
+10-18 18:51:10.173  2761  2761 D AndroidRuntime: Shutting down VM
+10-18 18:51:16.745  1248  1738 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:51:16.756  1248  2058 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:51:16.769  2773  2773 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2773
+10-18 18:51:19.937  2776  2776 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:19.948  2776  2776 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:20.013  2776  2776 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:20.101  2776  2776 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:20.101  2776  2776 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:20.108  2776  2776 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:20.213  2776  2776 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:51:21.390  2776  2776 W AccessibilityNodeInfoDumper: Fetch time: 26ms
+10-18 18:51:21.392  1584  1748 W WindowManager: Attempted to remove non-existing token: android.os.Binder@c8d7a96
+10-18 18:51:21.525  2776  2776 D AndroidRuntime: Shutting down VM
+10-18 18:51:22.953  2788  2788 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:22.965  2788  2788 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:23.085  2788  2788 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:23.185  2788  2788 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:23.185  2788  2788 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:23.193  2788  2788 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:23.431  2788  2788 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:51:23.448  2788  2788 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=406247, downTime=406247, deviceId=-1, source=0x101 }
+10-18 18:51:23.560  2788  2788 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=406247, downTime=406247, deviceId=-1, source=0x101 }
+10-18 18:51:23.582  2788  2788 D AndroidRuntime: Shutting down VM
+10-18 18:51:24.105  2721  2731 I art     : Background sticky concurrent mark sweep GC freed 16955(917KB) AllocSpace objects, 1(20KB) LOS objects, 11% free, 7MB/8MB, paused 4.276ms total 190.439ms
+10-18 18:51:25.054  2721  2721 I Choreographer: Skipped 39 frames!  The application may be doing too much work on its main thread.
+10-18 18:51:28.068  2797  2797 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:28.082  2797  2797 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:28.218  2797  2797 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:28.333  2797  2797 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:28.333  2797  2797 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:28.342  2797  2797 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:28.424  2797  2797 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:51:28.440  2797  2797 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=411229, downTime=411229, deviceId=0, source=0x1002 }
+10-18 18:51:28.513  2797  2797 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=411229, downTime=411229, deviceId=0, source=0x1002 }
+10-18 18:51:28.531  2797  2797 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1356.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=411332, downTime=411332, deviceId=0, source=0x1002 }
+10-18 18:51:28.574  2797  2797 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1216.6667, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=411374, downTime=411374, deviceId=0, source=0x1002 }
+10-18 18:51:28.693  2797  2797 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=820.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=411493, downTime=411493, deviceId=0, source=0x1002 }
+10-18 18:51:28.884  2797  2797 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=411685, downTime=411685, deviceId=0, source=0x1002 }
+10-18 18:51:28.924  2721  2731 I art     : Background partial concurrent mark sweep GC freed 32930(1480KB) AllocSpace objects, 0(0B) LOS objects, 35% free, 7MB/11MB, paused 1.071ms total 147.927ms
+10-18 18:51:29.032  2797  2797 D AndroidRuntime: Shutting down VM
+10-18 18:51:32.427  2808  2808 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:32.439  2808  2808 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:32.566  2808  2808 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:32.659  2808  2808 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:32.659  2808  2808 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:32.665  2808  2808 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:32.740  2808  2808 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:51:32.744  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=415543, downTime=415543, deviceId=0, source=0x1002 }
+10-18 18:51:32.776  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=415543, downTime=415543, deviceId=0, source=0x1002 }
+10-18 18:51:32.783  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1566.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=415583, downTime=415583, deviceId=0, source=0x1002 }
+10-18 18:51:32.830  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1406.6667, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=415631, downTime=415631, deviceId=0, source=0x1002 }
+10-18 18:51:32.882  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1233.3334, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=415683, downTime=415683, deviceId=0, source=0x1002 }
+10-18 18:51:32.921  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1103.3333, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=415722, downTime=415722, deviceId=0, source=0x1002 }
+10-18 18:51:33.045  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=415845, downTime=415845, deviceId=0, source=0x1002 }
+10-18 18:51:33.106  2808  2808 D AndroidRuntime: Shutting down VM
+10-18 18:51:36.608  1248  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:51:36.625  1248  1747 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:51:36.653  2820  2820 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 2820
+10-18 18:51:39.687  2823  2823 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:39.700  2823  2823 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:39.829  2823  2823 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:39.937  2823  2823 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:39.937  2823  2823 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:39.947  2823  2823 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:40.026  2823  2823 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:51:41.466  2823  2823 W AccessibilityNodeInfoDumper: Fetch time: 170ms
+10-18 18:51:41.473  1584  2122 W WindowManager: Attempted to remove non-existing token: android.os.Binder@99b1617
+10-18 18:51:41.652  2823  2823 D AndroidRuntime: Shutting down VM
+10-18 18:51:43.055  2834  2834 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:43.066  2834  2834 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:43.132  2834  2834 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:43.214  2834  2834 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:43.215  2834  2834 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:43.222  2834  2834 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:43.295  2834  2834 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:51:43.307  2834  2834 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1461.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=426098, downTime=426098, deviceId=0, source=0x1002 }
+10-18 18:51:43.335  2834  2834 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1461.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=426098, downTime=426098, deviceId=0, source=0x1002 }
+10-18 18:51:43.356  2834  2834 D AndroidRuntime: Shutting down VM
+10-18 18:51:45.604  2721  2731 I art     : Background sticky concurrent mark sweep GC freed 35078(1684KB) AllocSpace objects, 0(0B) LOS objects, 0% free, 28MB/28MB, paused 793us total 112.480ms
+10-18 18:51:45.635  2721  2734 I LeafPdf : rendered page 1 as 1440x1863
+10-18 18:51:45.664  2721  2742 I LeafPdf : rendered page 0 as 1440x1863
+10-18 18:51:45.736  2721  2731 I art     : Background partial concurrent mark sweep GC freed 13459(783KB) AllocSpace objects, 0(0B) LOS objects, 12% free, 27MB/31MB, paused 4.398ms total 128.422ms
+10-18 18:51:52.880  1248  2058 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:51:52.893  1248  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:51:52.906  2846  2846 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2846
+10-18 18:51:55.910  2849  2849 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:55.922  2849  2849 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:55.988  2849  2849 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:56.090  2849  2849 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:56.090  2849  2849 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:56.096  2849  2849 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:56.173  2849  2849 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:51:57.678  2849  2849 W AccessibilityNodeInfoDumper: Fetch time: 59ms
+10-18 18:51:57.690  1584  1598 W WindowManager: Attempted to remove non-existing token: android.os.Binder@48d9a04
+10-18 18:51:57.897  2849  2849 D AndroidRuntime: Shutting down VM
+10-18 18:51:59.383  2860  2860 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:59.398  2860  2860 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:59.532  2860  2860 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:51:59.651  2860  2860 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:51:59.652  2860  2860 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:51:59.661  2860  2860 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:51:59.759  2860  2860 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:51:59.781  2860  2860 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=670.0, y[0]=105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=442568, downTime=442568, deviceId=0, source=0x1002 }
+10-18 18:51:59.860  2860  2860 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=670.0, y[0]=105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=442568, downTime=442568, deviceId=0, source=0x1002 }
+10-18 18:51:59.906  2860  2860 D AndroidRuntime: Shutting down VM
+10-18 18:52:00.855  2721  2721 I Choreographer: Skipped 55 frames!  The application may be doing too much work on its main thread.
+10-18 18:52:02.489  1248  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:52:02.506  1248  1747 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:52:02.525  2871  2871 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2871
+10-18 18:52:05.522  2874  2874 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:05.535  2874  2874 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:05.663  2874  2874 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:05.775  2874  2874 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:05.776  2874  2874 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:05.787  2874  2874 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:05.866  2874  2874 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:52:07.112  2874  2874 W AccessibilityNodeInfoDumper: Fetch time: 70ms
+10-18 18:52:07.113  1584  2216 W WindowManager: Attempted to remove non-existing token: android.os.Binder@84ffbed
+10-18 18:52:07.218  1248  1299 D hwcomposer: hw_composer sent 199 syncs in 61s
+10-18 18:52:07.257  2874  2874 D AndroidRuntime: Shutting down VM
+10-18 18:52:08.676  2885  2885 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:08.687  2885  2885 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:08.751  2885  2885 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:08.828  2885  2885 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:08.828  2885  2885 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:08.835  2885  2885 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:08.904  2885  2885 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:52:08.908  2885  2885 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=331.0, y[0]=322.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=451707, downTime=451707, deviceId=0, source=0x1002 }
+10-18 18:52:08.951  2885  2885 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=331.0, y[0]=322.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=451707, downTime=451707, deviceId=0, source=0x1002 }
+10-18 18:52:09.010  2885  2885 D AndroidRuntime: Shutting down VM
+10-18 18:52:09.626  2044  2044 W RichInputMethodSubtype: Can't find emoji subtype
+10-18 18:52:09.626  2044  2044 W RichInputMethodSubtype: No input method subtype found; returning dummy subtype: Multi-lingual subtype: android.view.inputmethod.InputMethodSubtype@d78b2ed0, zz
+10-18 18:52:10.053  2044  2044 W ViewPager: Requested offscreen page limit 0 too small; defaulting to 1
+10-18 18:52:10.115  2044  2044 I LatinIME: Starting input. Cursor position = 0,0
+10-18 18:52:10.287  1810  2064 D EGL_emulation: eglMakeCurrent: 0xaaa182c0: ver 3 0 (tinfo 0xaa1fef20)
+10-18 18:52:10.308  1248  1747 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:52:10.313  2044  2901 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+10-18 18:52:10.383  2044  2044 D         : HostConnection::get() New Host Connection established 0xaaa053c0, tid 2044
+10-18 18:52:10.554  2044  2901 D         : HostConnection::get() New Host Connection established 0xaaa055c0, tid 2901
+10-18 18:52:10.577  2044  2901 I OpenGLRenderer: Initialized EGL, version 1.4
+10-18 18:52:10.583  2044  2901 D EGL_emulation: eglCreateContext: 0xaaa17ba0: maj 3 min 0 rcv 3
+10-18 18:52:10.603  2044  2901 D EGL_emulation: eglMakeCurrent: 0xaaa17ba0: ver 3 0 (tinfo 0xa9dff9e0)
+10-18 18:52:10.606  2044  2901 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
+10-18 18:52:10.614  2044  2901 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
+10-18 18:52:10.719  2044  2901 D EGL_emulation: eglMakeCurrent: 0xaaa17ba0: ver 3 0 (tinfo 0xa9dff9e0)
+10-18 18:52:12.040  2902  2902 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:12.056  2902  2902 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:12.179  2902  2902 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:12.397  2902  2902 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:12.397  2902  2902 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:12.405  2902  2902 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:12.524  2902  2902 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:52:12.558  2902  2902 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_P, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=455351, downTime=455351, deviceId=-1, source=0x101 }
+10-18 18:52:12.742  2902  2902 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_P, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=455351, downTime=455351, deviceId=-1, source=0x101 }
+10-18 18:52:12.950  2902  2902 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=455351, downTime=455351, deviceId=-1, source=0x101 }
+10-18 18:52:13.011  2902  2902 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=455351, downTime=455351, deviceId=-1, source=0x101 }
+10-18 18:52:13.161  2902  2902 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_G, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=455351, downTime=455351, deviceId=-1, source=0x101 }
+10-18 18:52:13.269  2902  2902 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_G, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=455351, downTime=455351, deviceId=-1, source=0x101 }
+10-18 18:52:13.305  2902  2902 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=455351, downTime=455351, deviceId=-1, source=0x101 }
+10-18 18:52:13.537  2902  2902 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=455351, downTime=455351, deviceId=-1, source=0x101 }
+10-18 18:52:13.841  2721  2731 I art     : Background sticky concurrent mark sweep GC freed 56042(2MB) AllocSpace objects, 3(56KB) LOS objects, 0% free, 31MB/31MB, paused 6.456ms total 497.580ms
+10-18 18:52:13.896  2902  2902 D AndroidRuntime: Shutting down VM
+10-18 18:52:14.302  2721  2731 I art     : Background partial concurrent mark sweep GC freed 33034(1563KB) AllocSpace objects, 6(160KB) LOS objects, 11% free, 31MB/35MB, paused 4.776ms total 444.242ms
+10-18 18:52:14.536  2721  2741 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-18 18:52:14.536  2721  2741 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-18 18:52:14.536  2721  2741 D PdfBox-Android: Type 6 GSUB lookup table is not supported and will be ignored
+10-18 18:52:14.536  2721  2741 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-18 18:52:14.536  2721  2741 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-18 18:52:14.723  2721  2735 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 18:52:14.726  2721  2735 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 18:52:14.728  2721  2741 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 18:52:14.732  2721  2734 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 18:52:14.735  2721  2734 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 18:52:14.739  2721  2742 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 18:52:14.742  2721  2742 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 18:52:14.752  2721  2741 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 18:52:21.507  1248  1287 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:52:21.533  1248  1738 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:52:21.546  2917  2917 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2917
+10-18 18:52:25.288  2920  2920 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:25.311  2920  2920 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:25.444  2920  2920 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:25.635  2920  2920 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:25.635  2920  2920 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:25.645  2920  2920 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:25.750  2920  2920 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:52:27.258  2920  2920 W AccessibilityNodeInfoDumper: Fetch time: 126ms
+10-18 18:52:27.262  1584  2261 W WindowManager: Attempted to remove non-existing token: android.os.Binder@473ff88
+10-18 18:52:27.455  2920  2920 D AndroidRuntime: Shutting down VM
+10-18 18:52:29.020  2931  2931 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:29.032  2931  2931 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:29.190  2931  2931 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:29.326  2931  2931 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:29.326  2931  2931 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:29.336  2931  2931 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:29.412  2931  2931 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:52:29.418  2931  2931 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=472217, downTime=472217, deviceId=-1, source=0x101 }
+10-18 18:52:29.454  2931  2931 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=472217, downTime=472217, deviceId=-1, source=0x101 }
+10-18 18:52:29.477  2931  2931 D AndroidRuntime: Shutting down VM
+10-18 18:52:29.596  2044  2901 D EGL_emulation: eglMakeCurrent: 0xaaa17ba0: ver 3 0 (tinfo 0xa9dff9e0)
+10-18 18:52:29.622  2044  2901 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40fcc60
+10-18 18:52:33.066  2940  2940 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:33.076  2940  2940 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:33.142  2940  2940 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:33.226  2940  2940 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:33.226  2940  2940 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:33.233  2940  2940 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:33.314  2940  2940 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:52:33.327  2940  2940 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=476117, downTime=476117, deviceId=-1, source=0x101 }
+10-18 18:52:33.372  2940  2940 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=476117, downTime=476117, deviceId=-1, source=0x101 }
+10-18 18:52:33.437  2940  2940 D AndroidRuntime: Shutting down VM
+10-18 18:52:34.615  2721  2721 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
+10-18 18:52:34.944  2721  2731 I art     : Background sticky concurrent mark sweep GC freed 30707(1402KB) AllocSpace objects, 9(444KB) LOS objects, 6% free, 33MB/35MB, paused 2.534ms total 220.011ms
+10-18 18:52:36.935  1248  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:52:36.953  1248  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:52:36.973  2951  2951 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2951
+10-18 18:52:40.007  2954  2954 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:40.018  2954  2954 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:40.084  2954  2954 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:40.168  2954  2954 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:40.169  2954  2954 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:40.176  2954  2954 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:40.246  2954  2954 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:52:41.625  2954  2954 W AccessibilityNodeInfoDumper: Fetch time: 130ms
+10-18 18:52:41.628  1584  2045 W WindowManager: Attempted to remove non-existing token: android.os.Binder@b0d8c34
+10-18 18:52:41.775  2954  2954 D AndroidRuntime: Shutting down VM
+10-18 18:52:43.245  2965  2965 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:43.257  2965  2965 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:43.328  2965  2965 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:43.417  2965  2965 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:43.417  2965  2965 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:43.424  2965  2965 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:43.497  2965  2965 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:52:43.505  2965  2965 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=1086.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=486302, downTime=486302, deviceId=0, source=0x1002 }
+10-18 18:52:43.564  2965  2965 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1086.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=486302, downTime=486302, deviceId=0, source=0x1002 }
+10-18 18:52:43.620  2965  2965 D AndroidRuntime: Shutting down VM
+10-18 18:52:48.120  1248  1287 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:52:48.131  1248  1289 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:52:48.148  2976  2976 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2976
+10-18 18:52:51.212  2979  2979 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:51.224  2979  2979 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:51.290  2979  2979 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:51.373  2979  2979 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:51.373  2979  2979 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:51.380  2979  2979 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:51.449  2979  2979 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:52:51.650  1584  1596 I art     : Background partial concurrent mark sweep GC freed 18399(1440KB) AllocSpace objects, 8(156KB) LOS objects, 33% free, 5MB/8MB, paused 3.777ms total 129.793ms
+10-18 18:52:52.672  2979  2979 W AccessibilityNodeInfoDumper: Fetch time: 16ms
+10-18 18:52:52.675  1584  1598 W WindowManager: Attempted to remove non-existing token: android.os.Binder@9b4ba5d
+10-18 18:52:53.003  2979  2979 D AndroidRuntime: Shutting down VM
+10-18 18:52:53.613  1248  1747 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:52:53.635  1248  2058 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:52:53.668  2992  2992 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2992
+10-18 18:52:56.720  2995  2995 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:52:56.734  2995  2995 D AndroidRuntime: CheckJNI is OFF
+10-18 18:52:56.869  2995  2995 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:52:57.000  2995  2995 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:52:57.000  2995  2995 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:52:57.010  2995  2995 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:52:57.112  2995  2995 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:52:58.432  2995  2995 W AccessibilityNodeInfoDumper: Fetch time: 34ms
+10-18 18:52:58.435  1584  1597 W WindowManager: Attempted to remove non-existing token: android.os.Binder@ff278a3
+10-18 18:52:58.617  2995  2995 D AndroidRuntime: Shutting down VM
+10-18 18:53:00.070  3006  3006 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:00.088  3006  3006 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:00.265  1810  2064 D EGL_emulation: eglMakeCurrent: 0xaaa182c0: ver 3 0 (tinfo 0xaa1fef20)
+10-18 18:53:00.405  3006  3006 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:00.561  3006  3006 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:00.561  3006  3006 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:00.571  3006  3006 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:00.647  3006  3006 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:53:00.670  3006  3006 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=503457, downTime=503457, deviceId=0, source=0x1002 }
+10-18 18:53:00.733  3006  3006 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=503457, downTime=503457, deviceId=0, source=0x1002 }
+10-18 18:53:00.817  3006  3006 D AndroidRuntime: Shutting down VM
+10-18 18:53:01.631  2721  2731 I art     : Background sticky concurrent mark sweep GC freed 30312(1463KB) AllocSpace objects, 1(16KB) LOS objects, 3% free, 34MB/35MB, paused 2.595ms total 105.735ms
+10-18 18:53:01.821  2721  2721 I Choreographer: Skipped 45 frames!  The application may be doing too much work on its main thread.
+10-18 18:53:04.346  1248  1287 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:53:04.357  1248  1738 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:53:04.371  3017  3017 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 3017
+10-18 18:53:07.393  3020  3020 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:07.406  3020  3020 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:07.472  3020  3020 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:07.558  3020  3020 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:07.558  3020  3020 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:07.566  3020  3020 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:07.636  3020  3020 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:53:07.741  1248  1299 D hwcomposer: hw_composer sent 215 syncs in 60s
+10-18 18:53:08.880  3020  3020 W AccessibilityNodeInfoDumper: Fetch time: 46ms
+10-18 18:53:08.881  1584  2373 W WindowManager: Attempted to remove non-existing token: android.os.Binder@c1137a0
+10-18 18:53:09.018  3020  3020 D AndroidRuntime: Shutting down VM
+10-18 18:53:10.451  3031  3031 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:10.464  3031  3031 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:10.593  3031  3031 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:10.698  3031  3031 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:10.698  3031  3031 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:10.708  3031  3031 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:10.788  3031  3031 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:53:10.805  3031  3031 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=352.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=513599, downTime=513599, deviceId=0, source=0x1002 }
+10-18 18:53:10.828  3031  3031 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=352.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=513599, downTime=513599, deviceId=0, source=0x1002 }
+10-18 18:53:10.849  3031  3031 D AndroidRuntime: Shutting down VM
+10-18 18:53:14.362  1248  1738 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:53:14.374  1248  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:53:14.387  3042  3042 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 3042
+10-18 18:53:17.395  3045  3045 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:17.406  3045  3045 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:17.471  3045  3045 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:17.553  3045  3045 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:17.553  3045  3045 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:17.560  3045  3045 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:17.630  3045  3045 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:53:18.923  3045  3045 W AccessibilityNodeInfoDumper: Fetch time: 70ms
+10-18 18:53:18.925  1584  2125 W WindowManager: Attempted to remove non-existing token: android.os.Binder@8079f59
+10-18 18:53:19.066  3045  3045 D AndroidRuntime: Shutting down VM
+10-18 18:53:20.629  3056  3056 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:20.667  3056  3056 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:20.806  3056  3056 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:20.954  3056  3056 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:20.954  3056  3056 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:20.964  3056  3056 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:21.064  3056  3056 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:53:21.088  3056  3056 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=596.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=523875, downTime=523875, deviceId=0, source=0x1002 }
+10-18 18:53:21.196  3056  3056 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=596.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=523875, downTime=523875, deviceId=0, source=0x1002 }
+10-18 18:53:21.301  3056  3056 D AndroidRuntime: Shutting down VM
+10-18 18:53:22.126  2721  2721 I Choreographer: Skipped 34 frames!  The application may be doing too much work on its main thread.
+10-18 18:53:22.146  2721  2731 I art     : Background sticky concurrent mark sweep GC freed 10083(490KB) AllocSpace objects, 0(0B) LOS objects, 1% free, 35MB/35MB, paused 2.578ms total 105.264ms
+10-18 18:53:24.876  1248  1747 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:53:24.894  1248  1289 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:53:24.912  3067  3067 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 3067
+10-18 18:53:27.927  3070  3070 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:27.941  3070  3070 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:28.060  3070  3070 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:28.166  3070  3070 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:28.166  3070  3070 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:28.174  3070  3070 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:28.257  3070  3070 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:53:29.520  3070  3070 W AccessibilityNodeInfoDumper: Fetch time: 42ms
+10-18 18:53:29.523  1584  2045 W WindowManager: Attempted to remove non-existing token: android.os.Binder@5a2271e
+10-18 18:53:29.704  3070  3070 D AndroidRuntime: Shutting down VM
+10-18 18:53:31.068  3081  3081 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:31.079  3081  3081 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:31.146  3081  3081 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:31.227  3081  3081 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:31.227  3081  3081 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:31.234  3081  3081 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:31.303  3081  3081 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:53:31.308  3081  3081 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=1331.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=534107, downTime=534107, deviceId=0, source=0x1002 }
+10-18 18:53:31.335  3081  3081 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1331.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=534107, downTime=534107, deviceId=0, source=0x1002 }
+10-18 18:53:31.350  3081  3081 D AndroidRuntime: Shutting down VM
+10-18 18:53:31.963  2721  2731 I art     : Background partial concurrent mark sweep GC freed 54148(2MB) AllocSpace objects, 10(688KB) LOS objects, 10% free, 32MB/36MB, paused 2.882ms total 220.368ms
+10-18 18:53:32.057  2721  2721 I Choreographer: Skipped 37 frames!  The application may be doing too much work on its main thread.
+10-18 18:53:34.873  1248  2058 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:53:34.889  1248  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:53:34.902  3092  3092 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 3092
+10-18 18:53:37.924  3095  3095 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:37.935  3095  3095 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:38.001  3095  3095 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:38.088  3095  3095 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:38.088  3095  3095 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:38.096  3095  3095 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:38.171  3095  3095 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:53:39.439  3095  3095 W AccessibilityNodeInfoDumper: Fetch time: 93ms
+10-18 18:53:39.442  1584  1598 W WindowManager: Attempted to remove non-existing token: android.os.Binder@d29fbff
+10-18 18:53:39.586  3095  3095 D AndroidRuntime: Shutting down VM
+10-18 18:53:40.943  3106  3106 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:40.954  3106  3106 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:41.017  3106  3106 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:41.094  3106  3106 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:41.094  3106  3106 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:41.101  3106  3106 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:41.170  3106  3106 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:53:41.181  3106  3106 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=543973, downTime=543973, deviceId=0, source=0x1002 }
+10-18 18:53:41.204  3106  3106 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=543973, downTime=543973, deviceId=0, source=0x1002 }
+10-18 18:53:41.218  3106  3106 D AndroidRuntime: Shutting down VM
+10-18 18:53:41.961  2721  2721 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
+10-18 18:53:44.708  1248  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:53:44.724  1248  1747 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:53:44.746  3117  3117 D         : HostConnection::get() New Host Connection established 0xb654d2c0, tid 3117
+10-18 18:53:47.787  3120  3120 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:47.800  3120  3120 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:47.932  3120  3120 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:48.041  3120  3120 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:48.041  3120  3120 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:48.051  3120  3120 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:48.132  3120  3120 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:53:49.403  3120  3120 W AccessibilityNodeInfoDumper: Fetch time: 44ms
+10-18 18:53:49.405  1584  2374 W WindowManager: Attempted to remove non-existing token: android.os.Binder@be22dcc
+10-18 18:53:49.567  3120  3120 D AndroidRuntime: Shutting down VM
+10-18 18:53:52.154  3131  3131 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:53:52.166  3131  3131 D AndroidRuntime: CheckJNI is OFF
+10-18 18:53:52.310  3131  3131 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:53:52.443  3131  3131 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:53:52.443  3131  3131 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:53:52.455  3131  3131 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:53:52.553  3131  3131 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:53:52.600  3131  3131 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_T, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=555398, downTime=555398, deviceId=-1, source=0x101 }
+10-18 18:53:52.713  3131  3131 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_T, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=555398, downTime=555398, deviceId=-1, source=0x101 }
+10-18 18:53:52.810  3131  3131 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_H, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=555398, downTime=555398, deviceId=-1, source=0x101 }
+10-18 18:53:52.815  3131  3131 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_H, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=555398, downTime=555398, deviceId=-1, source=0x101 }
+10-18 18:53:52.818  3131  3131 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=555398, downTime=555398, deviceId=-1, source=0x101 }
+10-18 18:53:52.833  3131  3131 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=555398, downTime=555398, deviceId=-1, source=0x101 }
+10-18 18:53:52.836  3131  3131 D AndroidRuntime: Shutting down VM
+10-18 18:53:59.365  1248  1287 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 18:53:59.382  1248  1747 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 18:53:59.402  3142  3142 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 3142
+10-18 18:54:02.624  3145  3145 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:54:02.641  3145  3145 D AndroidRuntime: CheckJNI is OFF
+10-18 18:54:02.766  3145  3145 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 18:54:02.871  3145  3145 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 18:54:02.871  3145  3145 E android.os.Debug: failed to load memtrack module: -2
+10-18 18:54:02.881  3145  3145 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 18:54:02.957  3145  3145 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 18:54:04.339  3145  3145 W AccessibilityNodeInfoDumper: Fetch time: 61ms
+10-18 18:54:04.342  1584  2126 W WindowManager: Attempted to remove non-existing token: android.os.Binder@109d815
+10-18 18:54:04.516  3145  3145 D AndroidRuntime: Shutting down VM

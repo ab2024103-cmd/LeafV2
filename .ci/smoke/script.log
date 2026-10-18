@@ -1,6 +1,6 @@
 == waiting for device ==
 == installing apks/app/build/outputs/apk/debug/app-debug.apk ==
-apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 18.7 MB/s (27449026 bytes in 1.400s)
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 16.0 MB/s (27449040 bytes in 1.633s)
 Performing Push Install
 	pkg: /data/local/tmp/app-debug.apk
 Success
@@ -8,9 +8,9 @@ Success
 Starting: Intent { cmp=com.leaf.reader/.MainActivity }
 Status: ok
 Activity: com.leaf.reader/.MainActivity
-ThisTime: 5095
-TotalTime: 5095
-WaitTime: 5232
+ThisTime: 5307
+TotalTime: 5307
+WaitTime: 5521
 Complete
 == 1. library ==
 captured 01-library
@@ -35,11 +35,26 @@ captured 05b-library
 tap 'device' at 1086,2308
 captured 06-device
    visible: Everything on this device | Leaf reads PDF, DOCX, XLSX, PPTX, TXT and EPUB. Choose a folder to browse it — Leaf asks for no permission at all, and your files are never copied. | Choose folder | Pick the storage root once and every supported file below it is listed. Leaf never asks for a storage permission. | No device documents yet | Choose a folder above to see the PDFs, documents, spreadsheets, presentations, text files and books stored on this device. | Device files | Library | Recents | Favorites | Search | Device | Settings
-== 6. logs ==
-== 7. native crash reports ==
+== 6. the other tabs ==
+captured 06b-library
+tap 'search' at 841,2308
+captured 07-search
+tap 'recents' at 352,2308
+captured 08-recents
+tap 'favorites' at 596,2308
+captured 09-favorites
+tap 'settings' at 1331,2308
+captured 10-settings
+tap 'search' at 841,2308
+captured 11-search
+no node matching 'the'
+captured 12-search-results
+   visible: Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
+== 7. logs ==
+== 8. native crash reports ==
 package: com.leaf.reader
 apk: apks/app/build/outputs/apk/debug/app-debug.apk
-screens: 01-library 02-reader-docx 03-scrolled 04-reader-pdf 05-find 06-device
+screens: 01-library 02-reader-docx 03-scrolled 04-reader-pdf 05-find 06-device 07-search 08-recents 09-favorites 10-settings 12-search-results
 --- 01-library ---
 All (6) | Documents | 6 shown · Date added · Z–A | little-book.epub | 1.8 KB | product-deck.pptx | 2.5 KB | budget.xlsx | 2.1 KB | quarterly-report.docx | 1.2 KB | field-guide.pdf | 1.7 KB | Library | Library | Recents | Favorites | Search | Device | Settings
 --- 02-reader-docx ---
@@ -50,31 +65,31 @@ field-guide.pdf | Page 1 of 3 | Prev | 100% | Next
 field-guide.pdf | Page 1 of 3 | page | 0 of 0 | Prev | 100% | Next
 --- 06-device ---
 Everything on this device | Leaf reads PDF, DOCX, XLSX, PPTX, TXT and EPUB. Choose a folder to browse it — Leaf asks for no permission at all, and your files are never copied. | Choose folder | Pick the storage root once and every supported file below it is listed. Leaf never asks for a storage permission. | No device documents yet | Choose a folder above to see the PDFs, documents, spreadsheets, presentations, text files and books stored on this device. | Device files | Library | Recents | Favorites | Search | Device | Settings
+--- 07-search ---
+Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
+--- 08-recents ---
+Today | 2 documents | Clear today | field-guide.pdf | 1.7 KB | Opened 1m ago | quarterly-report.docx | 1.2 KB | Opened 2m ago | Recents | Library | Recents | Favorites | Search | Device | Settings
+--- 09-favorites ---
+No favorites yet | Star a document from the library, the long-press sheet or the reader to pin it here. | Favorites | Library | Recents | Favorites | Search | Device | Settings
+--- 10-settings ---
+Appearance | App theme | Light | Dark | System | Default reading theme | Auto | Paper | Sepia | Night | OLED | Animations | Page turn and leaf sway transitions | Haptic feedback | Vibration on stars, actions and long presses | Language | English | Settings | Library | Recents | Favorites | Search | Device | Settings
+--- 12-search-results ---
+Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
 result: no fatal exception
 --- leaf log lines ---
-10-18 18:36:50.754  2697  2697 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:36:50.767  2697  2697 D AndroidRuntime: CheckJNI is OFF
-10-18 18:36:51.061  2697  2697 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 18:36:51.081  1584  2255 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2697
-10-18 18:36:51.091  2697  2697 D AndroidRuntime: Shutting down VM
-10-18 18:36:52.420  2706  2706 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:36:52.432  2706  2706 D AndroidRuntime: CheckJNI is OFF
-10-18 18:36:52.661  2706  2706 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 18:36:52.682  1584  1798 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
-10-18 18:36:52.900  1584  2295 I ActivityManager: Start proc 2715:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
-10-18 18:36:57.907  1584  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s95ms
-10-18 18:36:58.000  2706  2706 D AndroidRuntime: Shutting down VM
-10-18 18:37:13.826  2746  2746 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:13.839  2746  2746 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:15.907  2746  2746 D AndroidRuntime: Shutting down VM
-10-18 18:37:17.303  2758  2758 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:17.315  2758  2758 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:17.652  2758  2758 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 18:37:17.804  2758  2758 D AndroidRuntime: Shutting down VM
-10-18 18:37:27.313  2774  2774 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:27.323  2774  2774 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:28.849  2774  2774 D AndroidRuntime: Shutting down VM
-10-18 18:37:30.216  2785  2785 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:37:30.229  2785  2785 D AndroidRuntime: CheckJNI is OFF
-10-18 18:37:30.545  2785  2785 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 18:50:42.867  2688  2688 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:50:42.882  2688  2688 D AndroidRuntime: CheckJNI is OFF
+10-18 18:50:43.217  2688  2688 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 18:50:43.237  1584  2218 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2688
+10-18 18:50:43.246  2688  2688 D AndroidRuntime: Shutting down VM
+10-18 18:50:44.583  2712  2712 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:50:44.595  2712  2712 D AndroidRuntime: CheckJNI is OFF
+10-18 18:50:44.943  2712  2712 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 18:50:44.971  1584  1597 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 18:50:45.167  1584  2374 I ActivityManager: Start proc 2721:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 18:50:50.436  1584  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s307ms
+10-18 18:50:50.526  2712  2712 D AndroidRuntime: Shutting down VM
+10-18 18:51:06.209  2750  2750 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 18:51:06.228  2750  2750 D AndroidRuntime: CheckJNI is OFF
+10-18 18:51:08.314  2750  2750 D AndroidRuntime: Shutting down VM
 == smoke test finished ==
