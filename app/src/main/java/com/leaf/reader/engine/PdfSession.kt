@@ -153,6 +153,11 @@ class PdfTextIndex(val pages: List<PdfPageText>) {
 /** Reads and renders a PDF document. */
 class PdfSession(private val context: Context, private val uri: Uri) {
 
+    companion object {
+        /** Upper bound for the rendered page width — keeps the memory footprint small. */
+        const val MAX_RENDER_WIDTH = 1000
+    }
+
     private val resolver: ContentResolver = context.contentResolver
 
     private val descriptor: ParcelFileDescriptor? =
@@ -168,16 +173,33 @@ class PdfSession(private val context: Context, private val uri: Uri) {
 
     fun isValid(): Boolean = renderer != null
 
-    /** Renders a page to a bitmap of the requested width (aspect ratio preserved). */
+    /**
+     * Renders a page to a bitmap of the requested width (aspect ratio preserved).
+     *
+     * The bitmap is deliberately small and uses RGB_565: a full page in ARGB_8888 is more than
+     * ten megabytes, which is more than a low memory device (or the emulator) can spare while
+     * the reader is drawing. Pages are opaque, so the colour depth is not an issue.
+     */
     fun renderPage(pageIndex: Int, targetWidth: Int): Bitmap? {
         val pdf = renderer ?: return null
         if (pageIndex !in 0 until pdf.pageCount) return null
+        val wanted = targetWidth.coerceIn(64, MAX_RENDER_WIDTH)
         return runCatching {
             pdf.openPage(pageIndex).use { page ->
-                val scale = if (page.width > 0) targetWidth.toFloat() / page.width else 1f
+                val scale = if (page.width > 0) wanted.toFloat() / page.width else 1f
                 val width = max(1, (page.width * scale).toInt())
                 val height = max(1, (page.height * scale).toInt())
-                val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+                val bitmap = try {
+                    Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565)
+                } catch (error: OutOfMemoryError) {
+                    // Half the size still shows the page and keeps the device alive.
+                    val small = Bitmap.createBitmap(
+                        max(1, width / 2),
+                        max(1, height / 2),
+                        Bitmap.Config.RGB_565
+                    )
+                    small
+                }
                 bitmap.eraseColor(Color.WHITE)
                 val matrix = Matrix()
                 matrix.postScale(scale, scale)

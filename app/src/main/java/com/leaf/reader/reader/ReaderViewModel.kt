@@ -87,7 +87,7 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
     private val redoStack = ArrayDeque<HighlightOp>()
 
     private val bitmapCache = object : LinkedHashMap<Int, Bitmap>(0, 0.75f, true) {
-        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Int, Bitmap>?): Boolean = size > 3
+        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<Int, Bitmap>?): Boolean = size > 2
     }
 
     init {
@@ -156,15 +156,9 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
             }
             _state.value = _state.value.copy(pageCount = session.pageCount)
             repository.setPageCount(documentId, session.pageCount)
-            // Warm the text index in the background so in-page search and
-            // geometry highlights are instant later on.
-            viewModelScope.launch(Dispatchers.IO) {
-                try {
-                    session.textIndex()
-                } catch (error: Throwable) {
-                    // Indexing is best effort; the reader still works without it.
-                }
-            }
+            // The text index (used for in-page search and geometry highlights) is built on
+            // demand: it is the most memory hungry part of reading a PDF, so Leaf only pays
+            // for it when the reader actually searches inside the file.
         } else {
             val parsed = withContext(Dispatchers.IO) {
                 com.leaf.reader.engine.TextExtractor.parseDocument(
