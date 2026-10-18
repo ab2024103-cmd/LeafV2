@@ -263,11 +263,30 @@ class PdfSession(private val context: Context, private val uri: Uri) {
     /** Already built index, if the background extraction finished. */
     fun cachedTextIndex(): PdfTextIndex? = index
 
+    /** Pages built by the built in scanner, used when PDFBox cannot read the fonts. */
+    private fun fallbackPages(bytes: ByteArray): List<PdfPageText> {
+        var offset = 0
+        return PdfTextFallback.pages(bytes).mapIndexed { index, text ->
+            val page = PdfPageText(
+                index = index,
+                text = text,
+                textStart = offset,
+                pageWidth = 612f,
+                pageHeight = 792f,
+                glyphs = emptyList(),
+                lineHeight = 12f
+            )
+            offset += text.length + 2
+            page
+        }
+    }
+
     private fun buildIndex(): PdfTextIndex {
         val stream: InputStream = com.leaf.reader.core.FileUtils.openInputStream(context, uri)
             ?: return PdfTextIndex(emptyList())
         return runCatching {
-            val document = PDDocument.load(stream)
+            val bytes = stream.readBytes()
+            val document = PDDocument.load(bytes)
             try {
                 val pages = mutableListOf<PdfPageText>()
                 var globalOffset = 0
@@ -301,6 +320,12 @@ class PdfSession(private val context: Context, private val uri: Uri) {
                         )
                     )
                     globalOffset += text.length + 2
+                }
+                if (pages.all { it.text.isBlank() }) {
+                    // PDFBox could not read the fonts of this document (standard fonts on
+                    // Android): the built in scanner still finds the text.
+                    val fallback = fallbackPages(bytes)
+                    if (fallback.isNotEmpty()) return@runCatching PdfTextIndex(fallback)
                 }
                 PdfTextIndex(pages)
             } finally {
