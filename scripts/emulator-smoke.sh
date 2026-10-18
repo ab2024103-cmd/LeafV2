@@ -67,30 +67,44 @@ sleep 6
 capture 02-reader-docx
 echo "   visible: $(texts "${OUT}/02-reader-docx.xml")"
 
-echo "== 3. open the pdf =="
+echo "== 3. back to the library and scroll to the pdf =="
 adb shell input keyevent 4 || true
+sleep 3
+adb shell input swipe 540 1700 540 700 300 || true
 sleep 2
-adb shell input swipe 540 1100 540 500 300 || true
-sleep 2
+adb shell input swipe 540 1700 540 700 300 || true
+sleep 3
 capture 03-scrolled
-tap 03-scrolled "field-guide.pdf"
-sleep 7
+tap 03-scrolled "field-guide.pdf" || true
+sleep 9
 capture 04-reader-pdf
 echo "   visible: $(texts "${OUT}/04-reader-pdf.xml")"
 
-echo "== 4. back to the library and open the device screen =="
+echo "== 4. search inside the pdf =="
+tap 04-reader-pdf "Find in document" || true
+sleep 2
+adb shell input text "page" || true
+sleep 6
+capture 05-find
+echo "   visible: $(texts "${OUT}/05-find.xml")"
+
+echo "== 5. the device screen =="
 adb shell input keyevent 4 || true
+sleep 2
+adb shell input keyevent 4 || true
+sleep 3
+tap 04-reader-pdf "Library" || true
 sleep 3
 tap 04-reader-pdf "Device" || true
 sleep 4
-capture 05-device
-echo "   visible: $(texts "${OUT}/05-device.xml")"
+capture 06-device
+echo "   visible: $(texts "${OUT}/06-device.xml")"
 
-echo "== 5. logs =="
+echo "== 6. logs =="
 adb logcat -d -v threadtime > "${OUT}/logcat.txt" 2>/dev/null || true
 adb shell dumpsys activity activities 2>/dev/null | head -60 > "${OUT}/activities.txt" || true
 
-echo "== 6. native crash reports =="
+echo "== 7. native crash reports =="
 adb root >/dev/null 2>&1 || true
 sleep 2
 adb wait-for-device
@@ -104,8 +118,8 @@ adb shell dumpsys dropbox --print SYSTEM_TOMBSTONE 2>/dev/null | head -200 > "${
 {
   echo "package: ${PKG}"
   echo "apk: ${APK}"
-  echo "screens: 01-library 02-reader-docx 03-scrolled 04-reader-pdf 05-device"
-  for screen in 01-library 02-reader-docx 04-reader-pdf 05-device; do
+  echo "screens: 01-library 02-reader-docx 03-scrolled 04-reader-pdf 05-find 06-device"
+  for screen in 01-library 02-reader-docx 04-reader-pdf 05-find 06-device; do
     echo "--- ${screen} ---"
     texts "${OUT}/${screen}.xml"
   done
