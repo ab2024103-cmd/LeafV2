@@ -2,23 +2,23 @@ ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
 Display #0 (activities from top to bottom):
   Stack #0:
     Task id #3
-    * TaskRecord{e7319ed #3 I=com.android.launcher3/.Launcher U=0 sz=1}
+    * TaskRecord{2172142 #3 I=com.android.launcher3/.Launcher U=0 sz=1}
       userId=0 effectiveUid=u0a8 mCallingUid=0 mCallingPackage=null
       intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=com.android.launcher3/.Launcher}
       realActivity=com.android.launcher3/.Launcher
       autoRemoveRecents=false isPersistable=true numFullscreen=1 taskType=1 mTaskToReturnTo=0
       rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
-      Activities=[ActivityRecord{d51973f u0 com.android.launcher3/.Launcher t3}]
+      Activities=[ActivityRecord{c0bfbad u0 com.android.launcher3/.Launcher t3}]
       askedCompatMode=false inRecents=true isAvailable=true
       lastThumbnail=null lastThumbnailFile=/data/system/recent_images/3_task_thumbnail.png
       stackId=0
-      hasBeenVisible=true mResizeable=false firstActiveTime=1792343205833 lastActiveTime=1792343205833 (inactive for 8s)
-      * Hist #0: ActivityRecord{d51973f u0 com.android.launcher3/.Launcher t3}
+      hasBeenVisible=true mResizeable=false firstActiveTime=1792344107846 lastActiveTime=1792344107846 (inactive for 38s)
+      * Hist #0: ActivityRecord{c0bfbad u0 com.android.launcher3/.Launcher t3}
           packageName=com.android.launcher3 processName=com.android.launcher3
           launchedFromUid=0 launchedFromPackage=null userId=0
-          app=ProcessRecord{3367022 2342:com.android.launcher3/u0a8}
+          app=ProcessRecord{b077553 2300:com.android.launcher3/u0a8}
           Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=com.android.launcher3/.Launcher }
-          frontOfTask=true task=TaskRecord{e7319ed #3 I=com.android.launcher3/.Launcher U=0 sz=1}
+          frontOfTask=true task=TaskRecord{2172142 #3 I=com.android.launcher3/.Launcher U=0 sz=1}
           taskAffinity=null
           realActivity=com.android.launcher3/.Launcher
           baseDir=/system/priv-app/Launcher3/Launcher3.apk
@@ -28,24 +28,24 @@ Display #0 (activities from top to bottom):
           config={1.0 310mcc260mnc en_US ldltr sw411dp w411dp h659dp 560dpi nrml port finger -keyb/v/h -nav/h s.6}
           stackConfigOverride={1.0 ?mcc?mnc ?locale ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/?}
           taskDescription: iconFilename=null label="null" color=ff212121
-          launchFailed=false launchCount=0 lastLaunchTime=-5m30s398ms
+          launchFailed=false launchCount=0 lastLaunchTime=-6m11s140ms
           haveState=false icicle=null
           state=RESUMED stopped=false delayedResume=false finishing=false
           keysPaused=false inHistory=true visible=true sleeping=false idle=true
           fullscreen=true noDisplay=false immersive=false launchMode=2
           frozenBeforeDestroy=false forceNewConfig=false
           mActivityType=HOME_ACTIVITY_TYPE
-          waitingVisible=false nowVisible=true lastVisibleTime=-7s9ms
+          waitingVisible=false nowVisible=true lastVisibleTime=-35s942ms
 
     Running activities (most recent first):
-      TaskRecord{e7319ed #3 I=com.android.launcher3/.Launcher U=0 sz=1}
-        Run #0: ActivityRecord{d51973f u0 com.android.launcher3/.Launcher t3}
+      TaskRecord{2172142 #3 I=com.android.launcher3/.Launcher U=0 sz=1}
+        Run #0: ActivityRecord{c0bfbad u0 com.android.launcher3/.Launcher t3}
 
-    mResumedActivity: ActivityRecord{d51973f u0 com.android.launcher3/.Launcher t3}
-    mLastPausedActivity: ActivityRecord{d51973f u0 com.android.launcher3/.Launcher t3}
+    mResumedActivity: ActivityRecord{c0bfbad u0 com.android.launcher3/.Launcher t3}
+    mLastPausedActivity: ActivityRecord{c0bfbad u0 com.android.launcher3/.Launcher t3}
 
-  mFocusedActivity: ActivityRecord{d51973f u0 com.android.launcher3/.Launcher t3}
-  mFocusedStack=ActivityStack{a44ab3 stackId=0, 1 tasks} mLastFocusedStack=ActivityStack{a44ab3 stackId=0, 1 tasks}
+  mFocusedActivity: ActivityRecord{c0bfbad u0 com.android.launcher3/.Launcher t3}
+  mFocusedStack=ActivityStack{91e6e90 stackId=0, 1 tasks} mLastFocusedStack=ActivityStack{91e6e90 stackId=0, 1 tasks}
   mSleepTimeout=false
   mCurTaskId=4
   mUserStackInFront={}
