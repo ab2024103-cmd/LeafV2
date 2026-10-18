@@ -456,6 +456,7 @@ private fun PdfPageItem(
                 view.colors = colors
                 view.bitmap = bitmap
                 view.highlightRects = flatRects
+                android.util.Log.i("LeafPdf", "pdf view update bitmap=${bitmap?.width}x${bitmap?.height}")
             },
             modifier = Modifier.fillMaxSize()
         )
@@ -549,6 +550,10 @@ private fun TextPageList(
                             view.textLayout = layout
                             view.pageTop = slice?.topPx ?: 0
                             view.highlightRanges = highlightRanges
+                            android.util.Log.i(
+                                "LeafText",
+                                "text view update lines=${layout?.lineCount} height=${layout?.height} slice=${slice?.topPx}"
+                            )
                         },
                         modifier = Modifier.fillMaxSize()
                     )
@@ -580,6 +585,10 @@ private fun TextPageList(
                             view.textLayout = layout
                             view.pageTop = slice?.topPx ?: 0
                             view.highlightRanges = highlightRanges
+                            android.util.Log.i(
+                                "LeafText",
+                                "text view update lines=${layout?.lineCount} height=${layout?.height} slice=${slice?.topPx}"
+                            )
                         },
                         modifier = Modifier.fillMaxSize()
                     )

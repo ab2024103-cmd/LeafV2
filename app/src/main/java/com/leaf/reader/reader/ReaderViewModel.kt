@@ -173,6 +173,10 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
                 settings.typeface
             )
             textSession = session
+            android.util.Log.i(
+                "LeafText",
+                "parsed ${parsed.blocks.size} blocks, ${parsed.plainText.length} chars, viewport=${viewportWidth}x$viewportHeight"
+            )
             if (viewportWidth > 0 && viewportHeight > 0) {
                 session.configure(viewportWidth, viewportHeight, textSizeFor(zoom))
                 _state.value = _state.value.copy(pageCount = session.pageCount)
@@ -203,6 +207,7 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
     }
 
     fun configureViewport(width: Int, height: Int) {
+        android.util.Log.i("LeafText", "configureViewport ${width}x$height session=${textSession != null}")
         if (width <= 0 || height <= 0) return
         if (width == viewportWidth && height == viewportHeight) return
         viewportWidth = width

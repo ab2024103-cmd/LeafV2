@@ -63,6 +63,10 @@ class TextSession(
             .build()
         layout = built
         slices = computeSlices(built, viewportHeight, parsed.pageBreaks)
+        android.util.Log.i(
+            "LeafText",
+            "rebuild chars=${text.length} lines=${built.lineCount} viewport=${viewportWidth}x${viewportHeight} pages=${slices.size}"
+        )
     }
 
     val pageCount: Int get() = slices.size.coerceAtLeast(1)
