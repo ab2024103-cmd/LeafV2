@@ -18,6 +18,7 @@ import java.io.InputStream
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
+import kotlin.math.sqrt
 
 data class PdfGlyph(
     val ch: Char,
@@ -176,29 +177,29 @@ class PdfSession(private val context: Context, private val uri: Uri) {
     /**
      * Renders a page to a bitmap of the requested width (aspect ratio preserved).
      *
-     * The bitmap is deliberately small and uses RGB_565: a full page in ARGB_8888 is more than
-     * ten megabytes, which is more than a low memory device (or the emulator) can spare while
-     * the reader is drawing. Pages are opaque, so the colour depth is not an issue.
+     * The platform renderer insists on ARGB_8888, so the page size is capped instead: the
+     * width is limited to [MAX_RENDER_WIDTH] and further reduced when the device has little
+     * memory left. A full page in ARGB_8888 is around ten megabytes, which is more than a
+     * low memory device (or an emulator) can spare while the reader is drawing.
      */
     fun renderPage(pageIndex: Int, targetWidth: Int): Bitmap? {
         val pdf = renderer ?: return null
         if (pageIndex !in 0 until pdf.pageCount) return null
-        val wanted = targetWidth.coerceIn(64, MAX_RENDER_WIDTH)
         return runCatching {
             pdf.openPage(pageIndex).use { page ->
-                val scale = if (page.width > 0) wanted.toFloat() / page.width else 1f
-                val width = max(1, (page.width * scale).toInt())
-                val height = max(1, (page.height * scale).toInt())
+                val aspect = if (page.width > 0) page.height.toFloat() / page.width else 1.414f
+                val width = renderWidth(targetWidth, aspect)
+                val height = max(1, (width * aspect).toInt())
+                val scale = if (page.width > 0) width.toFloat() / page.width else 1f
                 val bitmap = try {
-                    Bitmap.createBitmap(width, height, Bitmap.Config.RGB_565)
+                    Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
                 } catch (error: OutOfMemoryError) {
                     // Half the size still shows the page and keeps the device alive.
-                    val small = Bitmap.createBitmap(
+                    Bitmap.createBitmap(
                         max(1, width / 2),
                         max(1, height / 2),
-                        Bitmap.Config.RGB_565
+                        Bitmap.Config.ARGB_8888
                     )
-                    small
                 }
                 bitmap.eraseColor(Color.WHITE)
                 val matrix = Matrix()
@@ -207,6 +208,18 @@ class PdfSession(private val context: Context, private val uri: Uri) {
                 bitmap
             }
         }.getOrNull()
+    }
+
+    /** Width that still fits into the memory the device can spare for one page. */
+    private fun renderWidth(targetWidth: Int, aspect: Float): Int {
+        val wanted = targetWidth.coerceIn(64, MAX_RENDER_WIDTH)
+        val runtime = Runtime.getRuntime()
+        val available = runtime.maxMemory() - (runtime.totalMemory() - runtime.freeMemory())
+        // One page may use a third of the free memory, four bytes per pixel.
+        val budget = (available / 3).coerceAtLeast(1_500_000L)
+        val maxPixels = (budget / 4).coerceAtLeast(120_000L)
+        val maxWidth = sqrt(maxPixels / aspect.coerceAtLeast(0.1f)).toInt()
+        return wanted.coerceAtMost(maxWidth.coerceAtLeast(64))
     }
 
     /** Builds (once) the text + geometry index used for search and highlighting. */

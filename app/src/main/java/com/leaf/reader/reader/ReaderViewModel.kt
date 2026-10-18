@@ -585,10 +585,13 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
 
     suspend fun renderPdfPage(page: Int, width: Int): Bitmap? {
         val session = pdfSession ?: return null
-        val cached = bitmapCache[page]
-        if (cached != null && cached.width >= width) return cached
+        // The key carries the width bucket: the same page at the same zoom is reused, a zoom
+        // change renders a sharper page.
+        val key = page * 1000 + (width / 100)
+        val cached = bitmapCache[key]
+        if (cached != null) return cached
         val bitmap = withContext(Dispatchers.IO) { session.renderPage(page, width) } ?: return null
-        bitmapCache[page] = bitmap
+        bitmapCache[key] = bitmap
         return bitmap
     }
 

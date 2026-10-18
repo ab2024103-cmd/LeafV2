@@ -37,16 +37,19 @@ echo "== launching ${ACTIVITY} =="
 adb shell am start -W -n "${ACTIVITY}" 2>&1 | tee "${OUT}/launch.txt"
 sleep 12
 
+CURRENT="${OUT}/01-library.xml"
+
 capture() {
   local name="$1"
   adb exec-out screencap -p > "${OUT}/${name}.png" 2>/dev/null || true
   adb shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1 || true
   adb pull /sdcard/ui.xml "${OUT}/${name}.xml" >/dev/null 2>&1 || true
+  CURRENT="${OUT}/${name}.xml"
   echo "captured ${name}"
 }
 
 tap() {
-  python3 scripts/tap_text.py "${OUT}/$1.xml" "$2" || true
+  python3 scripts/tap_text.py "${CURRENT}" "$1" "${2:-0}" || true
 }
 
 texts() {
@@ -62,7 +65,7 @@ capture 01-library
 echo "   visible: $(texts "${OUT}/01-library.xml")"
 
 echo "== 2. open a word document =="
-tap 01-library "quarterly-report.docx"
+tap "quarterly-report.docx"
 sleep 6
 capture 02-reader-docx
 echo "   visible: $(texts "${OUT}/02-reader-docx.xml")"
@@ -75,16 +78,19 @@ sleep 2
 adb shell input swipe 540 1700 540 700 300 || true
 sleep 3
 capture 03-scrolled
-tap 03-scrolled "field-guide.pdf" || true
+tap "field-guide.pdf" || true
 sleep 9
 capture 04-reader-pdf
 echo "   visible: $(texts "${OUT}/04-reader-pdf.xml")"
 
 echo "== 4. search inside the pdf =="
-tap 04-reader-pdf "Find in document" || true
+tap "Find in document" || true
 sleep 2
+capture 05a-findbar
+tap "Find in document" 1 || true
+sleep 1
 adb shell input text "page" || true
-sleep 6
+sleep 7
 capture 05-find
 echo "   visible: $(texts "${OUT}/05-find.xml")"
 
@@ -93,9 +99,8 @@ adb shell input keyevent 4 || true
 sleep 2
 adb shell input keyevent 4 || true
 sleep 3
-tap 04-reader-pdf "Library" || true
-sleep 3
-tap 04-reader-pdf "Device" || true
+capture 05b-library
+tap "Device" || true
 sleep 4
 capture 06-device
 echo "   visible: $(texts "${OUT}/06-device.xml")"
