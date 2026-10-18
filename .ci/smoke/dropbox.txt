@@ -1,4 +1,4 @@
-Drop box contents: 13 entries
+Drop box contents: 16 entries
 Searching for: SYSTEM_TOMBSTONE
 
 (No entries found.)
