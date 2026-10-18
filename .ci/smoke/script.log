@@ -1,6 +1,6 @@
 == waiting for device ==
 == installing apks/app/build/outputs/apk/debug/app-debug.apk ==
-apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 30.7 MB/s (27449103 bytes in 0.853s)
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 22.7 MB/s (27449111 bytes in 1.152s)
 Performing Push Install
 	pkg: /data/local/tmp/app-debug.apk
 Success
@@ -8,9 +8,9 @@ Success
 Starting: Intent { cmp=com.leaf.reader/.MainActivity }
 Status: ok
 Activity: com.leaf.reader/.MainActivity
-ThisTime: 3247
-TotalTime: 3247
-WaitTime: 3405
+ThisTime: 3751
+TotalTime: 3751
+WaitTime: 3862
 Complete
 == 1. library ==
 captured 01-library
@@ -18,10 +18,10 @@ captured 01-library
 == 2. open a word document ==
 tap 'quarterly-report.docx' at 720,1690
 captured 02-reader-docx
-   visible: Unfortunately, Leaf has stopped. | OK
+   visible: quarterly-report.docx | Page 1 of 1 | Prev | 100% | Next
 == 3. open the pdf ==
 captured 03-scrolled
-no node matching 'field-guide.pdf'
+tap 'field-guide.pdf' at 720,1923
 captured 04-reader-pdf
    visible: Unfortunately, Leaf has stopped. | OK
 == 4. back to the library and open the device screen ==
@@ -35,38 +35,38 @@ screens: 01-library 02-reader-docx 03-scrolled 04-reader-pdf 05-device
 --- 01-library ---
 All (6) | Documents | 6 shown · Date added · Z–A | little-book.epub | 1.8 KB | product-deck.pptx | 2.5 KB | budget.xlsx | 2.1 KB | quarterly-report.docx | 1.2 KB | field-guide.pdf | 1.7 KB | Library | Library | Recents | Favorites | Search | Device | Settings
 --- 02-reader-docx ---
-Unfortunately, Leaf has stopped. | OK
+quarterly-report.docx | Page 1 of 1 | Prev | 100% | Next
 --- 04-reader-pdf ---
 Unfortunately, Leaf has stopped. | OK
 --- 05-device ---
 Unfortunately, Leaf has stopped. | OK
-result: CRASH
-78:10-18 17:31:56.069  2698  2698 E AndroidRuntime: FATAL EXCEPTION: main
-79-10-18 17:31:56.069  2698  2698 E AndroidRuntime: Process: com.leaf.reader, PID: 2698
-80-10-18 17:31:56.069  2698  2698 E AndroidRuntime: java.lang.IllegalArgumentException: Cannot coerce value to an empty range: maximum -1 is less than minimum 0.
-81-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at kotlin.ranges.RangesKt___RangesKt.coerceIn(_Ranges.kt:1414)
-82-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at com.leaf.reader.engine.TextSession.slice(TextSession.kt:70)
-83-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at com.leaf.reader.reader.ReaderViewModel.pageSlice(ReaderViewModel.kt:586)
-84-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at com.leaf.reader.reader.ReaderScreenKt$TextPageList$5$1$2.invoke(ReaderScreen.kt:530)
-85-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at com.leaf.reader.reader.ReaderScreenKt$TextPageList$5$1$2.invoke(ReaderScreen.kt:529)
-86-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.jvm.kt:139)
-87-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.jvm.kt:35)
-88-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.LazyListItemProviderImpl$Item$1.invoke(LazyListItemProvider.kt:79)
-89-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.LazyListItemProviderImpl$Item$1.invoke(LazyListItemProvider.kt:77)
-90-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.jvm.kt:109)
-91-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.jvm.kt:35)
-92-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:401)
-93-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.layout.LazyLayoutPinnableItemKt.LazyLayoutPinnableItem(LazyLayoutPinnableItem.kt:58)
-94-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.LazyListItemProviderImpl.Item(LazyListItemProvider.kt:77)
-95-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.layout.LazyLayoutItemContentFactoryKt$SkippableItem$1.invoke(LazyLayoutItemContentFactory.kt:136)
-96-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.layout.LazyLayoutItemContentFactoryKt$SkippableItem$1.invoke(LazyLayoutItemContentFactory.kt:135)
-97-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.jvm.kt:109)
-98-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.internal.ComposableLambdaImpl.invoke(ComposableLambda.jvm.kt:35)
-99-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.CompositionLocalKt.CompositionLocalProvider(CompositionLocal.kt:401)
-100-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.runtime.saveable.SaveableStateHolderImpl.SaveableStateProvider(SaveableStateHolder.kt:85)
-101-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.layout.LazySaveableStateHolder.SaveableStateProvider(LazySaveableStateHolder.kt:85)
-102-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.layout.LazyLayoutItemContentFactoryKt.SkippableItem-JVlU9Rs(LazyLayoutItemContentFactory.kt:135)
-103-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.layout.LazyLayoutItemContentFactoryKt.access$SkippableItem-JVlU9Rs(LazyLayoutItemContentFactory.kt:1)
-104-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.layout.LazyLayoutItemContentFactory$CachedItemContent$createContentLambda$1.invoke(LazyLayoutItemContentFactory.kt:101)
-105-10-18 17:31:56.069  2698  2698 E AndroidRuntime: 	at androidx.compose.foundation.lazy.layout.LazyLayoutItemContentFactory$CachedItemContent$createContentLambda$1.invoke(LazyLayoutItemContentFactory.kt:91)
+result: no fatal exception
+--- leaf log lines ---
+10-18 17:42:41.965  2668  2668 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:42:41.988  2668  2668 D AndroidRuntime: CheckJNI is OFF
+10-18 17:42:42.520  2668  2668 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 17:42:42.559  1583  1794 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2668
+10-18 17:42:42.571  2668  2668 D AndroidRuntime: Shutting down VM
+10-18 17:42:43.950  2697  2697 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:42:43.959  2697  2697 D AndroidRuntime: CheckJNI is OFF
+10-18 17:42:44.135  2697  2697 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 17:42:44.154  1583  2259 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 17:42:44.273  1583  2234 I ActivityManager: Start proc 2706:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 17:42:48.010  1583  1602 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +3s751ms
+10-18 17:42:48.050  2697  2697 D AndroidRuntime: Shutting down VM
+10-18 17:43:03.093  2735  2735 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:43:03.102  2735  2735 D AndroidRuntime: CheckJNI is OFF
+10-18 17:43:05.079  2735  2735 D AndroidRuntime: Shutting down VM
+10-18 17:43:06.200  2746  2746 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:43:06.210  2746  2746 D AndroidRuntime: CheckJNI is OFF
+10-18 17:43:06.463  2746  2746 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 17:43:06.620  2746  2746 D AndroidRuntime: Shutting down VM
+10-18 17:43:15.482  2761  2761 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:43:15.490  2761  2761 D AndroidRuntime: CheckJNI is OFF
+10-18 17:43:16.959  2761  2761 D AndroidRuntime: Shutting down VM
+10-18 17:43:18.062  2772  2772 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:43:18.071  2772  2772 D AndroidRuntime: CheckJNI is OFF
+10-18 17:43:18.303  2772  2772 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 17:43:18.351  2772  2772 D AndroidRuntime: Shutting down VM
+10-18 17:43:21.573  2782  2782 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
 == smoke test finished ==

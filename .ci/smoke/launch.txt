@@ -1,7 +1,7 @@
 Starting: Intent { cmp=com.leaf.reader/.MainActivity }
 Status: ok
 Activity: com.leaf.reader/.MainActivity
-ThisTime: 3247
-TotalTime: 3247
-WaitTime: 3405
+ThisTime: 3751
+TotalTime: 3751
+WaitTime: 3862
 Complete
