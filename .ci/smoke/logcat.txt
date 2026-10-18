@@ -1,558 +1,1046 @@
---------- beginning of main
-10-18 19:19:26.088  2067  2067 D CarrierServiceBindHelper: Receive action: android.intent.action.PACKAGE_ADDED
-10-18 19:19:26.124  2067  2067 D CarrierServiceBindHelper: mHandler: 3
-10-18 19:19:26.124  2067  2067 D CarrierConfigLoader: mHandler: 9 phoneId: 0
 --------- beginning of system
-10-18 19:19:26.196  1584  2396 I ActivityManager: Start proc 2693:com.svox.pico/u0a40 for broadcast com.svox.pico/.VoiceDataInstallerReceiver
-10-18 19:19:26.380  1584  1597 W VoiceInteractionManagerService: no available voice recognition services found for user 0
-10-18 19:19:26.728  1584  1595 W BackupManagerService: dataChanged but no participant pkg='com.android.launcher3' uid=10008
-10-18 19:19:26.950  2355  2366 I art     : Background sticky concurrent mark sweep GC freed 3503(453KB) AllocSpace objects, 16(2024KB) LOS objects, 10% free, 20MB/22MB, paused 2.756ms total 110.555ms
-10-18 19:19:27.155  1584  2096 I ActivityManager: Killing 2082:com.android.settings:CryptKeeper/1000 (adj 15): empty #17
-10-18 19:19:27.563  1584  1599 W art     : Long monitor contention event with owner method=void com.android.server.am.BroadcastQueue.processNextBroadcast(boolean) from BroadcastQueue.java:639 waiters=0 for 401ms
-10-18 19:19:27.974  2691  2691 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:19:27.986  2691  2691 D AndroidRuntime: CheckJNI is OFF
-10-18 19:19:28.119  2691  2691 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:19:28.232  2691  2691 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:19:28.232  2691  2691 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:19:28.241  2691  2691 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:19:28.331  2691  2691 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 19:19:28.352  1584  2161 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2691
-10-18 19:19:28.363  2691  2691 D AndroidRuntime: Shutting down VM
-10-18 19:19:29.744  2714  2714 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:19:29.757  2714  2714 D AndroidRuntime: CheckJNI is OFF
-10-18 19:19:29.878  2714  2714 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:19:29.976  2714  2714 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:19:29.976  2714  2714 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:19:29.984  2714  2714 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:19:30.092  2714  2714 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 19:19:30.116  1584  2097 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
-10-18 19:19:30.332  1584  1596 I ActivityManager: Start proc 2723:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
-10-18 19:19:30.339  2723  2723 I art     : Late-enabling -Xcheck:jni
-10-18 19:19:30.425  1228  2059 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:19:30.428  1228  2059 D         : HostConnection::get() New Host Connection established 0xb65731c0, tid 2059
-10-18 19:19:30.713  2355  2415 D EGL_emulation: eglMakeCurrent: 0xad1553e0: ver 3 0 (tinfo 0xaaa715c0)
-10-18 19:19:30.739  2355  2415 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bda20
-10-18 19:19:31.834  1228  1608 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:19:31.840  2723  2741 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
-10-18 19:19:31.849  2723  2733 I art     : Background partial concurrent mark sweep GC freed 4712(404KB) AllocSpace objects, 0(0B) LOS objects, 39% free, 3MB/5MB, paused 5.603ms total 117.936ms
-10-18 19:19:31.888  2723  2723 D         : HostConnection::get() New Host Connection established 0xaa418f40, tid 2723
-10-18 19:19:33.791  2723  2741 D         : HostConnection::get() New Host Connection established 0xaa0dd5c0, tid 2741
-10-18 19:19:33.806  2723  2741 I OpenGLRenderer: Initialized EGL, version 1.4
-10-18 19:19:33.812  2723  2741 D EGL_emulation: eglCreateContext: 0xad1549c0: maj 3 min 0 rcv 3
-10-18 19:19:33.819  2723  2741 D EGL_emulation: eglMakeCurrent: 0xad1549c0: ver 3 0 (tinfo 0xaff4a2e0)
-10-18 19:19:33.825  2723  2741 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
-10-18 19:19:33.825  2723  2741 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
-10-18 19:19:33.858  2723  2741 D EGL_emulation: eglMakeCurrent: 0xad1549c0: ver 3 0 (tinfo 0xaff4a2e0)
-10-18 19:19:34.330  2723  2723 I Choreographer: Skipped 135 frames!  The application may be doing too much work on its main thread.
-10-18 19:19:35.368  1584  1603 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s100ms
-10-18 19:19:35.431  2714  2714 D AndroidRuntime: Shutting down VM
-10-18 19:19:35.622  1817  1817 W PathParser: Points are too far apart 4.030360828967057
-10-18 19:19:35.646  1817  1817 W PathParser: Points are too far apart 4.030360538880159
-10-18 19:19:35.665  1817  1817 W PathParser: Points are too far apart 4.030360828967057
-10-18 19:19:35.665  1817  1817 W PathParser: Points are too far apart 4.030360538880159
-10-18 19:19:35.785  1817  1817 W PathParser: Points are too far apart 4.030360828967057
-10-18 19:19:35.786  1817  1817 W PathParser: Points are too far apart 4.030360538880159
-10-18 19:19:35.954  2723  2723 I Choreographer: Skipped 93 frames!  The application may be doing too much work on its main thread.
-10-18 19:19:48.232  1228  1608 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:19:48.250  1228  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:19:48.287  2751  2751 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 2751
-10-18 19:19:51.272  2754  2754 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:19:51.286  2754  2754 D AndroidRuntime: CheckJNI is OFF
-10-18 19:19:51.418  2754  2754 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:19:51.537  2754  2754 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:19:51.537  2754  2754 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:19:51.547  2754  2754 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:19:51.641  2754  2754 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:19:53.238  2754  2754 W AccessibilityNodeInfoDumper: Fetch time: 187ms
-10-18 19:19:53.245  1584  1803 W WindowManager: Attempted to remove non-existing token: android.os.Binder@e9677cf
-10-18 19:19:53.405  2754  2754 D AndroidRuntime: Shutting down VM
-10-18 19:19:54.818  2766  2766 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:19:54.830  2766  2766 D AndroidRuntime: CheckJNI is OFF
-10-18 19:19:54.957  2766  2766 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:19:55.061  2766  2766 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:19:55.061  2766  2766 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:19:55.070  2766  2766 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:19:55.150  2766  2766 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:19:55.170  2766  2766 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1690.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=389687, downTime=389687, deviceId=0, source=0x1002 }
-10-18 19:19:55.271  2766  2766 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1690.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=389687, downTime=389687, deviceId=0, source=0x1002 }
-10-18 19:19:55.328  2766  2766 D AndroidRuntime: Shutting down VM
-10-18 19:19:56.876  2723  2733 I art     : Background sticky concurrent mark sweep GC freed 30962(1726KB) AllocSpace objects, 0(0B) LOS objects, 23% free, 6MB/8MB, paused 2.249ms total 136.118ms
-10-18 19:19:57.566  2723  2723 I LeafText: parsed 6 blocks, 457 chars, viewport=0x0
-10-18 19:19:57.792  2723  2723 I LeafText: text view update lines=null height=null slice=0
-10-18 19:19:57.807  2723  2723 I LeafText: onDraw size=1440x2154 pos=0,0 lines=null
-10-18 19:19:57.816  2723  2723 I LeafText: configureViewport 1440x2154 session=true
-10-18 19:19:57.864  2723  2723 I LeafText: rebuild chars=457 lines=18 viewport=1440x2154 pages=1
-10-18 19:19:57.890  2723  2723 I LeafText: text view update lines=18 height=1234 slice=0
-10-18 19:19:57.899  2723  2723 I LeafText: onDraw size=1440x2154 pos=0,0 lines=18
-10-18 19:20:00.200  1228  1297 D hwcomposer: hw_composer sent 146 syncs in 60s
-10-18 19:20:01.870  1228  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:20:01.887  1228  1745 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:20:01.900  2778  2778 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2778
-10-18 19:20:04.974  2782  2782 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:04.987  2782  2782 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:05.114  2782  2782 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:05.230  2782  2782 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:05.231  2782  2782 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:05.240  2782  2782 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:05.323  2782  2782 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:20:06.519  2782  2782 W AccessibilityNodeInfoDumper: Fetch time: 30ms
-10-18 19:20:06.522  1584  2158 W WindowManager: Attempted to remove non-existing token: android.os.Binder@7ac455c
-10-18 19:20:06.666  2782  2782 D AndroidRuntime: Shutting down VM
-10-18 19:20:08.043  2793  2793 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:08.057  2793  2793 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:08.346  2793  2793 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:08.506  2793  2793 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:08.506  2793  2793 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:08.516  2793  2793 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:08.618  2793  2793 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:20:08.631  2793  2793 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=403155, downTime=403155, deviceId=-1, source=0x101 }
-10-18 19:20:08.704  2793  2793 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=403155, downTime=403155, deviceId=-1, source=0x101 }
-10-18 19:20:08.718  2793  2793 D AndroidRuntime: Shutting down VM
-10-18 19:20:08.784  2793  2793 I art     : WaitForGcToComplete blocked for 10.146ms for cause Background
-10-18 19:20:09.256  2723  2733 I art     : Background sticky concurrent mark sweep GC freed 19710(1041KB) AllocSpace objects, 1(20KB) LOS objects, 11% free, 7MB/8MB, paused 4.625ms total 199.840ms
-10-18 19:20:09.550  2723  2723 I LeafText: configureViewport 1440x1622 session=true
-10-18 19:20:09.557  2723  2723 I LeafText: rebuild chars=457 lines=18 viewport=1440x1622 pages=1
-10-18 19:20:09.723  2723  2723 I LeafText: text view update lines=18 height=1234 slice=0
-10-18 19:20:10.197  2723  2723 I LeafText: onDraw size=1440x1622 pos=0,0 lines=18
-10-18 19:20:10.250  2723  2723 I Choreographer: Skipped 40 frames!  The application may be doing too much work on its main thread.
-10-18 19:20:13.239  2802  2802 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:13.254  2802  2802 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:13.382  2802  2802 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:13.494  2802  2802 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:13.494  2802  2802 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:13.504  2802  2802 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:13.585  2802  2802 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:20:13.596  2802  2802 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=408116, downTime=408116, deviceId=0, source=0x1002 }
-10-18 19:20:13.664  2802  2802 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=408116, downTime=408116, deviceId=0, source=0x1002 }
-10-18 19:20:13.687  2802  2802 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1376.6667, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=408213, downTime=408213, deviceId=0, source=0x1002 }
-10-18 19:20:13.721  2802  2802 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1263.3334, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=408247, downTime=408247, deviceId=0, source=0x1002 }
-10-18 19:20:13.880  2723  2733 I art     : Background partial concurrent mark sweep GC freed 31312(1425KB) AllocSpace objects, 0(0B) LOS objects, 35% free, 7MB/11MB, paused 973us total 113.966ms
-10-18 19:20:13.894  2802  2802 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=408420, downTime=408420, deviceId=0, source=0x1002 }
-10-18 19:20:14.026  2802  2802 D AndroidRuntime: Shutting down VM
-10-18 19:20:17.419  2813  2813 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:17.429  2813  2813 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:17.497  2813  2813 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:17.584  2813  2813 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:17.584  2813  2813 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:17.590  2813  2813 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:17.662  2813  2813 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:20:17.679  2813  2813 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412196, downTime=412196, deviceId=0, source=0x1002 }
-10-18 19:20:17.701  2813  2813 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412196, downTime=412196, deviceId=0, source=0x1002 }
-10-18 19:20:17.710  2813  2813 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1566.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412236, downTime=412236, deviceId=0, source=0x1002 }
-10-18 19:20:17.730  2813  2813 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1496.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412257, downTime=412257, deviceId=0, source=0x1002 }
-10-18 19:20:17.769  2813  2813 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1370.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412295, downTime=412295, deviceId=0, source=0x1002 }
-10-18 19:20:17.859  2813  2813 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1106.6667, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412374, downTime=412374, deviceId=0, source=0x1002 }
-10-18 19:20:17.934  2813  2813 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=820.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412460, downTime=412460, deviceId=0, source=0x1002 }
-10-18 19:20:17.996  2813  2813 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=412522, downTime=412522, deviceId=0, source=0x1002 }
-10-18 19:20:18.021  2813  2813 D AndroidRuntime: Shutting down VM
-10-18 19:20:21.526  1228  1745 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:20:21.543  1228  1608 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:20:21.572  2825  2825 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2825
-10-18 19:20:24.555  2828  2828 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:24.567  2828  2828 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:24.700  2828  2828 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:24.818  2828  2828 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:24.818  2828  2828 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:24.828  2828  2828 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:24.911  2828  2828 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:20:26.374  2828  2828 W AccessibilityNodeInfoDumper: Fetch time: 179ms
-10-18 19:20:26.377  1584  1727 W WindowManager: Attempted to remove non-existing token: android.os.Binder@2a3c065
-10-18 19:20:26.556  2828  2828 D AndroidRuntime: Shutting down VM
-10-18 19:20:27.937  2839  2839 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:27.950  2839  2839 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:28.086  2839  2839 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:28.193  2839  2839 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:28.193  2839  2839 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:28.204  2839  2839 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:28.291  2839  2839 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:20:28.309  2839  2839 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1461.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=422828, downTime=422828, deviceId=0, source=0x1002 }
-10-18 19:20:28.342  2839  2839 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1461.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=422828, downTime=422828, deviceId=0, source=0x1002 }
-10-18 19:20:28.360  2839  2839 D AndroidRuntime: Shutting down VM
-10-18 19:20:29.300  2723  2742 W art     : Long monitor contention event with owner method=long android.database.sqlite.SQLiteConnection.nativeOpen(java.lang.String, int, java.lang.String, boolean, boolean) from SQLiteConnection.java:4294967294 waiters=0 for 233ms
-10-18 19:20:30.232  2723  2723 I LeafPdf : pdf view update bitmap=nullxnull
-10-18 19:20:30.247  2723  2723 I LeafPdf : pdf view update bitmap=nullxnull
-10-18 19:20:30.259  2723  2723 I LeafPdf : onDraw size=1440x2036 pos=0,0 hasBitmap=false
-10-18 19:20:30.260  2723  2723 I LeafPdf : onDraw size=1440x2036 pos=0,0 hasBitmap=false
-10-18 19:20:30.267  2723  2723 I LeafText: configureViewport 1440x2154 session=false
-10-18 19:20:30.534  2723  2733 I art     : Background sticky concurrent mark sweep GC freed 36072(1759KB) AllocSpace objects, 0(0B) LOS objects, 0% free, 28MB/28MB, paused 797us total 130.028ms
-10-18 19:20:30.583  2723  2744 I LeafPdf : rendered page 0 as 1440x1863
-10-18 19:20:30.591  2723  2745 I LeafPdf : rendered page 1 as 1440x1863
-10-18 19:20:30.594  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:30.630  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:30.631  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=false
-10-18 19:20:30.652  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:30.657  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:30.677  2723  2733 I art     : Background partial concurrent mark sweep GC freed 13070(748KB) AllocSpace objects, 0(0B) LOS objects, 12% free, 27MB/31MB, paused 1.477ms total 132.816ms
-10-18 19:20:37.882  1228  1745 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:20:37.896  1228  2059 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:20:37.909  2851  2851 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2851
-10-18 19:20:40.942  2854  2854 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:40.977  2854  2854 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:41.137  2854  2854 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:41.286  2854  2854 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:41.286  2854  2854 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:41.296  2854  2854 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:41.392  2854  2854 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:20:42.756  2854  2854 W AccessibilityNodeInfoDumper: Fetch time: 52ms
-10-18 19:20:42.759  1584  1803 W WindowManager: Attempted to remove non-existing token: android.os.Binder@775e13a
-10-18 19:20:42.944  2854  2854 D AndroidRuntime: Shutting down VM
-10-18 19:20:44.429  2865  2865 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:44.441  2865  2865 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:44.569  2865  2865 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:44.675  2865  2865 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:44.675  2865  2865 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:44.685  2865  2865 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:44.766  2865  2865 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:20:44.781  2865  2865 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=670.0, y[0]=105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=439297, downTime=439297, deviceId=0, source=0x1002 }
-10-18 19:20:44.857  2865  2865 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=670.0, y[0]=105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=439297, downTime=439297, deviceId=0, source=0x1002 }
-10-18 19:20:44.888  2865  2865 D AndroidRuntime: Shutting down VM
-10-18 19:20:45.456  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:45.457  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:45.648  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:45.650  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:45.702  2723  2723 I LeafText: configureViewport 1440x1930 session=false
-10-18 19:20:47.418  1228  1745 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:20:47.433  1228  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:20:47.451  2876  2876 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2876
-10-18 19:20:50.270  2879  2879 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:50.280  2879  2879 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:50.340  2879  2879 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:50.412  2879  2879 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:50.412  2879  2879 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:50.418  2879  2879 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:50.469  2879  2879 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:20:51.746  2879  2879 W AccessibilityNodeInfoDumper: Fetch time: 73ms
-10-18 19:20:51.748  1584  2396 W WindowManager: Attempted to remove non-existing token: android.os.Binder@4acc1eb
-10-18 19:20:51.890  2879  2879 D AndroidRuntime: Shutting down VM
-10-18 19:20:53.270  2890  2890 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:53.281  2890  2890 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:53.346  2890  2890 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:53.428  2890  2890 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:53.428  2890  2890 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:53.435  2890  2890 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:53.506  2890  2890 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:20:53.510  2890  2890 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=331.0, y[0]=322.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=448035, downTime=448035, deviceId=0, source=0x1002 }
-10-18 19:20:53.564  2890  2890 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=331.0, y[0]=322.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=448035, downTime=448035, deviceId=0, source=0x1002 }
-10-18 19:20:53.643  2890  2890 D AndroidRuntime: Shutting down VM
-10-18 19:20:54.250  2048  2048 W RichInputMethodSubtype: Can't find emoji subtype
-10-18 19:20:54.250  2048  2048 W RichInputMethodSubtype: No input method subtype found; returning dummy subtype: Multi-lingual subtype: android.view.inputmethod.InputMethodSubtype@d78b2ed0, zz
-10-18 19:20:54.662  2048  2048 W ViewPager: Requested offscreen page limit 0 too small; defaulting to 1
-10-18 19:20:54.720  2048  2048 I LatinIME: Starting input. Cursor position = 0,0
-10-18 19:20:54.926  1228  2059 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:20:54.929  2048  2905 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
-10-18 19:20:54.933  1817  2028 D EGL_emulation: eglMakeCurrent: 0xae423de0: ver 3 0 (tinfo 0xae4127c0)
-10-18 19:20:54.974  2048  2048 D         : HostConnection::get() New Host Connection established 0xaff48c80, tid 2048
-10-18 19:20:55.177  2048  2905 D         : HostConnection::get() New Host Connection established 0xb4059440, tid 2905
-10-18 19:20:55.191  2048  2905 I OpenGLRenderer: Initialized EGL, version 1.4
-10-18 19:20:55.232  2048  2905 D EGL_emulation: eglCreateContext: 0xae4237e0: maj 3 min 0 rcv 3
-10-18 19:20:55.253  2048  2905 D EGL_emulation: eglMakeCurrent: 0xae4237e0: ver 3 0 (tinfo 0xae412960)
-10-18 19:20:55.268  2048  2905 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
-10-18 19:20:55.273  2048  2905 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
-10-18 19:20:55.382  2048  2905 D EGL_emulation: eglMakeCurrent: 0xae4237e0: ver 3 0 (tinfo 0xae412960)
-10-18 19:20:56.788  2907  2907 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:20:56.825  2907  2907 D AndroidRuntime: CheckJNI is OFF
-10-18 19:20:57.034  2907  2907 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:20:57.139  2907  2907 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:20:57.139  2907  2907 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:20:57.149  2907  2907 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:20:57.232  2907  2907 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:20:57.262  2907  2907 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_P, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451786, downTime=451786, deviceId=-1, source=0x101 }
-10-18 19:20:57.313  2907  2907 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_P, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451786, downTime=451786, deviceId=-1, source=0x101 }
-10-18 19:20:57.391  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:57.391  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:57.427  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:57.427  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:57.532  2907  2907 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451786, downTime=451786, deviceId=-1, source=0x101 }
-10-18 19:20:57.578  2907  2907 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451786, downTime=451786, deviceId=-1, source=0x101 }
-10-18 19:20:57.744  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:57.744  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:57.782  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:57.783  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:57.799  2048  2048 W RichInputConnection: Slow InputConnection: GET_TEXT_AFTER_CURSOR took 213 ms.
-10-18 19:20:57.952  2907  2907 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_G, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451786, downTime=451786, deviceId=-1, source=0x101 }
-10-18 19:20:58.053  2907  2907 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_G, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451786, downTime=451786, deviceId=-1, source=0x101 }
-10-18 19:20:58.070  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:58.070  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:58.110  2723  2733 I art     : Background sticky concurrent mark sweep GC freed 49381(1907KB) AllocSpace objects, 1(16KB) LOS objects, 0% free, 31MB/31MB, paused 4.585ms total 380.963ms
-10-18 19:20:58.144  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:58.145  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:58.184  2907  2907 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451786, downTime=451786, deviceId=-1, source=0x101 }
-10-18 19:20:58.362  2723  2733 W art     : Suspending all threads took: 12.396ms
-10-18 19:20:58.397  2907  2907 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=451786, downTime=451786, deviceId=-1, source=0x101 }
-10-18 19:20:58.524  2723  2733 I art     : Background partial concurrent mark sweep GC freed 28298(1364KB) AllocSpace objects, 8(200KB) LOS objects, 11% free, 30MB/34MB, paused 22.756ms total 411.272ms
-10-18 19:20:58.569  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:58.570  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:20:58.674  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:58.675  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
-10-18 19:20:58.807  2723  2744 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
-10-18 19:20:58.807  2723  2744 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
-10-18 19:20:58.807  2723  2744 D PdfBox-Android: Type 6 GSUB lookup table is not supported and will be ignored
-10-18 19:20:58.807  2723  2744 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
-10-18 19:20:58.808  2723  2744 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
-10-18 19:20:58.856  2907  2907 D AndroidRuntime: Shutting down VM
-10-18 19:20:59.476  1228  1297 D hwcomposer: hw_composer sent 203 syncs in 60s
-10-18 19:20:59.497  2723  2745 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:20:59.502  2723  2737 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:20:59.506  2723  2744 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:20:59.507  2723  2743 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:20:59.511  2723  2745 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:20:59.530  2723  2744 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:20:59.540  2723  2737 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:20:59.547  2723  2743 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:21:00.082  1817  2028 D EGL_emulation: eglMakeCurrent: 0xae423de0: ver 3 0 (tinfo 0xae4127c0)
-10-18 19:21:06.661  1228  1745 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:21:06.673  1228  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:21:06.685  2921  2921 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2921
-10-18 19:21:10.127  2924  2924 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:10.199  2924  2924 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:10.430  2924  2924 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:10.640  2924  2924 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:10.641  2924  2924 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:10.650  2924  2924 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:10.748  2924  2924 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:21:12.263  2924  2924 W AccessibilityNodeInfoDumper: Fetch time: 147ms
-10-18 19:21:12.266  1584  1727 W WindowManager: Attempted to remove non-existing token: android.os.Binder@5c0de
-10-18 19:21:12.460  2924  2924 D AndroidRuntime: Shutting down VM
-10-18 19:21:13.984  2935  2935 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:13.997  2935  2935 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:14.138  2935  2935 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:14.277  2935  2935 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:14.277  2935  2935 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:14.287  2935  2935 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:14.367  2935  2935 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:21:14.372  2935  2935 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=468897, downTime=468897, deviceId=-1, source=0x101 }
-10-18 19:21:14.406  2935  2935 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=468897, downTime=468897, deviceId=-1, source=0x101 }
-10-18 19:21:14.443  2935  2935 D AndroidRuntime: Shutting down VM
-10-18 19:21:14.533  1817  2028 D EGL_emulation: eglMakeCurrent: 0xae423de0: ver 3 0 (tinfo 0xae4127c0)
-10-18 19:21:14.544  2048  2905 D EGL_emulation: eglMakeCurrent: 0xae4237e0: ver 3 0 (tinfo 0xae412960)
-10-18 19:21:14.567  2048  2905 E Surface : getSlotFromBufferLocked: unknown buffer: 0xaaac91e0
-10-18 19:21:18.025  2944  2944 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:18.038  2944  2944 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:18.173  2944  2944 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:18.283  2944  2944 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:18.283  2944  2944 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:18.292  2944  2944 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:18.420  2944  2944 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:21:18.431  2944  2944 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=472956, downTime=472956, deviceId=-1, source=0x101 }
-10-18 19:21:18.466  2944  2944 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=472956, downTime=472956, deviceId=-1, source=0x101 }
-10-18 19:21:18.484  2944  2944 D AndroidRuntime: Shutting down VM
-10-18 19:21:18.996  2723  2723 I LeafText: configureViewport 1440x1398 session=false
-10-18 19:21:19.241  2723  2733 I art     : Background sticky concurrent mark sweep GC freed 32188(1443KB) AllocSpace objects, 11(884KB) LOS objects, 7% free, 32MB/34MB, paused 3.581ms total 182.195ms
-10-18 19:21:19.769  2723  2723 I Choreographer: Skipped 44 frames!  The application may be doing too much work on its main thread.
-10-18 19:21:21.986  1228  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:21:22.000  1228  2059 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:21:22.018  2955  2955 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2955
-10-18 19:21:24.942  2958  2958 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:24.952  2958  2958 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:25.018  2958  2958 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:25.103  2958  2958 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:25.103  2958  2958 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:25.110  2958  2958 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:25.179  2958  2958 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:21:26.556  2958  2958 W AccessibilityNodeInfoDumper: Fetch time: 130ms
-10-18 19:21:26.558  1584  2397 W WindowManager: Attempted to remove non-existing token: android.os.Binder@aa90cea
-10-18 19:21:26.701  2958  2958 D AndroidRuntime: Shutting down VM
-10-18 19:21:28.246  2969  2969 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:28.260  2969  2969 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:28.382  2969  2969 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:28.484  2969  2969 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:28.485  2969  2969 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:28.491  2969  2969 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:28.587  2969  2969 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:21:28.600  2969  2969 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=1086.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=483117, downTime=483117, deviceId=0, source=0x1002 }
-10-18 19:21:28.663  2969  2969 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1086.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=483117, downTime=483117, deviceId=0, source=0x1002 }
-10-18 19:21:28.713  2969  2969 D AndroidRuntime: Shutting down VM
-10-18 19:21:33.232  1228  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:21:33.245  1228  1745 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:21:33.260  2980  2980 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2980
-10-18 19:21:36.336  2983  2983 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:36.376  2983  2983 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:36.515  2983  2983 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:36.672  2983  2983 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:36.672  2983  2983 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:36.681  2983  2983 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:36.779  2983  2983 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:21:37.081  1584  1594 I art     : Background partial concurrent mark sweep GC freed 15543(1251KB) AllocSpace objects, 6(116KB) LOS objects, 33% free, 5MB/8MB, paused 4.402ms total 169.212ms
-10-18 19:21:38.189  2983  2983 W AccessibilityNodeInfoDumper: Fetch time: 37ms
-10-18 19:21:38.194  1584  1747 W WindowManager: Attempted to remove non-existing token: android.os.Binder@2e5fbdb
-10-18 19:21:38.388  2983  2983 D AndroidRuntime: Shutting down VM
-10-18 19:21:38.978  1228  2059 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:21:38.995  1228  1289 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:21:39.034  2996  2996 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2996
-10-18 19:21:41.979  2999  2999 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:41.991  2999  2999 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:42.122  2999  2999 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:42.237  2999  2999 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:42.237  2999  2999 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:42.247  2999  2999 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:42.328  2999  2999 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:21:43.533  2999  2999 W AccessibilityNodeInfoDumper: Fetch time: 18ms
-10-18 19:21:43.534  1584  1801 W WindowManager: Attempted to remove non-existing token: android.os.Binder@4482151
-10-18 19:21:43.686  2999  2999 D AndroidRuntime: Shutting down VM
-10-18 19:21:45.077  3010  3010 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:45.089  3010  3010 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:45.217  3010  3010 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:45.323  3010  3010 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:45.324  3010  3010 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:45.332  3010  3010 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:45.411  3010  3010 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:21:45.443  3010  3010 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=499955, downTime=499955, deviceId=0, source=0x1002 }
-10-18 19:21:45.519  3010  3010 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=499955, downTime=499955, deviceId=0, source=0x1002 }
-10-18 19:21:45.604  3010  3010 D AndroidRuntime: Shutting down VM
-10-18 19:21:46.584  2723  2723 I Choreographer: Skipped 43 frames!  The application may be doing too much work on its main thread.
-10-18 19:21:49.162  1228  1608 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:21:49.174  1228  2059 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:21:49.187  3021  3021 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 3021
-10-18 19:21:52.128  3024  3024 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:52.139  3024  3024 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:52.204  3024  3024 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:52.289  3024  3024 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:52.290  3024  3024 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:52.297  3024  3024 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:52.365  3024  3024 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:21:53.628  3024  3024 W AccessibilityNodeInfoDumper: Fetch time: 45ms
-10-18 19:21:53.631  1584  2097 W WindowManager: Attempted to remove non-existing token: android.os.Binder@2830db6
-10-18 19:21:53.776  3024  3024 D AndroidRuntime: Shutting down VM
-10-18 19:21:55.139  3035  3035 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:21:55.150  3035  3035 D AndroidRuntime: CheckJNI is OFF
-10-18 19:21:55.216  3035  3035 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:21:55.297  3035  3035 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:21:55.297  3035  3035 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:21:55.304  3035  3035 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:21:55.373  3035  3035 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:21:55.389  3035  3035 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=352.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=509905, downTime=509905, deviceId=0, source=0x1002 }
-10-18 19:21:55.410  3035  3035 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=352.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=509905, downTime=509905, deviceId=0, source=0x1002 }
-10-18 19:21:55.431  3035  3035 D AndroidRuntime: Shutting down VM
-10-18 19:21:58.907  1228  2059 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:21:58.920  1228  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:21:58.943  3046  3046 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 3046
-10-18 19:22:00.144  1817  2028 D EGL_emulation: eglMakeCurrent: 0xae423de0: ver 3 0 (tinfo 0xae4127c0)
-10-18 19:22:00.253  1228  1297 D hwcomposer: hw_composer sent 193 syncs in 60s
-10-18 19:22:02.127  3049  3049 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:02.188  3049  3049 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:02.330  3049  3049 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:02.482  3049  3049 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:02.482  3049  3049 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:02.493  3049  3049 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:02.590  3049  3049 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:22:04.077  3049  3049 W AccessibilityNodeInfoDumper: Fetch time: 87ms
-10-18 19:22:04.080  1584  2161 W WindowManager: Attempted to remove non-existing token: android.os.Binder@be7ab7
-10-18 19:22:04.261  3049  3049 D AndroidRuntime: Shutting down VM
-10-18 19:22:05.719  3060  3060 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:05.730  3060  3060 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:05.795  3060  3060 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:05.879  3060  3060 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:05.879  3060  3060 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:05.886  3060  3060 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:05.955  3060  3060 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:22:05.976  3060  3060 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=596.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=520492, downTime=520492, deviceId=0, source=0x1002 }
-10-18 19:22:06.042  3060  3060 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=596.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=520492, downTime=520492, deviceId=0, source=0x1002 }
-10-18 19:22:06.114  3060  3060 D AndroidRuntime: Shutting down VM
-10-18 19:22:09.629  1228  1745 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:22:09.646  1228  1289 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:22:09.663  3071  3071 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 3071
-10-18 19:22:13.520  3074  3074 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:13.531  3074  3074 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:13.595  3074  3074 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:13.678  3074  3074 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:13.678  3074  3074 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:13.685  3074  3074 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:13.754  3074  3074 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:22:14.996  3074  3074 W AccessibilityNodeInfoDumper: Fetch time: 18ms
-10-18 19:22:15.000  1584  1801 W WindowManager: Attempted to remove non-existing token: android.os.Binder@b083224
-10-18 19:22:15.146  3074  3074 D AndroidRuntime: Shutting down VM
-10-18 19:22:16.468  3085  3085 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:16.478  3085  3085 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:16.535  3085  3085 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:16.600  3085  3085 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:16.601  3085  3085 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:16.606  3085  3085 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:16.654  3085  3085 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:22:16.656  3085  3085 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=1331.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=531182, downTime=531182, deviceId=0, source=0x1002 }
-10-18 19:22:16.678  3085  3085 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1331.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=531182, downTime=531182, deviceId=0, source=0x1002 }
-10-18 19:22:16.694  3085  3085 D AndroidRuntime: Shutting down VM
-10-18 19:22:17.346  2723  2733 I art     : Background partial concurrent mark sweep GC freed 50750(2MB) AllocSpace objects, 9(264KB) LOS objects, 11% free, 32MB/36MB, paused 2.004ms total 280.276ms
-10-18 19:22:17.400  2723  2723 I Choreographer: Skipped 38 frames!  The application may be doing too much work on its main thread.
-10-18 19:22:20.172  1228  2059 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:22:20.187  1228  1745 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:22:20.206  3096  3096 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 3096
-10-18 19:22:23.136  3099  3099 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:23.149  3099  3099 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:23.271  3099  3099 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:23.374  3099  3099 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:23.374  3099  3099 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:23.380  3099  3099 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:23.456  3099  3099 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:22:24.732  3099  3099 W AccessibilityNodeInfoDumper: Fetch time: 98ms
-10-18 19:22:24.735  1584  2396 W WindowManager: Attempted to remove non-existing token: android.os.Binder@d9c818d
-10-18 19:22:24.881  3099  3099 D AndroidRuntime: Shutting down VM
-10-18 19:22:26.249  3110  3110 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:26.263  3110  3110 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:26.390  3110  3110 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:26.494  3110  3110 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:26.494  3110  3110 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:26.502  3110  3110 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:26.582  3110  3110 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:22:26.597  3110  3110 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=541116, downTime=541116, deviceId=0, source=0x1002 }
-10-18 19:22:26.636  3110  3110 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=541116, downTime=541116, deviceId=0, source=0x1002 }
-10-18 19:22:26.669  3110  3110 D AndroidRuntime: Shutting down VM
-10-18 19:22:27.598  2723  2723 I Choreographer: Skipped 48 frames!  The application may be doing too much work on its main thread.
-10-18 19:22:30.300  1228  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:22:30.313  1228  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:22:30.325  3121  3121 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 3121
-10-18 19:22:33.241  3124  3124 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:33.252  3124  3124 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:33.318  3124  3124 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:33.417  3124  3124 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:33.417  3124  3124 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:33.425  3124  3124 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:33.501  3124  3124 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:22:34.747  3124  3124 W AccessibilityNodeInfoDumper: Fetch time: 41ms
-10-18 19:22:34.749  1584  2161 W WindowManager: Attempted to remove non-existing token: android.os.Binder@b2a4f42
-10-18 19:22:35.080  3124  3124 D AndroidRuntime: Shutting down VM
-10-18 19:22:36.617  3135  3135 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:36.631  3135  3135 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:36.760  3135  3135 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:36.889  3135  3135 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:36.889  3135  3135 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:36.898  3135  3135 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:36.997  3135  3135 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:22:37.010  3135  3135 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=560.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=551528, downTime=551528, deviceId=0, source=0x1002 }
-10-18 19:22:37.117  3135  3135 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=560.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=551528, downTime=551528, deviceId=0, source=0x1002 }
-10-18 19:22:37.254  3135  3135 D AndroidRuntime: Shutting down VM
-10-18 19:22:37.748  2048  2048 I LatinIME: Starting input. Cursor position = 0,0
-10-18 19:22:37.950  1817  2028 D EGL_emulation: eglMakeCurrent: 0xae423de0: ver 3 0 (tinfo 0xae4127c0)
-10-18 19:22:38.013  2048  2905 D EGL_emulation: eglMakeCurrent: 0xae4237e0: ver 3 0 (tinfo 0xae412960)
-10-18 19:22:39.869  3145  3145 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:39.882  3145  3145 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:40.009  3145  3145 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:40.142  3145  3145 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:40.142  3145  3145 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:40.157  3145  3145 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:40.255  3145  3145 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:22:40.284  3145  3145 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_L, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=554809, downTime=554809, deviceId=-1, source=0x101 }
-10-18 19:22:40.310  3145  3145 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_L, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=554809, downTime=554809, deviceId=-1, source=0x101 }
-10-18 19:22:40.627  3145  3145 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=554809, downTime=554809, deviceId=-1, source=0x101 }
-10-18 19:22:40.726  3145  3145 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=554809, downTime=554809, deviceId=-1, source=0x101 }
-10-18 19:22:40.885  3145  3145 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=554809, downTime=554809, deviceId=-1, source=0x101 }
-10-18 19:22:40.901  3145  3145 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=554809, downTime=554809, deviceId=-1, source=0x101 }
-10-18 19:22:40.914  3145  3145 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_F, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=554809, downTime=554809, deviceId=-1, source=0x101 }
-10-18 19:22:40.993  3145  3145 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_F, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=554809, downTime=554809, deviceId=-1, source=0x101 }
-10-18 19:22:41.095  3145  3145 D AndroidRuntime: Shutting down VM
-10-18 19:22:41.765  2723  2737 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:22:41.772  2723  2737 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:22:41.776  2723  2737 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
-10-18 19:22:42.060  2723  2733 I art     : Background sticky concurrent mark sweep GC freed 46554(2MB) AllocSpace objects, 11(264KB) LOS objects, 7% free, 33MB/36MB, paused 2.009ms total 187.440ms
-10-18 19:22:47.618  1228  1608 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
-10-18 19:22:47.636  1228  1287 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
-10-18 19:22:47.654  3157  3157 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 3157
-10-18 19:22:50.964  3160  3160 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:22:50.976  3160  3160 D AndroidRuntime: CheckJNI is OFF
-10-18 19:22:51.093  3160  3160 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
-10-18 19:22:51.196  3160  3160 E memtrack: Couldn't load memtrack module (No such file or directory)
-10-18 19:22:51.196  3160  3160 E android.os.Debug: failed to load memtrack module: -2
-10-18 19:22:51.202  3160  3160 I Radio-JNI: register_android_hardware_Radio DONE
-10-18 19:22:51.326  3160  3160 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
-10-18 19:22:52.808  3160  3160 W AccessibilityNodeInfoDumper: Fetch time: 115ms
-10-18 19:22:52.816  1584  1803 W WindowManager: Attempted to remove non-existing token: android.os.Binder@1eda1bc
-10-18 19:22:52.979  3160  3160 D AndroidRuntime: Shutting down VM
+10-18 19:41:55.152  1585  1598 W VoiceInteractionManagerService: no available voice recognition services found for user 0
+--------- beginning of main
+10-18 19:41:56.490  2712  2712 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:41:56.503  2712  2712 D AndroidRuntime: CheckJNI is OFF
+10-18 19:41:56.589  2712  2712 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:41:56.681  2712  2712 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:41:56.681  2712  2712 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:41:56.688  2712  2712 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:41:56.762  2712  2712 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 19:41:56.780  1585  1734 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2712
+10-18 19:41:56.790  2712  2712 D AndroidRuntime: Shutting down VM
+10-18 19:41:58.154  2721  2721 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:41:58.168  2721  2721 D AndroidRuntime: CheckJNI is OFF
+10-18 19:41:58.282  2721  2721 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:41:58.373  2721  2721 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:41:58.373  2721  2721 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:41:58.381  2721  2721 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:41:58.454  2721  2721 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 19:41:58.476  1585  2191 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 19:41:58.667  2730  2730 I art     : Late-enabling -Xcheck:jni
+10-18 19:41:58.672  1585  1810 I ActivityManager: Start proc 2730:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 19:41:58.842  1230  1286 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:41:59.169  2319  2371 D EGL_emulation: eglMakeCurrent: 0xad194240: ver 3 0 (tinfo 0xaa17f340)
+10-18 19:41:59.182  2319  2371 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bc760
+10-18 19:41:59.259  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 3925(212KB) AllocSpace objects, 0(0B) LOS objects, 29% free, 2MB/3MB, paused 1.597ms total 159.970ms
+10-18 19:42:00.279  1230  1297 D hwcomposer: hw_composer sent 72 syncs in 60s
+10-18 19:42:00.514  1230  1286 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:42:00.528  2730  2749 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+10-18 19:42:00.603  2730  2730 D         : HostConnection::get() New Host Connection established 0xaabf1d80, tid 2730
+10-18 19:42:02.420  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 3760(286KB) AllocSpace objects, 0(0B) LOS objects, 6% free, 4MB/5MB, paused 4.746ms total 104.903ms
+10-18 19:42:03.179  2730  2749 D         : HostConnection::get() New Host Connection established 0xa9d7f400, tid 2749
+10-18 19:42:03.187  2730  2749 I OpenGLRenderer: Initialized EGL, version 1.4
+10-18 19:42:03.194  2730  2749 D EGL_emulation: eglCreateContext: 0xae553c60: maj 3 min 0 rcv 3
+10-18 19:42:03.197  2730  2749 D EGL_emulation: eglMakeCurrent: 0xae553c60: ver 3 0 (tinfo 0xae5f3670)
+10-18 19:42:03.202  2730  2749 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
+10-18 19:42:03.203  2730  2749 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
+10-18 19:42:03.258  2730  2749 D EGL_emulation: eglMakeCurrent: 0xae553c60: ver 3 0 (tinfo 0xae5f3670)
+10-18 19:42:03.646  2730  2730 I Choreographer: Skipped 174 frames!  The application may be doing too much work on its main thread.
+10-18 19:42:04.565  1585  1604 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s919ms
+10-18 19:42:04.675  2721  2721 D AndroidRuntime: Shutting down VM
+10-18 19:42:04.731  2730  2730 I Choreographer: Skipped 62 frames!  The application may be doing too much work on its main thread.
+10-18 19:42:04.928  1828  1828 W PathParser: Points are too far apart 4.030360828967057
+10-18 19:42:04.932  1828  1828 W PathParser: Points are too far apart 4.030360538880159
+10-18 19:42:04.977  1828  1828 W PathParser: Points are too far apart 4.030360828967057
+10-18 19:42:04.977  1828  1828 W PathParser: Points are too far apart 4.030360538880159
+10-18 19:42:05.016  1828  1828 W PathParser: Points are too far apart 4.030360828967057
+10-18 19:42:05.016  1828  1828 W PathParser: Points are too far apart 4.030360538880159
+10-18 19:42:17.380  1230  1736 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:42:17.398  1230  2078 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:42:17.434  2756  2756 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2756
+10-18 19:42:20.353  2759  2759 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:42:20.366  2759  2759 D AndroidRuntime: CheckJNI is OFF
+10-18 19:42:20.495  2759  2759 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:42:20.614  2759  2759 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:42:20.614  2759  2759 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:42:20.622  2759  2759 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:42:20.714  2759  2759 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:42:22.426  2759  2759 W AccessibilityNodeInfoDumper: Fetch time: 221ms
+10-18 19:42:22.431  1585  1810 W WindowManager: Attempted to remove non-existing token: android.os.Binder@68f1cf5
+10-18 19:42:22.591  2759  2759 D AndroidRuntime: Shutting down VM
+10-18 19:42:24.171  2772  2772 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:42:24.184  2772  2772 D AndroidRuntime: CheckJNI is OFF
+10-18 19:42:24.303  2772  2772 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:42:24.399  2772  2772 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:42:24.400  2772  2772 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:42:24.407  2772  2772 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:42:24.485  2772  2772 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:42:24.495  2772  2772 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1690.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=416295, downTime=416295, deviceId=0, source=0x1002 }
+10-18 19:42:24.608  2772  2772 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1690.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=416295, downTime=416295, deviceId=0, source=0x1002 }
+10-18 19:42:24.668  2772  2772 D AndroidRuntime: Shutting down VM
+10-18 19:42:25.547  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 27413(1615KB) AllocSpace objects, 0(0B) LOS objects, 21% free, 6MB/8MB, paused 1.277ms total 277.493ms
+10-18 19:42:26.970  2730  2730 I LeafText: parsed 6 blocks, 457 chars, viewport=0x0
+10-18 19:42:27.159  2730  2730 I LeafText: text view update lines=null height=null slice=0
+10-18 19:42:27.175  2730  2730 I LeafText: onDraw size=1440x2154 pos=0,0 lines=null
+10-18 19:42:27.183  2730  2730 I LeafText: configureViewport 1440x2154 session=true
+10-18 19:42:27.223  2730  2730 I LeafText: rebuild chars=457 lines=18 viewport=1440x2154 pages=1
+10-18 19:42:27.249  2730  2730 I LeafText: text view update lines=18 height=1234 slice=0
+10-18 19:42:27.261  2730  2730 I LeafText: onDraw size=1440x2154 pos=0,0 lines=18
+10-18 19:42:31.145  1230  1286 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:42:31.157  1230  2078 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:42:31.169  2784  2784 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2784
+10-18 19:42:34.147  2788  2788 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:42:34.158  2788  2788 D AndroidRuntime: CheckJNI is OFF
+10-18 19:42:34.293  2788  2788 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:42:34.401  2788  2788 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:42:34.402  2788  2788 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:42:34.412  2788  2788 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:42:34.491  2788  2788 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:42:35.742  2788  2788 W AccessibilityNodeInfoDumper: Fetch time: 30ms
+10-18 19:42:35.745  1585  2127 W WindowManager: Attempted to remove non-existing token: android.os.Binder@402a8a
+10-18 19:42:35.898  2788  2788 D AndroidRuntime: Shutting down VM
+10-18 19:42:37.431  2799  2799 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:42:37.466  2799  2799 D AndroidRuntime: CheckJNI is OFF
+10-18 19:42:37.607  2799  2799 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:42:37.777  2799  2799 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:42:37.777  2799  2799 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:42:37.787  2799  2799 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:42:37.889  2799  2799 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:42:37.905  2799  2799 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=429703, downTime=429703, deviceId=-1, source=0x101 }
+10-18 19:42:37.981  2799  2799 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=429703, downTime=429703, deviceId=-1, source=0x101 }
+10-18 19:42:38.005  2799  2799 D AndroidRuntime: Shutting down VM
+10-18 19:42:38.764  2730  2730 I LeafText: configureViewport 1440x1622 session=true
+10-18 19:42:38.775  2730  2730 I LeafText: rebuild chars=457 lines=18 viewport=1440x1622 pages=1
+10-18 19:42:38.949  2730  2730 I LeafText: text view update lines=18 height=1234 slice=0
+10-18 19:42:39.512  2730  2730 I LeafText: onDraw size=1440x1622 pos=0,0 lines=18
+10-18 19:42:39.627  2730  2740 I art     : Background partial concurrent mark sweep GC freed 18611(861KB) AllocSpace objects, 0(0B) LOS objects, 34% free, 7MB/11MB, paused 1.806ms total 164.033ms
+10-18 19:42:39.647  2730  2730 I Choreographer: Skipped 51 frames!  The application may be doing too much work on its main thread.
+10-18 19:42:42.463  2808  2808 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:42:42.477  2808  2808 D AndroidRuntime: CheckJNI is OFF
+10-18 19:42:42.609  2808  2808 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:42:42.720  2808  2808 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:42:42.720  2808  2808 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:42:42.730  2808  2808 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:42:42.817  2808  2808 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:42:42.841  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=434636, downTime=434636, deviceId=0, source=0x1002 }
+10-18 19:42:42.898  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=434636, downTime=434636, deviceId=0, source=0x1002 }
+10-18 19:42:42.919  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1416.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=434721, downTime=434721, deviceId=0, source=0x1002 }
+10-18 19:42:42.957  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1290.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=434759, downTime=434759, deviceId=0, source=0x1002 }
+10-18 19:42:43.063  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=926.6667, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=434868, downTime=434868, deviceId=0, source=0x1002 }
+10-18 19:42:43.138  2808  2808 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=434944, downTime=434944, deviceId=0, source=0x1002 }
+10-18 19:42:43.303  2808  2808 D AndroidRuntime: Shutting down VM
+10-18 19:42:46.727  2818  2818 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:42:46.740  2818  2818 D AndroidRuntime: CheckJNI is OFF
+10-18 19:42:46.876  2818  2818 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:42:46.989  2818  2818 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:42:46.989  2818  2818 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:42:46.999  2818  2818 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:42:47.083  2818  2818 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:42:47.090  2818  2818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=438895, downTime=438895, deviceId=0, source=0x1002 }
+10-18 19:42:47.134  2818  2818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=438895, downTime=438895, deviceId=0, source=0x1002 }
+10-18 19:42:47.141  2818  2818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1526.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=438947, downTime=438947, deviceId=0, source=0x1002 }
+10-18 19:42:47.188  2818  2818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1366.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=438995, downTime=438995, deviceId=0, source=0x1002 }
+10-18 19:42:47.230  2818  2818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1230.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=439036, downTime=439036, deviceId=0, source=0x1002 }
+10-18 19:42:47.269  2818  2818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_MOVE, actionButton=0, id[0]=0, x[0]=540.0, y[0]=1096.6666, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=439076, downTime=439076, deviceId=0, source=0x1002 }
+10-18 19:42:47.416  2818  2818 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=540.0, y[0]=700.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=439222, downTime=439222, deviceId=0, source=0x1002 }
+10-18 19:42:47.445  2818  2818 D AndroidRuntime: Shutting down VM
+10-18 19:42:51.001  1230  1736 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:42:51.018  1230  1289 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:42:51.047  2830  2830 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2830
+10-18 19:42:54.036  2833  2833 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:42:54.049  2833  2833 D AndroidRuntime: CheckJNI is OFF
+10-18 19:42:54.182  2833  2833 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:42:54.301  2833  2833 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:42:54.301  2833  2833 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:42:54.311  2833  2833 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:42:54.395  2833  2833 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:42:56.010  2833  2833 W AccessibilityNodeInfoDumper: Fetch time: 241ms
+10-18 19:42:56.016  1585  1809 W WindowManager: Attempted to remove non-existing token: android.os.Binder@90458fb
+10-18 19:42:56.196  2833  2833 D AndroidRuntime: Shutting down VM
+10-18 19:42:57.638  2844  2844 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:42:57.652  2844  2844 D AndroidRuntime: CheckJNI is OFF
+10-18 19:42:57.776  2844  2844 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:42:57.870  2844  2844 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:42:57.871  2844  2844 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:42:57.878  2844  2844 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:42:57.959  2844  2844 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:42:57.968  2844  2844 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1461.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=449769, downTime=449769, deviceId=0, source=0x1002 }
+10-18 19:42:57.998  2844  2844 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=1461.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=449769, downTime=449769, deviceId=0, source=0x1002 }
+10-18 19:42:58.030  2844  2844 D AndroidRuntime: Shutting down VM
+10-18 19:43:00.353  1230  1297 D hwcomposer: hw_composer sent 186 syncs in 60s
+10-18 19:43:00.624  2730  2730 I LeafText: configureViewport 1440x2154 session=false
+10-18 19:43:00.910  2730  2750 I LeafPdf : rendered page 0 as 1440x1863
+10-18 19:43:00.918  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 42395(2018KB) AllocSpace objects, 0(0B) LOS objects, 0% free, 28MB/28MB, paused 4.181ms total 233.557ms
+10-18 19:43:00.933  2730  2751 I LeafPdf : rendered page 1 as 1440x1863
+10-18 19:43:01.276  2730  2740 I art     : Background partial concurrent mark sweep GC freed 23440(1080KB) AllocSpace objects, 0(0B) LOS objects, 12% free, 27MB/31MB, paused 12.925ms total 340.087ms
+10-18 19:43:07.633  1230  2078 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:43:07.650  1230  1736 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:43:07.674  2856  2856 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 2856
+10-18 19:43:10.613  2859  2859 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:10.626  2859  2859 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:10.762  2859  2859 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:10.892  2859  2859 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:10.893  2859  2859 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:10.902  2859  2859 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:10.999  2859  2859 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:43:12.330  2859  2859 W AccessibilityNodeInfoDumper: Fetch time: 33ms
+10-18 19:43:12.338  1585  1809 W WindowManager: Attempted to remove non-existing token: android.os.Binder@7188d18
+10-18 19:43:12.515  2859  2859 D AndroidRuntime: Shutting down VM
+10-18 19:43:14.015  2870  2870 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:14.028  2870  2870 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:14.156  2870  2870 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:14.265  2870  2870 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:14.265  2870  2870 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:14.272  2870  2870 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:14.355  2870  2870 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:43:14.362  2870  2870 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=670.0, y[0]=105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=466165, downTime=466165, deviceId=0, source=0x1002 }
+10-18 19:43:14.445  2870  2870 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=670.0, y[0]=105.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=466165, downTime=466165, deviceId=0, source=0x1002 }
+10-18 19:43:14.484  2870  2870 D AndroidRuntime: Shutting down VM
+10-18 19:43:15.160  2730  2730 I Choreographer: Skipped 38 frames!  The application may be doing too much work on its main thread.
+10-18 19:43:15.187  2730  2730 I LeafText: configureViewport 1440x1930 session=false
+10-18 19:43:16.997  1230  1286 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:43:17.009  1230  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:43:17.023  2881  2881 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2881
+10-18 19:43:19.991  2884  2884 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:20.005  2884  2884 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:20.137  2884  2884 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:20.250  2884  2884 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:20.251  2884  2884 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:20.261  2884  2884 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:20.345  2884  2884 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:43:21.654  2884  2884 W AccessibilityNodeInfoDumper: Fetch time: 84ms
+10-18 19:43:21.656  1585  2191 W WindowManager: Attempted to remove non-existing token: android.os.Binder@9019371
+10-18 19:43:21.805  2884  2884 D AndroidRuntime: Shutting down VM
+10-18 19:43:23.261  2895  2895 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:23.273  2895  2895 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:23.349  2895  2895 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:23.438  2895  2895 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:23.439  2895  2895 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:23.446  2895  2895 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:23.520  2895  2895 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:43:23.529  2895  2895 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=331.0, y[0]=322.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=475329, downTime=475329, deviceId=0, source=0x1002 }
+10-18 19:43:23.574  2895  2895 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=331.0, y[0]=322.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=475329, downTime=475329, deviceId=0, source=0x1002 }
+10-18 19:43:23.643  2895  2895 D AndroidRuntime: Shutting down VM
+10-18 19:43:24.342  2067  2067 W RichInputMethodSubtype: Can't find emoji subtype
+10-18 19:43:24.342  2067  2067 W RichInputMethodSubtype: No input method subtype found; returning dummy subtype: Multi-lingual subtype: android.view.inputmethod.InputMethodSubtype@d78b2ed0, zz
+10-18 19:43:24.769  2067  2067 W ViewPager: Requested offscreen page limit 0 too small; defaulting to 1
+10-18 19:43:24.856  2067  2067 I LatinIME: Starting input. Cursor position = 0,0
+10-18 19:43:25.093  2067  2077 I art     : Background sticky concurrent mark sweep GC freed 8341(1090KB) AllocSpace objects, 5(164KB) LOS objects, 28% free, 3MB/4MB, paused 6.638ms total 115.415ms
+10-18 19:43:25.223  1828  2063 D EGL_emulation: eglMakeCurrent: 0xa28adfa0: ver 3 0 (tinfo 0xaa064ba0)
+10-18 19:43:25.261  1230  2078 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:43:25.278  2067  2912 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+10-18 19:43:25.342  2067  2067 D         : HostConnection::get() New Host Connection established 0xaa171100, tid 2067
+10-18 19:43:25.636  2067  2912 D         : HostConnection::get() New Host Connection established 0xaa4b5480, tid 2912
+10-18 19:43:25.686  2067  2912 I OpenGLRenderer: Initialized EGL, version 1.4
+10-18 19:43:25.694  2067  2912 D EGL_emulation: eglCreateContext: 0xae553600: maj 3 min 0 rcv 3
+10-18 19:43:25.713  2067  2912 D EGL_emulation: eglMakeCurrent: 0xae553600: ver 3 0 (tinfo 0xae552810)
+10-18 19:43:25.733  2067  2912 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
+10-18 19:43:25.733  2067  2912 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
+10-18 19:43:25.822  2067  2912 D EGL_emulation: eglMakeCurrent: 0xae553600: ver 3 0 (tinfo 0xae552810)
+10-18 19:43:26.898  2909  2909 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:26.910  2909  2909 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:27.026  2909  2909 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:27.109  2909  2909 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:27.109  2909  2909 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:27.121  2909  2909 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:27.269  2909  2909 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:43:27.317  2909  2909 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_P, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=479122, downTime=479122, deviceId=-1, source=0x101 }
+10-18 19:43:27.620  2909  2909 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_P, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=479122, downTime=479122, deviceId=-1, source=0x101 }
+10-18 19:43:27.833  2909  2909 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=479122, downTime=479122, deviceId=-1, source=0x101 }
+10-18 19:43:27.917  2909  2909 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=479122, downTime=479122, deviceId=-1, source=0x101 }
+10-18 19:43:28.203  2067  2067 W RichInputConnection: Slow InputConnection: GET_TEXT_AFTER_CURSOR took 287 ms.
+10-18 19:43:28.256  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 48038(1854KB) AllocSpace objects, 1(16KB) LOS objects, 4% free, 30MB/31MB, paused 6.392ms total 187.595ms
+10-18 19:43:28.310  2909  2909 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_G, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=479122, downTime=479122, deviceId=-1, source=0x101 }
+10-18 19:43:28.338  2909  2909 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_G, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=479122, downTime=479122, deviceId=-1, source=0x101 }
+10-18 19:43:28.345  2909  2909 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=479122, downTime=479122, deviceId=-1, source=0x101 }
+10-18 19:43:28.527  2909  2909 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=479122, downTime=479122, deviceId=-1, source=0x101 }
+10-18 19:43:28.741  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 10348(451KB) AllocSpace objects, 1(20KB) LOS objects, 0% free, 31MB/31MB, paused 4.042ms total 189.279ms
+10-18 19:43:28.812  2909  2909 D AndroidRuntime: Shutting down VM
+10-18 19:43:28.868  2067  2067 W RichInputConnection: Slow InputConnection: GET_TEXT_AFTER_CURSOR took 255 ms.
+10-18 19:43:29.227  2730  2740 I art     : Background partial concurrent mark sweep GC freed 30775(1578KB) AllocSpace objects, 7(180KB) LOS objects, 11% free, 31MB/35MB, paused 5.083ms total 461.448ms
+10-18 19:43:29.509  2730  2750 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-18 19:43:29.509  2730  2750 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-18 19:43:29.509  2730  2750 D PdfBox-Android: Type 6 GSUB lookup table is not supported and will be ignored
+10-18 19:43:29.509  2730  2750 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-18 19:43:29.510  2730  2750 D PdfBox-Android: Type 4 GSUB lookup table is not supported and will be ignored
+10-18 19:43:29.885  2730  2743 E LeafPdf : pdf text extraction failed on page 0
+10-18 19:43:29.885  2730  2743 E LeafPdf : java.lang.NoClassDefFoundError: <clinit> failed for class com.tom_roush.pdfbox.pdmodel.font.PDType1Font; see exception in other thread
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:29.885  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:29.913  2730  2751 E LeafPdf : pdf text extraction failed on page 0
+10-18 19:43:29.913  2730  2751 E LeafPdf : java.lang.NoClassDefFoundError: <clinit> failed for class com.tom_roush.pdfbox.pdmodel.font.PDType1Font; see exception in other thread
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:29.913  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:29.994  2730  2744 E LeafPdf : pdf text extraction failed on page 0
+10-18 19:43:29.994  2730  2744 E LeafPdf : java.lang.NoClassDefFoundError: <clinit> failed for class com.tom_roush.pdfbox.pdmodel.font.PDType1Font; see exception in other thread
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:29.994  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:30.033  2730  2743 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:43:30.053  2730  2751 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:43:30.087  2730  2743 E LeafPdf : pdf text extraction failed on page 1
+10-18 19:43:30.087  2730  2743 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:30.087  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:30.091  2730  2743 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:43:30.113  2730  2751 E LeafPdf : pdf text extraction failed on page 1
+10-18 19:43:30.113  2730  2751 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:30.113  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:30.147  2730  2744 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:43:30.150  2730  2744 E LeafPdf : pdf text extraction failed on page 1
+10-18 19:43:30.150  2730  2744 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:30.150  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:30.159  2730  2751 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:43:30.162  2730  2743 E LeafPdf : pdf text extraction failed on page 2
+10-18 19:43:30.162  2730  2743 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:30.162  2730  2743 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:30.188  2730  2744 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:43:30.189  2730  2744 E LeafPdf : pdf text extraction failed on page 2
+10-18 19:43:30.189  2730  2744 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:30.189  2730  2744 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:30.203  2730  2751 E LeafPdf : pdf text extraction failed on page 2
+10-18 19:43:30.203  2730  2751 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:30.203  2730  2751 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:30.778  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 31914(4MB) AllocSpace objects, 17(3MB) LOS objects, 0% free, 39MB/39MB, paused 9.550ms total 469.097ms
+10-18 19:43:31.102  2730  2740 I art     : Background partial concurrent mark sweep GC freed 34668(5MB) AllocSpace objects, 9(3MB) LOS objects, 7% free, 52MB/56MB, paused 1.425ms total 321.754ms
+10-18 19:43:31.135  2730  2750 E LeafPdf : pdf text extraction failed on page 0
+10-18 19:43:31.135  2730  2750 E LeafPdf : java.lang.StackOverflowError: stack size 1038KB
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-18 19:43:31.135  2730  2750 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer
+10-18 19:43:31.141  2730  2750 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:43:31.145  2730  2750 E LeafPdf : pdf text extraction failed on page 1
+10-18 19:43:31.145  2730  2750 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:31.145  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:31.150  2730  2750 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:43:31.152  2730  2750 E LeafPdf : pdf text extraction failed on page 2
+10-18 19:43:31.152  2730  2750 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at com.leaf.reader.reader.ReaderViewModel$computeMatches$2.invokeSuspend(ReaderViewModel.kt:575)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:43:31.152  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:43:36.560  1230  1286 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:43:36.578  1230  1289 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:43:36.601  2926  2926 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2926
+10-18 19:43:40.630  2929  2929 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:40.643  2929  2929 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:40.775  2929  2929 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:40.951  2929  2929 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:40.951  2929  2929 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:40.961  2929  2929 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:41.053  2929  2929 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:43:41.343  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 20901(2MB) AllocSpace objects, 4(6MB) LOS objects, 7% free, 47MB/51MB, paused 1.505ms total 103.366ms
+10-18 19:43:42.563  2929  2929 W AccessibilityNodeInfoDumper: Fetch time: 116ms
+10-18 19:43:42.569  1585  2127 W WindowManager: Attempted to remove non-existing token: android.os.Binder@b9c465c
+10-18 19:43:42.767  2929  2929 D AndroidRuntime: Shutting down VM
+10-18 19:43:44.389  2940  2940 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:44.403  2940  2940 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:44.602  2940  2940 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:44.714  2940  2940 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:44.714  2940  2940 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:44.724  2940  2940 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:44.804  2940  2940 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:43:44.809  2940  2940 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=496615, downTime=496615, deviceId=-1, source=0x101 }
+10-18 19:43:44.842  2940  2940 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=496615, downTime=496615, deviceId=-1, source=0x101 }
+10-18 19:43:44.870  2940  2940 D AndroidRuntime: Shutting down VM
+10-18 19:43:45.007  2067  2912 D EGL_emulation: eglMakeCurrent: 0xae553600: ver 3 0 (tinfo 0xae552810)
+10-18 19:43:45.037  2067  2912 E Surface : getSlotFromBufferLocked: unknown buffer: 0xaab09460
+10-18 19:43:48.421  2949  2949 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:48.432  2949  2949 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:48.510  2949  2949 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:48.632  2949  2949 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:48.633  2949  2949 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:48.640  2949  2949 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:48.712  2949  2949 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:43:48.723  2949  2949 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=500529, downTime=500529, deviceId=-1, source=0x101 }
+10-18 19:43:48.762  2949  2949 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=500529, downTime=500529, deviceId=-1, source=0x101 }
+10-18 19:43:48.776  2949  2949 D AndroidRuntime: Shutting down VM
+10-18 19:43:49.330  2730  2730 I LeafText: configureViewport 1440x1398 session=false
+10-18 19:43:50.016  2730  2730 I Choreographer: Skipped 39 frames!  The application may be doing too much work on its main thread.
+10-18 19:43:52.257  1230  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:43:52.268  1230  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:43:52.281  2960  2960 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2960
+10-18 19:43:55.233  2963  2963 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:55.245  2963  2963 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:55.315  2963  2963 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:55.406  2963  2963 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:55.406  2963  2963 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:55.414  2963  2963 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:55.488  2963  2963 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:43:56.984  2963  2963 W AccessibilityNodeInfoDumper: Fetch time: 172ms
+10-18 19:43:56.986  1585  1809 W WindowManager: Attempted to remove non-existing token: android.os.Binder@d56c48
+10-18 19:43:57.128  2963  2963 D AndroidRuntime: Shutting down VM
+10-18 19:43:58.570  2974  2974 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:43:58.583  2974  2974 D AndroidRuntime: CheckJNI is OFF
+10-18 19:43:58.701  2974  2974 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:43:58.795  2974  2974 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:43:58.795  2974  2974 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:43:58.801  2974  2974 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:43:58.882  2974  2974 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:43:58.904  2974  2974 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=1086.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=510699, downTime=510699, deviceId=0, source=0x1002 }
+10-18 19:43:58.951  2974  2974 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1086.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=510699, downTime=510699, deviceId=0, source=0x1002 }
+10-18 19:43:59.014  2974  2974 D AndroidRuntime: Shutting down VM
+10-18 19:44:00.175  1828  2063 D EGL_emulation: eglMakeCurrent: 0xa28adfa0: ver 3 0 (tinfo 0xaa064ba0)
+10-18 19:44:00.202  1230  1297 D hwcomposer: hw_composer sent 207 syncs in 60s
+10-18 19:44:03.580  1230  1609 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:44:03.607  1230  1289 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:44:03.644  2986  2986 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 2986
+10-18 19:44:06.708  2989  2989 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:06.721  2989  2989 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:06.858  2989  2989 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:06.991  2989  2989 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:06.992  2989  2989 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:07.003  2989  2989 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:07.101  2989  2989 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:44:07.352  1585  1595 I art     : Background partial concurrent mark sweep GC freed 13645(1108KB) AllocSpace objects, 4(76KB) LOS objects, 33% free, 5MB/8MB, paused 4.191ms total 148.868ms
+10-18 19:44:08.524  2989  2989 W AccessibilityNodeInfoDumper: Fetch time: 34ms
+10-18 19:44:08.531  1585  2127 W WindowManager: Attempted to remove non-existing token: android.os.Binder@98d3ae1
+10-18 19:44:08.738  2989  2989 D AndroidRuntime: Shutting down VM
+10-18 19:44:09.256  1230  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:44:09.269  1230  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:44:09.282  3002  3002 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 3002
+10-18 19:44:12.271  3005  3005 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:12.285  3005  3005 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:12.415  3005  3005 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:12.521  3005  3005 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:12.521  3005  3005 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:12.530  3005  3005 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:12.609  3005  3005 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:44:13.823  3005  3005 W AccessibilityNodeInfoDumper: Fetch time: 17ms
+10-18 19:44:13.826  1585  1809 W WindowManager: Attempted to remove non-existing token: android.os.Binder@89696c7
+10-18 19:44:13.975  3005  3005 D AndroidRuntime: Shutting down VM
+10-18 19:44:15.385  3017  3017 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:15.397  3017  3017 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:15.466  3017  3017 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:15.550  3017  3017 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:15.550  3017  3017 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:15.557  3017  3017 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:15.628  3017  3017 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:44:15.640  3017  3017 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=527437, downTime=527437, deviceId=0, source=0x1002 }
+10-18 19:44:15.714  3017  3017 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=527437, downTime=527437, deviceId=0, source=0x1002 }
+10-18 19:44:15.804  3017  3017 D AndroidRuntime: Shutting down VM
+10-18 19:44:16.531  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 53083(2MB) AllocSpace objects, 0(0B) LOS objects, 4% free, 48MB/51MB, paused 1.809ms total 157.505ms
+10-18 19:44:16.943  2730  2730 I Choreographer: Skipped 51 frames!  The application may be doing too much work on its main thread.
+10-18 19:44:19.293  1230  1286 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:44:19.304  1230  1289 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:44:19.319  3028  3028 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 3028
+10-18 19:44:22.286  3031  3031 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:22.298  3031  3031 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:22.431  3031  3031 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:22.548  3031  3031 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:22.548  3031  3031 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:22.558  3031  3031 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:22.639  3031  3031 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:44:23.976  3031  3031 W AccessibilityNodeInfoDumper: Fetch time: 55ms
+10-18 19:44:23.978  1585  2191 W WindowManager: Attempted to remove non-existing token: android.os.Binder@ef904f4
+10-18 19:44:24.129  3031  3031 D AndroidRuntime: Shutting down VM
+10-18 19:44:25.525  3042  3042 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:25.538  3042  3042 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:25.607  3042  3042 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:25.689  3042  3042 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:25.689  3042  3042 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:25.696  3042  3042 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:25.768  3042  3042 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:44:25.776  3042  3042 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=352.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=537577, downTime=537577, deviceId=0, source=0x1002 }
+10-18 19:44:25.808  3042  3042 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=352.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=537577, downTime=537577, deviceId=0, source=0x1002 }
+10-18 19:44:25.824  3042  3042 D AndroidRuntime: Shutting down VM
+10-18 19:44:29.494  1230  1286 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:44:29.532  1230  1736 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:44:29.568  3053  3053 D         : HostConnection::get() New Host Connection established 0xb660d300, tid 3053
+10-18 19:44:32.645  3056  3056 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:32.659  3056  3056 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:32.796  3056  3056 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:32.926  3056  3056 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:32.926  3056  3056 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:32.937  3056  3056 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:33.039  3056  3056 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:44:34.544  3056  3056 W AccessibilityNodeInfoDumper: Fetch time: 97ms
+10-18 19:44:34.554  1585  2127 W WindowManager: Attempted to remove non-existing token: android.os.Binder@841a41d
+10-18 19:44:34.756  3056  3056 D AndroidRuntime: Shutting down VM
+10-18 19:44:36.239  3067  3067 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:36.253  3067  3067 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:36.381  3067  3067 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:36.493  3067  3067 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:36.493  3067  3067 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:36.503  3067  3067 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:36.588  3067  3067 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:44:36.611  3067  3067 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=596.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=548401, downTime=548401, deviceId=0, source=0x1002 }
+10-18 19:44:36.694  3067  3067 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=596.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=548401, downTime=548401, deviceId=0, source=0x1002 }
+10-18 19:44:36.794  3067  3067 D AndroidRuntime: Shutting down VM
+10-18 19:44:37.546  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 31147(1492KB) AllocSpace objects, 1(16KB) LOS objects, 3% free, 49MB/51MB, paused 2.996ms total 115.683ms
+10-18 19:44:37.591  2730  2730 I Choreographer: Skipped 35 frames!  The application may be doing too much work on its main thread.
+10-18 19:44:40.408  1230  1609 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:44:40.420  1230  2078 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:44:40.436  3078  3078 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 3078
+10-18 19:44:43.368  3081  3081 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:43.381  3081  3081 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:43.513  3081  3081 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:43.627  3081  3081 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:43.627  3081  3081 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:43.637  3081  3081 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:43.718  3081  3081 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:44:44.967  3081  3081 W AccessibilityNodeInfoDumper: Fetch time: 21ms
+10-18 19:44:44.969  1585  1596 W WindowManager: Attempted to remove non-existing token: android.os.Binder@f61e692
+10-18 19:44:45.125  3081  3081 D AndroidRuntime: Shutting down VM
+10-18 19:44:46.552  3092  3092 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:46.564  3092  3092 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:46.636  3092  3092 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:46.727  3092  3092 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:46.727  3092  3092 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:46.735  3092  3092 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:46.811  3092  3092 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:44:46.827  3092  3092 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=1331.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=558622, downTime=558622, deviceId=0, source=0x1002 }
+10-18 19:44:46.846  3092  3092 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=1331.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=558622, downTime=558622, deviceId=0, source=0x1002 }
+10-18 19:44:46.868  3092  3092 D AndroidRuntime: Shutting down VM
+10-18 19:44:47.510  2730  2730 I Choreographer: Skipped 33 frames!  The application may be doing too much work on its main thread.
+10-18 19:44:50.361  1230  1286 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:44:50.373  1230  2078 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:44:50.387  3103  3103 D         : HostConnection::get() New Host Connection established 0xb654d300, tid 3103
+10-18 19:44:53.349  3106  3106 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:53.360  3106  3106 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:53.428  3106  3106 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:53.515  3106  3106 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:53.515  3106  3106 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:53.521  3106  3106 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:53.594  3106  3106 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:44:55.011  3106  3106 W AccessibilityNodeInfoDumper: Fetch time: 138ms
+10-18 19:44:55.015  1585  1597 W WindowManager: Attempted to remove non-existing token: android.os.Binder@7dbd863
+10-18 19:44:55.168  3106  3106 D AndroidRuntime: Shutting down VM
+10-18 19:44:56.598  3117  3117 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:44:56.610  3117  3117 D AndroidRuntime: CheckJNI is OFF
+10-18 19:44:56.683  3117  3117 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:44:56.767  3117  3117 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:44:56.767  3117  3117 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:44:56.775  3117  3117 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:44:56.849  3117  3117 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:44:56.859  3117  3117 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=568658, downTime=568658, deviceId=0, source=0x1002 }
+10-18 19:44:56.881  3117  3117 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=841.0, y[0]=2308.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=568658, downTime=568658, deviceId=0, source=0x1002 }
+10-18 19:44:56.909  3117  3117 D AndroidRuntime: Shutting down VM
+10-18 19:44:57.941  2730  2730 I Choreographer: Skipped 56 frames!  The application may be doing too much work on its main thread.
+10-18 19:44:58.432  2730  2740 I art     : Background sticky concurrent mark sweep GC freed 11591(549KB) AllocSpace objects, 0(0B) LOS objects, 1% free, 50MB/51MB, paused 3.730ms total 141.448ms
+10-18 19:45:00.193  1230  1297 D hwcomposer: hw_composer sent 194 syncs in 60s
+10-18 19:45:00.530  1230  1736 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:45:00.557  1230  1609 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:45:00.583  3128  3128 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 3128
+10-18 19:45:03.702  3131  3131 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:45:03.717  3131  3131 D AndroidRuntime: CheckJNI is OFF
+10-18 19:45:03.857  3131  3131 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:45:03.992  3131  3131 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:45:03.993  3131  3131 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:45:04.002  3131  3131 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:45:04.106  3131  3131 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:45:05.562  3131  3131 W AccessibilityNodeInfoDumper: Fetch time: 93ms
+10-18 19:45:05.566  1585  2188 W WindowManager: Attempted to remove non-existing token: android.os.Binder@41b7c60
+10-18 19:45:05.756  3131  3131 D AndroidRuntime: Shutting down VM
+10-18 19:45:07.253  3142  3142 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:45:07.267  3142  3142 D AndroidRuntime: CheckJNI is OFF
+10-18 19:45:07.401  3142  3142 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:45:07.518  3142  3142 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:45:07.518  3142  3142 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:45:07.528  3142  3142 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:45:07.614  3142  3142 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:45:07.628  3142  3142 I Input   : injectMotionEvent: MotionEvent { action=ACTION_DOWN, actionButton=0, id[0]=0, x[0]=720.0, y[0]=560.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=579426, downTime=579426, deviceId=0, source=0x1002 }
+10-18 19:45:07.714  3142  3142 I Input   : injectMotionEvent: MotionEvent { action=ACTION_UP, actionButton=0, id[0]=0, x[0]=720.0, y[0]=560.0, toolType[0]=TOOL_TYPE_UNKNOWN, buttonState=0, metaState=0, flags=0x0, edgeFlags=0x0, pointerCount=1, historySize=0, eventTime=579426, downTime=579426, deviceId=0, source=0x1002 }
+10-18 19:45:07.810  3142  3142 D AndroidRuntime: Shutting down VM
+10-18 19:45:08.316  2067  2067 I LatinIME: Starting input. Cursor position = 0,0
+10-18 19:45:08.414  2730  2740 I art     : Background partial concurrent mark sweep GC freed 152598(9MB) AllocSpace objects, 12(31MB) LOS objects, 28% free, 10MB/14MB, paused 815us total 384.436ms
+10-18 19:45:08.626  1828  2063 D EGL_emulation: eglMakeCurrent: 0xa28adfa0: ver 3 0 (tinfo 0xaa064ba0)
+10-18 19:45:08.655  2067  2912 D EGL_emulation: eglMakeCurrent: 0xae553600: ver 3 0 (tinfo 0xae552810)
+10-18 19:45:10.479  3152  3152 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:45:10.492  3152  3152 D AndroidRuntime: CheckJNI is OFF
+10-18 19:45:10.671  3152  3152 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:45:10.803  3152  3152 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:45:10.803  3152  3152 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:45:10.814  3152  3152 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:45:10.898  3152  3152 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:45:10.937  3152  3152 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_L, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=582741, downTime=582741, deviceId=-1, source=0x101 }
+10-18 19:45:10.964  3152  3152 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_L, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=582741, downTime=582741, deviceId=-1, source=0x101 }
+10-18 19:45:11.263  3152  3152 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=582741, downTime=582741, deviceId=-1, source=0x101 }
+10-18 19:45:11.389  3152  3152 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_E, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=582741, downTime=582741, deviceId=-1, source=0x101 }
+10-18 19:45:11.554  3152  3152 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=582741, downTime=582741, deviceId=-1, source=0x101 }
+10-18 19:45:11.594  3152  3152 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_A, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=582741, downTime=582741, deviceId=-1, source=0x101 }
+10-18 19:45:11.601  3152  3152 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_F, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=582741, downTime=582741, deviceId=-1, source=0x101 }
+10-18 19:45:11.619  3152  3152 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_F, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=582741, downTime=582741, deviceId=-1, source=0x101 }
+10-18 19:45:11.626  3152  3152 D AndroidRuntime: Shutting down VM
+10-18 19:45:12.481  2730  2750 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:45:12.488  2730  2750 E LeafPdf : pdf text extraction failed on page 0
+10-18 19:45:12.488  2730  2750 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invokeSuspend(TextExtractor.kt:26)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invoke(TextExtractor.kt)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invoke(TextExtractor.kt)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor.extract(TextExtractor.kt:21)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.data.DocumentRepository.ensureText(DocumentRepository.kt:135)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at com.leaf.reader.ui.search.SearchScreenKt$runSearch$2.invokeSuspend(SearchScreen.kt:520)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:45:12.488  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:45:12.495  2730  2750 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:45:12.499  2730  2750 E LeafPdf : pdf text extraction failed on page 1
+10-18 19:45:12.499  2730  2750 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invokeSuspend(TextExtractor.kt:26)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invoke(TextExtractor.kt)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invoke(TextExtractor.kt)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor.extract(TextExtractor.kt:21)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.data.DocumentRepository.ensureText(DocumentRepository.kt:135)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at com.leaf.reader.ui.search.SearchScreenKt$runSearch$2.invokeSuspend(SearchScreen.kt:520)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:45:12.499  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:45:12.504  2730  2750 I art     : Rejecting re-init on previously-failed class java.lang.Class<com.tom_roush.pdfbox.pdmodel.font.PDType1Font>
+10-18 19:45:12.506  2730  2750 E LeafPdf : pdf text extraction failed on page 2
+10-18 19:45:12.506  2730  2750 E LeafPdf : java.lang.StackOverflowError: com.tom_roush.pdfbox.pdmodel.font.PDType1Font
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.font.PDFontFactory.createFont(PDFontFactory.java:74)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.pdmodel.PDResources.getFont(PDResources.java:145)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.operator.text.SetFontAndSize.process(SetFontAndSize.java:62)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processOperator(PDFStreamEngine.java:966)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStreamOperators(PDFStreamEngine.java:541)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processStream(PDFStreamEngine.java:516)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.contentstream.PDFStreamEngine.processPage(PDFStreamEngine.java:153)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.LegacyPDFStreamEngine.processPage(LegacyPDFStreamEngine.java:161)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPage(PDFTextStripper.java:362)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.processPages(PDFTextStripper.java:290)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.writeText(PDFTextStripper.java:237)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.tom_roush.pdfbox.text.PDFTextStripper.getText(PDFTextStripper.java:201)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.buildIndex(PdfSession.kt:269)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.access$buildIndex(PdfSession.kt:155)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invokeSuspend(PdfSession.kt:239)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession$textIndex$3.invoke(PdfSession.kt)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.PdfSession.textIndex(PdfSession.kt:238)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invokeSuspend(TextExtractor.kt:26)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invoke(TextExtractor.kt)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor$extract$2.invoke(TextExtractor.kt)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.intrinsics.UndispatchedKt.startUndispatchedOrReturn(Undispatched.kt:78)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt__Builders_commonKt.withContext(Builders.common.kt:167)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.BuildersKt.withContext(Unknown Source)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.engine.TextExtractor.extract(TextExtractor.kt:21)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.data.DocumentRepository.ensureText(DocumentRepository.kt:135)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at com.leaf.reader.ui.search.SearchScreenKt$runSearch$2.invokeSuspend(SearchScreen.kt:520)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:108)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:115)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:103)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:584)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:793)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:697)
+10-18 19:45:12.506  2730  2750 E LeafPdf : 	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:684)
+10-18 19:45:18.229  1230  1289 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 19:45:18.243  1230  1286 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 19:45:18.258  3164  3164 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 3164
+10-18 19:45:22.405  3167  3167 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:45:22.417  3167  3167 D AndroidRuntime: CheckJNI is OFF
+10-18 19:45:22.520  3167  3167 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 19:45:22.645  3167  3167 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 19:45:22.645  3167  3167 E android.os.Debug: failed to load memtrack module: -2
+10-18 19:45:22.653  3167  3167 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 19:45:22.729  3167  3167 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 19:45:24.219  3167  3167 W AccessibilityNodeInfoDumper: Fetch time: 134ms
+10-18 19:45:24.223  1585  2189 W WindowManager: Attempted to remove non-existing token: android.os.Binder@a9fb5ea
+10-18 19:45:24.391  3167  3167 D AndroidRuntime: Shutting down VM
