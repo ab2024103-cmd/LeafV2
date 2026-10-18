@@ -1,6 +1,5 @@
 package com.leaf.reader.ui
 
-import android.Manifest
 import android.content.Intent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -143,17 +142,6 @@ fun LeafApp(container: AppContainer) {
         }
         deviceMessage = "Reading the folder…"
         runDeviceScan { DeviceScanner.scanTree(context, uri) }
-    }
-
-    /** Full device scan — on Android 6-9 this asks for storage access once, on purpose. */
-    val storagePermission = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { granted ->
-        if (granted) {
-            runDeviceScan { DeviceScanner.scanStorage(context) }
-        } else {
-            deviceMessage = "Storage access declined — use \"Choose folder\" instead, it never asks."
-        }
     }
 
     val picker = rememberLauncherForActivityResult(
@@ -349,13 +337,8 @@ fun LeafApp(container: AppContainer) {
                             message = deviceMessage,
                             addedUris = state.documents.map { it.uri }.toSet(),
                             onBrowseFolder = { treePicker.launch(null) },
-                            onScanStorage = {
-                                if (DeviceScanner.canScanWithoutPermission()) {
-                                    runDeviceScan { DeviceScanner.scanMediaStore(context) }
-                                } else {
-                                    storagePermission.launch(Manifest.permission.READ_EXTERNAL_STORAGE)
-                                }
-                            },
+                            onScanStorage = { runDeviceScan { DeviceScanner.scanMediaStore(context) } },
+                            showQuickScan = DeviceScanner.canScanWithoutPermission(),
                             onAdd = { file -> viewModel.addDeviceFile(file) },
                             onOpen = { file -> viewModel.addAndOpenDeviceFile(file) }
                         )

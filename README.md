@@ -20,6 +20,7 @@ every feature can be explored immediately, even on a device with no documents.
 
 | Area | What Leaf does |
 | --- | --- |
+| **Device files** | A dedicated tab that lists every PDF, Word, Excel, PowerPoint, text and EPUB file that already lives on the phone. *Choose folder* uses the system folder picker, so Leaf **never requests a storage permission** and never copies your files — it only remembers the uri you already granted. Files can be added to the library or opened straight away. |
 | **Library** | Type icon, name, folder, tags, size and reading progress per row; folder chips with live counts; “Jump back in” hero card; “Continue reading” grid; long-press action sheet; empty state; two-pane list + detail on wide screens; optional grouping by file type with per-group counts, size, highlight and bookmark statistics. |
 | **Recents** | Automatic logging of every open document, de-duplicated, split into *Today* / *Earlier*, 24-hour count badge on the nav bar, per-row remove with **Undo**, clear-today / clear-all with confirmation. |
 | **Favorites** | Instant star toggle with haptics, its own independent sort order, same row actions as the library. |
@@ -81,8 +82,18 @@ The project is built with **GitHub Actions** (`.github/workflows/build-apk.yml`)
 git tag v2.0.0 && git push origin v2.0.0
 ```
 
+## Continuous testing
+
+Every push also runs the app on an **Android 6 (API 23) emulator** inside GitHub Actions
+(`reactivecircus/android-emulator-runner`): the APK is installed, the library, the reader, an
+in-document search and the device browser are driven with `adb`, and the screenshots, the UI
+hierarchy, the logcat and any native crash tombstone are committed back to the branch under
+`.ci/smoke/` so a regression can be seen immediately.
+
 ## Privacy
 
-Leaf declares **no `INTERNET` permission**. It has no analytics, no crash reporting and no
+Leaf declares **no permissions at all** — no `INTERNET`, no storage. The only system dialogs you
+ever see are Android's own file-picker grants, which are how the platform hands an app access to a
+file without copying it. It has no analytics, no crash reporting and no
 network code at all. The only storage access is the access *you* grant through the system
 document picker; Leaf stores document URIs, never copies of your files.

@@ -59,6 +59,7 @@ fun DeviceScreen(
     addedUris: Set<String>,
     onBrowseFolder: () -> Unit,
     onScanStorage: () -> Unit,
+    showQuickScan: Boolean = true,
     onAdd: (DeviceFile) -> Unit,
     onOpen: (DeviceFile) -> Unit
 ) {
@@ -97,7 +98,8 @@ fun DeviceScreen(
                         Spacer(Modifier.height(4.dp))
                         Text(
                             text = "Leaf reads PDF, DOCX, XLSX, PPTX, TXT and EPUB. Choose a folder to " +
-                                "browse it — no permission prompt, and your files are never copied.",
+                                "browse it — Leaf asks for no permission at all, and your files are " +
+                                "never copied.",
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -108,14 +110,16 @@ fun DeviceScreen(
                                 Spacer(Modifier.width(6.dp))
                                 Text("Choose folder")
                             }
-                            OutlinedButton(onClick = onScanStorage) {
-                                Text("Scan storage")
+                            if (showQuickScan) {
+                                OutlinedButton(onClick = onScanStorage) {
+                                    Text("Quick scan")
+                                }
                             }
                         }
                         Spacer(Modifier.height(6.dp))
                         Text(
-                            text = "“Choose folder” never asks for a permission. “Scan storage” " +
-                                "searches the whole device and asks for storage access once.",
+                            text = "Pick the storage root once and every supported file below it is " +
+                                "listed. Leaf never asks for a storage permission.",
                             style = MaterialTheme.typography.labelSmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
