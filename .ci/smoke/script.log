@@ -1,6 +1,6 @@
 == waiting for device ==
 == installing apks/app/build/outputs/apk/debug/app-debug.apk ==
-apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 16.0 MB/s (27449040 bytes in 1.633s)
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 25.4 MB/s (27449045 bytes in 1.032s)
 Performing Push Install
 	pkg: /data/local/tmp/app-debug.apk
 Success
@@ -8,9 +8,9 @@ Success
 Starting: Intent { cmp=com.leaf.reader/.MainActivity }
 Status: ok
 Activity: com.leaf.reader/.MainActivity
-ThisTime: 5307
-TotalTime: 5307
-WaitTime: 5521
+ThisTime: 3562
+TotalTime: 3562
+WaitTime: 3849
 Complete
 == 1. library ==
 captured 01-library
@@ -68,7 +68,7 @@ Everything on this device | Leaf reads PDF, DOCX, XLSX, PPTX, TXT and EPUB. Choo
 --- 07-search ---
 Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
 --- 08-recents ---
-Today | 2 documents | Clear today | field-guide.pdf | 1.7 KB | Opened 1m ago | quarterly-report.docx | 1.2 KB | Opened 2m ago | Recents | Library | Recents | Favorites | Search | Device | Settings
+Today | 2 documents | Clear today | field-guide.pdf | 1.7 KB | Opened 1m ago | quarterly-report.docx | 1.2 KB | Opened 1m ago | Recents | Library | Recents | Favorites | Search | Device | Settings
 --- 09-favorites ---
 No favorites yet | Star a document from the library, the long-press sheet or the reader to pin it here. | Favorites | Library | Recents | Favorites | Search | Device | Settings
 --- 10-settings ---
@@ -77,19 +77,19 @@ Appearance | App theme | Light | Dark | System | Default reading theme | Auto | 
 Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
 result: no fatal exception
 --- leaf log lines ---
-10-18 18:50:42.867  2688  2688 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:50:42.882  2688  2688 D AndroidRuntime: CheckJNI is OFF
-10-18 18:50:43.217  2688  2688 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 18:50:43.237  1584  2218 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2688
-10-18 18:50:43.246  2688  2688 D AndroidRuntime: Shutting down VM
-10-18 18:50:44.583  2712  2712 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:50:44.595  2712  2712 D AndroidRuntime: CheckJNI is OFF
-10-18 18:50:44.943  2712  2712 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 18:50:44.971  1584  1597 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
-10-18 18:50:45.167  1584  2374 I ActivityManager: Start proc 2721:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
-10-18 18:50:50.436  1584  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s307ms
-10-18 18:50:50.526  2712  2712 D AndroidRuntime: Shutting down VM
-10-18 18:51:06.209  2750  2750 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 18:51:06.228  2750  2750 D AndroidRuntime: CheckJNI is OFF
-10-18 18:51:08.314  2750  2750 D AndroidRuntime: Shutting down VM
+10-18 19:04:45.315  2668  2668 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:04:45.324  2668  2668 D AndroidRuntime: CheckJNI is OFF
+10-18 19:04:45.826  2668  2668 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 19:04:45.902  1582  2100 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2668
+10-18 19:04:45.909  2668  2668 D AndroidRuntime: Shutting down VM
+10-18 19:04:47.359  2691  2691 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:04:47.368  2691  2691 D AndroidRuntime: CheckJNI is OFF
+10-18 19:04:47.811  2691  2691 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 19:04:47.841  1582  2295 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 19:04:48.168  1582  1789 I ActivityManager: Start proc 2700:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 19:04:51.683  1582  1601 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +3s562ms
+10-18 19:04:51.764  2691  2691 D AndroidRuntime: Shutting down VM
+10-18 19:05:06.341  2730  2730 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:05:06.350  2730  2730 D AndroidRuntime: CheckJNI is OFF
+10-18 19:05:08.239  2730  2730 D AndroidRuntime: Shutting down VM
 == smoke test finished ==
