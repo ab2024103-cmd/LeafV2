@@ -22,8 +22,8 @@ object PdfTextFallback {
         while (index < bytes.size) {
             val start = indexOf(bytes, STREAM, index) ?: break
             var contentStart = start + STREAM.size
-            if (contentStart < bytes.size && bytes[contentStart] == CR) contentStart++
-            if (contentStart < bytes.size && bytes[contentStart] == LF) contentStart++
+            if (contentStart < bytes.size && (bytes[contentStart].toInt() and 0xFF) == CR) contentStart++
+            if (contentStart < bytes.size && (bytes[contentStart].toInt() and 0xFF) == LF) contentStart++
             val end = indexOf(bytes, ENDSTREAM, contentStart) ?: break
             index = end + ENDSTREAM.size
             val raw = bytes.copyOfRange(contentStart, end)
@@ -41,7 +41,7 @@ object PdfTextFallback {
         val builder = StringBuilder()
         var index = 0
         while (index < content.size) {
-            if (content[index] == OPEN_PAREN) {
+            if ((content[index].toInt() and 0xFF) == OPEN_PAREN) {
                 val literal = readLiteral(content, index)
                 if (literal != null) {
                     builder.append(literal.first)
@@ -118,9 +118,9 @@ object PdfTextFallback {
 
     private val STREAM = "stream".toByteArray(Charsets.ISO_8859_1)
     private val ENDSTREAM = "endstream".toByteArray(Charsets.ISO_8859_1)
-    private const val CR = 13.toByte()
-    private const val LF = 10.toByte()
-    private const val OPEN_PAREN = 40.toByte()
-    private const val CLOSE_PAREN = 41.toByte()
-    private const val ESCAPE = 92.toByte()
+    private const val CR = 13
+    private const val LF = 10
+    private const val OPEN_PAREN = 40
+    private const val CLOSE_PAREN = 41
+    private const val ESCAPE = 92
 }
