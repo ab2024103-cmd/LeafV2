@@ -30,13 +30,52 @@ data class TextHighlightRange(
 class LeafTextView(context: Context) : View(context) {
 
     var textLayout: StaticLayout? = null
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var pageTop: Int = 0
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var highlightRanges: List<TextHighlightRange> = emptyList()
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var selectionRange: IntRange? = null
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var scale: Float = 1f
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var panX: Float = 0f
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var panY: Float = 0f
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var colors: ReaderColors = readerColors(com.leaf.reader.model.ReadingTheme.PAPER, false)
+        set(value) {
+            field = value
+            invalidate()
+        }
 
     var onSelectionChanged: ((Int, Int) -> Unit)? = null
     var onTap: ((Int) -> Unit)? = null

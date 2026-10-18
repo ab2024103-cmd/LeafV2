@@ -590,6 +590,12 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
         val key = page * 1000 + (width / 100)
         val cached = bitmapCache[key]
         if (cached != null) return cached
+        // Free the oldest page before the new one is rendered: two pages are enough for a
+        // smooth scroll and three would be too much for a low memory device.
+        while (bitmapCache.size >= 2) {
+            val eldest = bitmapCache.keys.firstOrNull() ?: break
+            bitmapCache.remove(eldest)
+        }
         val bitmap = withContext(Dispatchers.IO) { session.renderPage(page, width) } ?: return null
         bitmapCache[key] = bitmap
         return bitmap

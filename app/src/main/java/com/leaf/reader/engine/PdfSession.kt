@@ -156,7 +156,7 @@ class PdfSession(private val context: Context, private val uri: Uri) {
 
     companion object {
         /** Upper bound for the rendered page width — keeps the memory footprint small. */
-        const val MAX_RENDER_WIDTH = 1000
+        const val MAX_RENDER_WIDTH = 1600
     }
 
     private val resolver: ContentResolver = context.contentResolver

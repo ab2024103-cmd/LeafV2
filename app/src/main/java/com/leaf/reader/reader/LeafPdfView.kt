@@ -30,11 +30,40 @@ data class PdfHighlightRect(
 class LeafPdfView(context: Context) : View(context) {
 
     var bitmap: Bitmap? = null
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var highlightRects: List<PdfHighlightRect> = emptyList()
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var selectionRect: NormRect? = null
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var panX: Float = 0f
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var panY: Float = 0f
+        set(value) {
+            field = value
+            invalidate()
+        }
+
     var colors: ReaderColors = readerColors(com.leaf.reader.model.ReadingTheme.PAPER, false)
+        set(value) {
+            field = value
+            invalidate()
+        }
 
     var onSelection: ((NormRect) -> Unit)? = null
     var onTap: ((Float, Float) -> Unit)? = null
