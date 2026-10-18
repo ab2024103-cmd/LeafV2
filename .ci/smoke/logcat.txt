@@ -1,0 +1,134 @@
+--------- beginning of main
+10-18 17:06:01.236  2071  2071 D CarrierServiceBindHelper: Receive action: android.intent.action.PACKAGE_ADDED
+10-18 17:06:01.264  2071  2071 D CarrierServiceBindHelper: mHandler: 3
+10-18 17:06:01.265  2071  2071 D CarrierConfigLoader: mHandler: 9 phoneId: 0
+--------- beginning of system
+10-18 17:06:01.481  1586  2111 I ActivityManager: Start proc 2688:com.svox.pico/u0a40 for broadcast com.svox.pico/.VoiceDataInstallerReceiver
+10-18 17:06:01.482  1586  1601 W art     : Long monitor contention event with owner method=void com.android.server.am.BroadcastQueue.processNextBroadcast(boolean) from BroadcastQueue.java:639 waiters=0 for 213ms
+10-18 17:06:02.088  1586  2111 W BackupManagerService: dataChanged but no participant pkg='com.android.launcher3' uid=10008
+10-18 17:06:02.310  1586  2141 I ActivityManager: Killing 2083:com.android.settings:CryptKeeper/1000 (adj 15): empty #17
+10-18 17:06:03.622  2686  2686 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:03.650  2686  2686 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:04.023  2686  2686 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 17:06:04.134  1586  1599 W VoiceInteractionManagerService: no available voice recognition services found for user 0
+10-18 17:06:04.292  2686  2686 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 17:06:04.292  2686  2686 E android.os.Debug: failed to load memtrack module: -2
+10-18 17:06:04.303  2686  2686 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 17:06:04.462  2686  2686 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 17:06:04.486  1586  2161 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2686
+10-18 17:06:04.514  2686  2686 D AndroidRuntime: Shutting down VM
+10-18 17:06:06.008  2710  2710 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:06.021  2710  2710 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:06.155  2710  2710 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 17:06:06.264  2710  2710 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 17:06:06.264  2710  2710 E android.os.Debug: failed to load memtrack module: -2
+10-18 17:06:06.274  2710  2710 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 17:06:06.353  2710  2710 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 17:06:06.381  1586  2141 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 17:06:06.585  1586  2297 I ActivityManager: Start proc 2719:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 17:06:06.587  2719  2719 I art     : Late-enabling -Xcheck:jni
+10-18 17:06:06.714  1226  1291 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 17:06:06.999  2342  2395 D EGL_emulation: eglMakeCurrent: 0xaa9933e0: ver 3 0 (tinfo 0xaa9a5520)
+10-18 17:06:07.064  2342  2395 E Surface : getSlotFromBufferLocked: unknown buffer: 0xb40bd8e0
+10-18 17:06:08.226  1226  1751 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 17:06:08.231  2719  2738 D OpenGLRenderer: Use EGL_SWAP_BEHAVIOR_PRESERVED: true
+10-18 17:06:08.248  2719  2719 D         : HostConnection::get() New Host Connection established 0xaaac4ec0, tid 2719
+10-18 17:06:09.992  2719  2738 D         : HostConnection::get() New Host Connection established 0xadb9da80, tid 2738
+10-18 17:06:10.003  2719  2738 I OpenGLRenderer: Initialized EGL, version 1.4
+10-18 17:06:10.009  2719  2738 D EGL_emulation: eglCreateContext: 0xae423c00: maj 3 min 0 rcv 3
+10-18 17:06:10.015  2719  2738 D EGL_emulation: eglMakeCurrent: 0xae423c00: ver 3 0 (tinfo 0xae4bf400)
+10-18 17:06:10.028  2719  2738 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008cdf
+10-18 17:06:10.029  2719  2738 E eglCodecCommon: glUtilsParamSize: unknow param 0x00008824
+10-18 17:06:10.053  2719  2738 D EGL_emulation: eglMakeCurrent: 0xae423c00: ver 3 0 (tinfo 0xae4bf400)
+10-18 17:06:10.057  1226  2038 D         : HostConnection::get() New Host Connection established 0xb653c280, tid 2038
+10-18 17:06:10.332  2719  2719 I Choreographer: Skipped 120 frames!  The application may be doing too much work on its main thread.
+10-18 17:06:11.050  1586  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +4s535ms
+10-18 17:06:11.226  2710  2710 D AndroidRuntime: Shutting down VM
+10-18 17:06:11.758  2719  2719 I Choreographer: Skipped 84 frames!  The application may be doing too much work on its main thread.
+10-18 17:06:11.865  1815  1815 W PathParser: Points are too far apart 4.030360828967057
+10-18 17:06:11.866  1815  1815 W PathParser: Points are too far apart 4.030360538880159
+10-18 17:06:12.094  1815  1815 W PathParser: Points are too far apart 4.030360828967057
+10-18 17:06:12.094  1815  1815 W PathParser: Points are too far apart 4.030360538880159
+10-18 17:06:22.016  1226  1291 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 17:06:22.032  1226  1751 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 17:06:22.077  2745  2745 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2745
+10-18 17:06:25.058  2748  2748 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:25.071  2748  2748 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:25.199  2748  2748 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 17:06:25.316  2748  2748 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 17:06:25.316  2748  2748 E android.os.Debug: failed to load memtrack module: -2
+10-18 17:06:25.326  2748  2748 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 17:06:25.422  2748  2748 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 17:06:27.000  2748  2748 W AccessibilityNodeInfoDumper: Fetch time: 179ms
+10-18 17:06:27.004  1586  2161 W WindowManager: Attempted to remove non-existing token: android.os.Binder@413b01f
+10-18 17:06:27.181  2748  2748 D AndroidRuntime: Shutting down VM
+10-18 17:06:31.726  1226  1291 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 17:06:31.741  1226  1634 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 17:06:31.755  2762  2762 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2762
+10-18 17:06:34.743  2765  2765 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:34.756  2765  2765 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:34.880  2765  2765 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 17:06:34.992  2765  2765 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 17:06:34.992  2765  2765 E android.os.Debug: failed to load memtrack module: -2
+10-18 17:06:35.002  2765  2765 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 17:06:35.085  2765  2765 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 17:06:36.352  2765  2765 W AccessibilityNodeInfoDumper: Fetch time: 123ms
+10-18 17:06:36.354  1586  2198 W WindowManager: Attempted to remove non-existing token: android.os.Binder@3059f6c
+10-18 17:06:36.512  2765  2765 D AndroidRuntime: Shutting down VM
+10-18 17:06:39.018  1226  2038 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 17:06:39.033  1226  1291 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 17:06:39.046  2778  2778 D         : HostConnection::get() New Host Connection established 0xb658d300, tid 2778
+10-18 17:06:42.143  2781  2781 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:42.156  2781  2781 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:42.271  2781  2781 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 17:06:42.369  2781  2781 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 17:06:42.369  2781  2781 E android.os.Debug: failed to load memtrack module: -2
+10-18 17:06:42.376  2781  2781 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 17:06:42.450  2781  2781 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 17:06:43.734  2781  2781 W AccessibilityNodeInfoDumper: Fetch time: 141ms
+10-18 17:06:43.736  1586  2141 W WindowManager: Attempted to remove non-existing token: android.os.Binder@97ff935
+10-18 17:06:43.876  2781  2781 D AndroidRuntime: Shutting down VM
+10-18 17:06:45.273  2793  2793 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:45.285  2793  2793 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:45.352  2793  2793 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 17:06:45.436  2793  2793 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 17:06:45.436  2793  2793 E android.os.Debug: failed to load memtrack module: -2
+10-18 17:06:45.444  2793  2793 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 17:06:45.517  2793  2793 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 17:06:45.530  2793  2793 I Input   : injectKeyEvent: KeyEvent { action=ACTION_DOWN, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=407451, downTime=407451, deviceId=-1, source=0x101 }
+10-18 17:06:45.574  2793  2793 I Input   : injectKeyEvent: KeyEvent { action=ACTION_UP, keyCode=KEYCODE_BACK, scanCode=0, metaState=0, flags=0x0, repeatCount=0, eventTime=407451, downTime=407451, deviceId=-1, source=0x101 }
+10-18 17:06:45.595  1226  1751 D PermissionCache: checking android.permission.READ_FRAME_BUFFER for uid=1000 => granted (779 us)
+10-18 17:06:45.601  1226  1751 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 1806336
+10-18 17:06:45.606  1586  1804 D         : HostConnection::get() New Host Connection established 0xad191640, tid 1804
+10-18 17:06:45.722  2793  2793 D AndroidRuntime: Shutting down VM
+10-18 17:06:45.898  1586  1596 I art     : Background partial concurrent mark sweep GC freed 16225(1264KB) AllocSpace objects, 10(200KB) LOS objects, 33% free, 5MB/8MB, paused 12.031ms total 207.975ms
+10-18 17:06:45.902  1586  1600 W art     : Long monitor contention event with owner method=void com.android.server.am.ActivityManagerService.activityPaused(android.os.IBinder) from ActivityManagerService.java:6439 waiters=0 for 182ms
+10-18 17:06:45.934  1586  1600 I ActivityManager: Killing 2443:com.android.carrierconfig/u0a3 (adj 15): empty #17
+10-18 17:06:46.105  2342  2395 D EGL_emulation: eglMakeCurrent: 0xaa9933e0: ver 3 0 (tinfo 0xaa9a5520)
+10-18 17:06:46.349  2719  2738 D EGL_emulation: eglMakeCurrent: 0xae423c00: ver 3 0 (tinfo 0xae4bf400)
+10-18 17:06:46.372  2719  2738 E Surface : getSlotFromBufferLocked: unknown buffer: 0xae4f70e0
+10-18 17:06:46.574  2719  2719 I Choreographer: Skipped 30 frames!  The application may be doing too much work on its main thread.
+10-18 17:06:47.076  1815  1815 W PathParser: Points are too far apart 4.030360828967057
+10-18 17:06:47.076  1815  1815 W PathParser: Points are too far apart 4.030360538880159
+10-18 17:06:47.097  1815  1815 W PathParser: Points are too far apart 4.030360828967057
+10-18 17:06:47.097  1815  1815 W PathParser: Points are too far apart 4.030360538880159
+10-18 17:06:47.131  1815  1815 W PathParser: Points are too far apart 4.030360828967057
+10-18 17:06:47.131  1815  1815 W PathParser: Points are too far apart 4.030360538880159
+10-18 17:06:47.217  1815  1815 W PathParser: Points are too far apart 4.030360828967057
+10-18 17:06:47.218  1815  1815 W PathParser: Points are too far apart 4.030360538880159
+10-18 17:06:48.257  1226  1751 E SurfaceFlinger: ro.sf.lcd_density must be defined as a build property
+10-18 17:06:48.269  1226  1634 D gralloc_ranchu: gralloc_alloc: Creating ashmem region of size 14745600
+10-18 17:06:48.288  2806  2806 D         : HostConnection::get() New Host Connection established 0xb65cd300, tid 2806
+10-18 17:06:51.786  2809  2809 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:51.833  2809  2809 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:51.969  2809  2809 D ICU     : No timezone override file found: /data/misc/zoneinfo/current/icu/icu_tzdata.dat
+10-18 17:06:52.120  2809  2809 E memtrack: Couldn't load memtrack module (No such file or directory)
+10-18 17:06:52.121  2809  2809 E android.os.Debug: failed to load memtrack module: -2
+10-18 17:06:52.129  2809  2809 I Radio-JNI: register_android_hardware_Radio DONE
+10-18 17:06:52.228  2809  2809 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 17:06:53.543  2809  2809 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@8000f3f7; boundsInParent: Rect(524157, 0 - 524439, 338); boundsInScreen: Rect(1501, 1146 - 1440, 1349); packageName: com.android.launcher3; className: android.widget.TextView; text: Settings; error: null; maxTextLength: -1; contentDescription: Settings; viewIdResName: null; checkable: false; checked: false; focusable: true; focused: false; selected: false; clickable: true; longClickable: true; contextClickable: false; enabled: true; password: false; scrollable: false; actions: [AccessibilityAction: ACTION_FOCUS - null, AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_CLICK - null, AccessibilityAction: ACTION_LONG_CLICK - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_NEXT_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_PREVIOUS_AT_MOVEMENT_GRANULARITY - null, AccessibilityAction: ACTION_SET_SELECTION - null, AccessibilityAction: ACTION_UNKNOWN - null, AccessibilityAction: ACTION_UNKNOWN - Remove, AccessibilityAction: ACTION_UNKNOWN - Move item]
+10-18 17:06:53.545  2809  2809 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@80008adb; boundsInParent: Rect(0, 0 - 1440, 238); boundsInScreen: Rect(0, 84 - 1440, 322); packageName: com.android.launcher3; className: android.widget.LinearLayout; text: null; error: null; maxTextLength: -1; contentDescription: null; viewIdResName: com.android.launcher3:id/drag_target_bar; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_UNKNOWN - null]
+10-18 17:06:53.546  2809  2809 I AccessibilityNodeInfoDumper: Skipping invisible child: android.view.accessibility.AccessibilityNodeInfo@8000bba8; boundsInParent: Rect(0, 0 - 182, 182); boundsInScreen: Rect(0, 84 - 182, 266); packageName: com.android.launcher3; className: android.view.View; text: null; error: null; maxTextLength: -1; contentDescription: null; viewIdResName: com.android.launcher3:id/focus_indicator; checkable: false; checked: false; focusable: false; focused: false; selected: false; clickable: false; longClickable: false; contextClickable: false; enabled: true; password: false; scrollable: false; actions: [AccessibilityAction: ACTION_SELECT - null, AccessibilityAction: ACTION_CLEAR_SELECTION - null, AccessibilityAction: ACTION_ACCESSIBILITY_FOCUS - null, AccessibilityAction: ACTION_UNKNOWN - null]
+10-18 17:06:53.558  2809  2809 W AccessibilityNodeInfoDumper: Fetch time: 129ms
+10-18 17:06:53.566  1586  2296 W WindowManager: Attempted to remove non-existing token: android.os.Binder@5d58417
+10-18 17:06:53.675  2809  2809 D AndroidRuntime: Shutting down VM

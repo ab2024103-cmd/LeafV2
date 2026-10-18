@@ -1,0 +1,37 @@
+package: com.leaf.reader
+apk: apks/app/build/outputs/apk/debug/app-debug.apk
+screens: 01-library 02-reader 03-tabs 04-back
+result: no fatal exception
+--- leaf related log lines ---
+10-18 17:06:03.622  2686  2686 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:03.650  2686  2686 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:04.462  2686  2686 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 17:06:04.486  1586  2161 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2686
+10-18 17:06:04.514  2686  2686 D AndroidRuntime: Shutting down VM
+10-18 17:06:06.008  2710  2710 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:06.021  2710  2710 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:06.353  2710  2710 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 17:06:06.381  1586  2141 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 17:06:06.585  1586  2297 I ActivityManager: Start proc 2719:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 17:06:11.050  1586  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +4s535ms
+10-18 17:06:11.226  2710  2710 D AndroidRuntime: Shutting down VM
+10-18 17:06:25.058  2748  2748 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:25.071  2748  2748 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:25.422  2748  2748 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 17:06:27.181  2748  2748 D AndroidRuntime: Shutting down VM
+10-18 17:06:34.743  2765  2765 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:34.756  2765  2765 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:35.085  2765  2765 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 17:06:36.512  2765  2765 D AndroidRuntime: Shutting down VM
+10-18 17:06:42.143  2781  2781 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:42.156  2781  2781 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:42.450  2781  2781 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 17:06:43.876  2781  2781 D AndroidRuntime: Shutting down VM
+10-18 17:06:45.273  2793  2793 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:45.285  2793  2793 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:45.517  2793  2793 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 17:06:45.722  2793  2793 D AndroidRuntime: Shutting down VM
+10-18 17:06:51.786  2809  2809 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 17:06:51.833  2809  2809 D AndroidRuntime: CheckJNI is OFF
+10-18 17:06:52.228  2809  2809 D AndroidRuntime: Calling main entry com.android.commands.uiautomator.Launcher
+10-18 17:06:53.675  2809  2809 D AndroidRuntime: Shutting down VM
