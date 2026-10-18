@@ -2,24 +2,24 @@ ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
 Display #0 (activities from top to bottom):
   Stack #1:
     Task id #4
-    * TaskRecord{20ce9a7 #4 A=com.leaf.reader U=0 sz=1}
+    * TaskRecord{ff34bb0 #4 A=com.leaf.reader U=0 sz=1}
       userId=0 effectiveUid=u0a55 mCallingUid=0 mCallingPackage=null
       affinity=com.leaf.reader
       intent={flg=0x10000000 cmp=com.leaf.reader/.MainActivity}
       realActivity=com.leaf.reader/.MainActivity
       autoRemoveRecents=false isPersistable=true numFullscreen=1 taskType=0 mTaskToReturnTo=0
       rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
-      Activities=[ActivityRecord{2ee9b2c u0 com.leaf.reader/.MainActivity t4}]
+      Activities=[ActivityRecord{c53ec08 u0 com.leaf.reader/.MainActivity t4}]
       askedCompatMode=false inRecents=true isAvailable=true
       lastThumbnail=null lastThumbnailFile=/data/system/recent_images/4_task_thumbnail.png
       stackId=1
-      hasBeenVisible=true mResizeable=false firstActiveTime=1792353711746 lastActiveTime=1792353711746 (inactive for 163s)
-      * Hist #0: ActivityRecord{2ee9b2c u0 com.leaf.reader/.MainActivity t4}
+      hasBeenVisible=true mResizeable=false firstActiveTime=1792355452071 lastActiveTime=1792355452071 (inactive for 201s)
+      * Hist #0: ActivityRecord{c53ec08 u0 com.leaf.reader/.MainActivity t4}
           packageName=com.leaf.reader processName=com.leaf.reader
           launchedFromUid=0 launchedFromPackage=null userId=0
-          app=ProcessRecord{cda8e54 2694:com.leaf.reader/u0a55}
+          app=ProcessRecord{5c70a29 2721:com.leaf.reader/u0a55}
           Intent { flg=0x10000000 cmp=com.leaf.reader/.MainActivity }
-          frontOfTask=true task=TaskRecord{20ce9a7 #4 A=com.leaf.reader U=0 sz=1}
+          frontOfTask=true task=TaskRecord{ff34bb0 #4 A=com.leaf.reader U=0 sz=1}
           taskAffinity=com.leaf.reader
           realActivity=com.leaf.reader/.MainActivity
           baseDir=/data/app/com.leaf.reader-1/base.apk
@@ -29,32 +29,32 @@ Display #0 (activities from top to bottom):
           config={1.0 310mcc260mnc en_US ldltr sw411dp w411dp h659dp 560dpi nrml port finger -keyb/v/h -nav/h s.6}
           stackConfigOverride={1.0 ?mcc?mnc ?locale ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/?}
           taskDescription: iconFilename=null label="null" color=fff5f5f5
-          launchFailed=false launchCount=1 lastLaunchTime=-2m43s660ms
+          launchFailed=false launchCount=1 lastLaunchTime=-3m21s326ms
           haveState=false icicle=null
           state=RESUMED stopped=false delayedResume=false finishing=false
           keysPaused=false inHistory=true visible=true sleeping=false idle=true
           fullscreen=true noDisplay=false immersive=false launchMode=2
           frozenBeforeDestroy=false forceNewConfig=false
           mActivityType=APPLICATION_ACTIVITY_TYPE
-          waitingVisible=false nowVisible=true lastVisibleTime=-2m40s633ms
+          waitingVisible=false nowVisible=true lastVisibleTime=-3m15s787ms
 
     Running activities (most recent first):
-      TaskRecord{20ce9a7 #4 A=com.leaf.reader U=0 sz=1}
-        Run #0: ActivityRecord{2ee9b2c u0 com.leaf.reader/.MainActivity t4}
+      TaskRecord{ff34bb0 #4 A=com.leaf.reader U=0 sz=1}
+        Run #0: ActivityRecord{c53ec08 u0 com.leaf.reader/.MainActivity t4}
 
-    mResumedActivity: ActivityRecord{2ee9b2c u0 com.leaf.reader/.MainActivity t4}
+    mResumedActivity: ActivityRecord{c53ec08 u0 com.leaf.reader/.MainActivity t4}
 
   Stack #0:
     Task id #3
-    * TaskRecord{96461fd #3 I=com.android.launcher3/.Launcher U=0 sz=1}
+    * TaskRecord{f8e01ae #3 I=com.android.launcher3/.Launcher U=0 sz=1}
       userId=0 effectiveUid=u0a8 mCallingUid=0 mCallingPackage=null
       intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=com.android.launcher3/.Launcher}
       realActivity=com.android.launcher3/.Launcher
       autoRemoveRecents=false isPersistable=true numFullscreen=1 taskType=1 mTaskToReturnTo=0
       rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
-      Activities=[ActivityRecord{8d582f4 u0 com.android.launcher3/.Launcher t3}]
+      Activities=[ActivityRecord{432c88f u0 com.android.launcher3/.Launcher t3}]
       askedCompatMode=false inRecents=true isAvailable=true
       lastThumbnail=null lastThumbnailFile=/data/system/recent_images/3_task_thumbnail.png
       stackId=0
-      hasBeenVisible=true mResizeable=false firstActiveTime=1792353711559 lastActiveTime=1792353711559 (inactive for 163s)
-      * Hist #0: ActivityRecord{8d582f4 u0 com.android.launcher3/.Launcher t3}
+      hasBeenVisible=true mResizeable=false firstActiveTime=1792355451807 lastActiveTime=1792355451807 (inactive for 201s)
+      * Hist #0: ActivityRecord{432c88f u0 com.android.launcher3/.Launcher t3}

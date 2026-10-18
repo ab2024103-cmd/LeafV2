@@ -1,6 +1,6 @@
 == waiting for device ==
 == installing apks/app/build/outputs/apk/debug/app-debug.apk ==
-apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 30.2 MB/s (27465440 bytes in 0.867s)
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 15.2 MB/s (27465438 bytes in 1.721s)
 Performing Push Install
 	pkg: /data/local/tmp/app-debug.apk
 Success
@@ -8,9 +8,9 @@ Success
 Starting: Intent { cmp=com.leaf.reader/.MainActivity }
 Status: ok
 Activity: com.leaf.reader/.MainActivity
-ThisTime: 3153
-TotalTime: 3153
-WaitTime: 3266
+ThisTime: 5677
+TotalTime: 5677
+WaitTime: 5938
 Complete
 == 1. library ==
 captured 01-library
@@ -29,7 +29,7 @@ tap 'find in document' at 670,105
 captured 05a-findbar
 tap 'find in document' at 331,322
 captured 05-find
-   visible: field-guide.pdf | Page 1 of 3 | page | 0 of 0 | Prev | 100% | Next
+   visible: field-guide.pdf | Page 2 of 3 | page | 1 of 5 | Prev | 100% | Next
 == 5. the device screen ==
 captured 05b-library
 tap 'device' at 1086,2308
@@ -49,7 +49,7 @@ tap 'search' at 841,2308
 captured 11-search
 tap 'search names, tags, folders and file contents' at 720,560
 captured 12-search-results
-   visible: leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | quarterly-report.docx | 1 hit · p1 | Quarterly Report  Leaf keeps this Word document readable without any cloud service… | Search | Library | Recents | Favorites | Search | Device | Settings
+   visible: leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | field-guide.pdf | 2 hits · p1 | Leaf Field Guide  A tiny sample document shipped with the app.… | Search | Library | Recents | Favorites | Search | Device | Settings
 == 7. logs ==
 == 8. native crash reports ==
 package: com.leaf.reader
@@ -62,34 +62,34 @@ quarterly-report.docx | Page 1 of 1 | Prev | 100% | Next
 --- 04-reader-pdf ---
 field-guide.pdf | Page 1 of 3 | Prev | 100% | Next
 --- 05-find ---
-field-guide.pdf | Page 1 of 3 | page | 0 of 0 | Prev | 100% | Next
+field-guide.pdf | Page 2 of 3 | page | 1 of 5 | Prev | 100% | Next
 --- 06-device ---
 Everything on this device | Leaf reads PDF, DOCX, XLSX, PPTX, TXT and EPUB. Choose a folder to browse it — Leaf asks for no permission at all, and your files are never copied. | Choose folder | Pick the storage root once and every supported file below it is listed. Leaf never asks for a storage permission. | No device documents yet | Choose a folder above to see the PDFs, documents, spreadsheets, presentations, text files and books stored on this device. | Device files | Library | Recents | Favorites | Search | Device | Settings
 --- 07-search ---
 Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
 --- 08-recents ---
-Today | 2 documents | Clear today | field-guide.pdf | 1.7 KB | Opened 1m ago | quarterly-report.docx | 1.2 KB | Opened 1m ago | Recents | Library | Recents | Favorites | Search | Device | Settings
+Today | 2 documents | Clear today | field-guide.pdf | 1.7 KB | 66% · p2 | Opened 1m ago | quarterly-report.docx | 1.2 KB | Opened 1m ago | Recents | Library | Recents | Favorites | Search | Device | Settings
 --- 09-favorites ---
 No favorites yet | Star a document from the library, the long-press sheet or the reader to pin it here. | Favorites | Library | Recents | Favorites | Search | Device | Settings
 --- 10-settings ---
 Appearance | App theme | Light | Dark | System | Default reading theme | Auto | Paper | Sepia | Night | OLED | Animations | Page turn and leaf sway transitions | Haptic feedback | Vibration on stars, actions and long presses | Language | English | Settings | Library | Recents | Favorites | Search | Device | Settings
 --- 12-search-results ---
-leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | quarterly-report.docx | 1 hit · p1 | Quarterly Report  Leaf keeps this Word document readable without any cloud service… | Search | Library | Recents | Favorites | Search | Device | Settings
+leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | field-guide.pdf | 2 hits · p1 | Leaf Field Guide  A tiny sample document shipped with the app.… | Search | Library | Recents | Favorites | Search | Device | Settings
 result: no fatal exception
 --- leaf log lines ---
-10-18 20:01:50.007  2662  2662 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 20:01:50.014  2662  2662 D AndroidRuntime: CheckJNI is OFF
-10-18 20:01:50.411  2662  2662 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 20:01:50.421  1580  1787 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2662
-10-18 20:01:50.427  2662  2662 D AndroidRuntime: Shutting down VM
-10-18 20:01:51.341  2685  2685 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 20:01:51.347  2685  2685 D AndroidRuntime: CheckJNI is OFF
-10-18 20:01:51.485  2685  2685 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 20:01:51.501  1580  1591 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
-10-18 20:01:51.641  1580  1734 I ActivityManager: Start proc 2694:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
-10-18 20:01:54.738  1580  1599 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +3s153ms
-10-18 20:01:54.783  2685  2685 D AndroidRuntime: Shutting down VM
-10-18 20:02:09.183  2723  2723 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 20:02:09.190  2723  2723 D AndroidRuntime: CheckJNI is OFF
-10-18 20:02:10.788  2723  2723 D AndroidRuntime: Shutting down VM
+10-18 20:30:49.423  2703  2703 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 20:30:49.440  2703  2703 D AndroidRuntime: CheckJNI is OFF
+10-18 20:30:49.879  2703  2703 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 20:30:49.902  1584  1598 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2703
+10-18 20:30:49.907  2703  2703 D AndroidRuntime: Shutting down VM
+10-18 20:30:51.282  2712  2712 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 20:30:51.297  2712  2712 D AndroidRuntime: CheckJNI is OFF
+10-18 20:30:51.633  2712  2712 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 20:30:51.665  1584  1597 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 20:30:51.971  1584  2171 I ActivityManager: Start proc 2721:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 20:30:57.571  1584  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s677ms
+10-18 20:30:57.696  2712  2712 D AndroidRuntime: Shutting down VM
+10-18 20:31:13.188  2751  2751 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 20:31:13.202  2751  2751 D AndroidRuntime: CheckJNI is OFF
+10-18 20:31:15.362  2751  2751 D AndroidRuntime: Shutting down VM
 == smoke test finished ==
