@@ -1,6 +1,6 @@
 == waiting for device ==
 == installing apks/app/build/outputs/apk/debug/app-debug.apk ==
-apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 25.4 MB/s (27449045 bytes in 1.032s)
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 17.4 MB/s (27465433 bytes in 1.508s)
 Performing Push Install
 	pkg: /data/local/tmp/app-debug.apk
 Success
@@ -8,9 +8,9 @@ Success
 Starting: Intent { cmp=com.leaf.reader/.MainActivity }
 Status: ok
 Activity: com.leaf.reader/.MainActivity
-ThisTime: 3562
-TotalTime: 3562
-WaitTime: 3849
+ThisTime: 5100
+TotalTime: 5100
+WaitTime: 5275
 Complete
 == 1. library ==
 captured 01-library
@@ -47,9 +47,9 @@ tap 'settings' at 1331,2308
 captured 10-settings
 tap 'search' at 841,2308
 captured 11-search
-no node matching 'the'
+tap 'search names, tags, folders and file contents' at 720,560
 captured 12-search-results
-   visible: Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
+   visible: leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | quarterly-report.docx | 1 hit · p1 | Quarterly Report  Leaf keeps this Word document readable without any cloud service… | Search | Library | Recents | Favorites | Search | Device | Settings
 == 7. logs ==
 == 8. native crash reports ==
 package: com.leaf.reader
@@ -74,22 +74,22 @@ No favorites yet | Star a document from the library, the long-press sheet or the
 --- 10-settings ---
 Appearance | App theme | Light | Dark | System | Default reading theme | Auto | Paper | Sepia | Night | OLED | Animations | Page turn and leaf sway transitions | Haptic feedback | Vibration on stars, actions and long presses | Language | English | Settings | Library | Recents | Favorites | Search | Device | Settings
 --- 12-search-results ---
-Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
+leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | quarterly-report.docx | 1 hit · p1 | Quarterly Report  Leaf keeps this Word document readable without any cloud service… | Search | Library | Recents | Favorites | Search | Device | Settings
 result: no fatal exception
 --- leaf log lines ---
-10-18 19:04:45.315  2668  2668 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:04:45.324  2668  2668 D AndroidRuntime: CheckJNI is OFF
-10-18 19:04:45.826  2668  2668 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 19:04:45.902  1582  2100 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2668
-10-18 19:04:45.909  2668  2668 D AndroidRuntime: Shutting down VM
-10-18 19:04:47.359  2691  2691 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:04:47.368  2691  2691 D AndroidRuntime: CheckJNI is OFF
-10-18 19:04:47.811  2691  2691 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 19:04:47.841  1582  2295 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
-10-18 19:04:48.168  1582  1789 I ActivityManager: Start proc 2700:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
-10-18 19:04:51.683  1582  1601 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +3s562ms
-10-18 19:04:51.764  2691  2691 D AndroidRuntime: Shutting down VM
-10-18 19:05:06.341  2730  2730 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:06.350  2730  2730 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:08.239  2730  2730 D AndroidRuntime: Shutting down VM
+10-18 19:19:27.974  2691  2691 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:19:27.986  2691  2691 D AndroidRuntime: CheckJNI is OFF
+10-18 19:19:28.331  2691  2691 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 19:19:28.352  1584  2161 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2691
+10-18 19:19:28.363  2691  2691 D AndroidRuntime: Shutting down VM
+10-18 19:19:29.744  2714  2714 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:19:29.757  2714  2714 D AndroidRuntime: CheckJNI is OFF
+10-18 19:19:30.092  2714  2714 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 19:19:30.116  1584  2097 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 19:19:30.332  1584  1596 I ActivityManager: Start proc 2723:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 19:19:35.368  1584  1603 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s100ms
+10-18 19:19:35.431  2714  2714 D AndroidRuntime: Shutting down VM
+10-18 19:19:51.272  2754  2754 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:19:51.286  2754  2754 D AndroidRuntime: CheckJNI is OFF
+10-18 19:19:53.405  2754  2754 D AndroidRuntime: Shutting down VM
 == smoke test finished ==

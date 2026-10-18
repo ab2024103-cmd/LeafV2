@@ -20,95 +20,95 @@ No favorites yet | Star a document from the library, the long-press sheet or the
 --- 10-settings ---
 Appearance | App theme | Light | Dark | System | Default reading theme | Auto | Paper | Sepia | Night | OLED | Animations | Page turn and leaf sway transitions | Haptic feedback | Vibration on stars, actions and long presses | Language | English | Settings | Library | Recents | Favorites | Search | Device | Settings
 --- 12-search-results ---
-Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
+leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | quarterly-report.docx | 1 hit · p1 | Quarterly Report  Leaf keeps this Word document readable without any cloud service… | Search | Library | Recents | Favorites | Search | Device | Settings
 result: no fatal exception
 --- leaf log lines ---
-10-18 19:04:45.315  2668  2668 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:04:45.324  2668  2668 D AndroidRuntime: CheckJNI is OFF
-10-18 19:04:45.826  2668  2668 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 19:04:45.902  1582  2100 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2668
-10-18 19:04:45.909  2668  2668 D AndroidRuntime: Shutting down VM
-10-18 19:04:47.359  2691  2691 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:04:47.368  2691  2691 D AndroidRuntime: CheckJNI is OFF
-10-18 19:04:47.811  2691  2691 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-18 19:04:47.841  1582  2295 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
-10-18 19:04:48.168  1582  1789 I ActivityManager: Start proc 2700:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
-10-18 19:04:51.683  1582  1601 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +3s562ms
-10-18 19:04:51.764  2691  2691 D AndroidRuntime: Shutting down VM
-10-18 19:05:06.341  2730  2730 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:06.350  2730  2730 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:08.239  2730  2730 D AndroidRuntime: Shutting down VM
-10-18 19:05:09.273  2742  2742 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:09.285  2742  2742 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:09.492  2742  2742 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:05:09.638  2742  2742 D AndroidRuntime: Shutting down VM
-10-18 19:05:11.709  2700  2700 I LeafText: parsed 6 blocks, 457 chars, viewport=0x0
-10-18 19:05:11.880  2700  2700 I LeafText: text view update lines=null height=null slice=0
-10-18 19:05:11.896  2700  2700 I LeafText: onDraw size=1440x2154 lines=null
-10-18 19:05:11.904  2700  2700 I LeafText: configureViewport 1440x2154 session=true
-10-18 19:05:11.937  2700  2700 I LeafText: rebuild chars=457 lines=18 viewport=1440x2154 pages=1
-10-18 19:05:18.068  2757  2757 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:18.075  2757  2757 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:19.591  2757  2757 D AndroidRuntime: Shutting down VM
-10-18 19:05:20.593  2768  2768 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:20.602  2768  2768 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:20.809  2768  2768 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:05:20.857  2768  2768 D AndroidRuntime: Shutting down VM
-10-18 19:05:21.190  2700  2700 I LeafText: configureViewport 1440x1622 session=true
-10-18 19:05:21.195  2700  2700 I LeafText: rebuild chars=457 lines=18 viewport=1440x1622 pages=1
-10-18 19:05:21.273  2700  2700 I LeafText: text view update lines=18 height=1234 slice=0
-10-18 19:05:21.629  2700  2700 I LeafText: onDraw size=1440x1622 lines=18
-10-18 19:05:24.893  2777  2777 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:24.925  2777  2777 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:25.184  2777  2777 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:05:25.649  2777  2777 D AndroidRuntime: Shutting down VM
-10-18 19:05:28.693  2787  2787 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:28.702  2787  2787 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:28.910  2787  2787 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:05:29.358  2787  2787 D AndroidRuntime: Shutting down VM
-10-18 19:05:34.850  2802  2802 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:34.859  2802  2802 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:36.502  2802  2802 D AndroidRuntime: Shutting down VM
-10-18 19:05:37.487  2813  2813 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:37.494  2813  2813 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:37.655  2813  2813 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:05:37.707  2813  2813 D AndroidRuntime: Shutting down VM
-10-18 19:05:39.684  2700  2700 I LeafPdf : pdf view update bitmap=nullxnull
-10-18 19:05:39.699  2700  2700 I LeafPdf : pdf view update bitmap=nullxnull
-10-18 19:05:39.714  2700  2700 I LeafPdf : onDraw size=1440x2036 hasBitmap=false
-10-18 19:05:39.715  2700  2700 I LeafPdf : onDraw size=1440x2036 hasBitmap=false
-10-18 19:05:39.724  2700  2700 I LeafText: configureViewport 1440x2154 session=false
-10-18 19:05:39.959  2700  2722 I LeafPdf : rendered page 0 as 1440x1863
-10-18 19:05:39.971  2700  2700 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:05:39.973  2700  2713 I LeafPdf : rendered page 1 as 1440x1863
-10-18 19:05:40.001  2700  2700 I LeafPdf : onDraw size=1440x1863 hasBitmap=true
-10-18 19:05:40.002  2700  2700 I LeafPdf : onDraw size=1440x1863 hasBitmap=false
-10-18 19:05:40.010  2700  2700 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:05:40.014  2700  2700 I LeafPdf : onDraw size=1440x1863 hasBitmap=true
-10-18 19:05:49.043  2828  2828 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:49.053  2828  2828 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:50.537  2828  2828 D AndroidRuntime: Shutting down VM
-10-18 19:05:51.582  2839  2839 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:51.590  2839  2839 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:51.766  2839  2839 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-18 19:05:51.828  2839  2839 D AndroidRuntime: Shutting down VM
-10-18 19:05:52.297  2700  2700 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:05:52.298  2700  2700 I LeafPdf : pdf view update bitmap=1440x1863
-10-18 19:05:52.440  2700  2700 I LeafPdf : onDraw size=1440x1863 hasBitmap=true
-10-18 19:05:52.441  2700  2700 I LeafPdf : onDraw size=1440x1863 hasBitmap=true
-10-18 19:05:52.480  2700  2700 I LeafText: configureViewport 1440x1930 session=false
-10-18 19:05:56.278  2853  2853 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:56.286  2853  2853 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:58.039  2853  2853 D AndroidRuntime: Shutting down VM
-10-18 19:05:59.050  2865  2865 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-18 19:05:59.058  2865  2865 D AndroidRuntime: CheckJNI is OFF
-10-18 19:05:59.262  2865  2865 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:19:27.974  2691  2691 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:19:27.986  2691  2691 D AndroidRuntime: CheckJNI is OFF
+10-18 19:19:28.331  2691  2691 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 19:19:28.352  1584  2161 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2691
+10-18 19:19:28.363  2691  2691 D AndroidRuntime: Shutting down VM
+10-18 19:19:29.744  2714  2714 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:19:29.757  2714  2714 D AndroidRuntime: CheckJNI is OFF
+10-18 19:19:30.092  2714  2714 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-18 19:19:30.116  1584  2097 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-18 19:19:30.332  1584  1596 I ActivityManager: Start proc 2723:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-18 19:19:35.368  1584  1603 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s100ms
+10-18 19:19:35.431  2714  2714 D AndroidRuntime: Shutting down VM
+10-18 19:19:51.272  2754  2754 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:19:51.286  2754  2754 D AndroidRuntime: CheckJNI is OFF
+10-18 19:19:53.405  2754  2754 D AndroidRuntime: Shutting down VM
+10-18 19:19:54.818  2766  2766 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:19:54.830  2766  2766 D AndroidRuntime: CheckJNI is OFF
+10-18 19:19:55.150  2766  2766 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:19:55.328  2766  2766 D AndroidRuntime: Shutting down VM
+10-18 19:19:57.566  2723  2723 I LeafText: parsed 6 blocks, 457 chars, viewport=0x0
+10-18 19:19:57.792  2723  2723 I LeafText: text view update lines=null height=null slice=0
+10-18 19:19:57.807  2723  2723 I LeafText: onDraw size=1440x2154 pos=0,0 lines=null
+10-18 19:19:57.816  2723  2723 I LeafText: configureViewport 1440x2154 session=true
+10-18 19:19:57.864  2723  2723 I LeafText: rebuild chars=457 lines=18 viewport=1440x2154 pages=1
+10-18 19:19:57.890  2723  2723 I LeafText: text view update lines=18 height=1234 slice=0
+10-18 19:19:57.899  2723  2723 I LeafText: onDraw size=1440x2154 pos=0,0 lines=18
+10-18 19:20:04.974  2782  2782 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:04.987  2782  2782 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:06.666  2782  2782 D AndroidRuntime: Shutting down VM
+10-18 19:20:08.043  2793  2793 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:08.057  2793  2793 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:08.618  2793  2793 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:20:08.718  2793  2793 D AndroidRuntime: Shutting down VM
+10-18 19:20:09.550  2723  2723 I LeafText: configureViewport 1440x1622 session=true
+10-18 19:20:09.557  2723  2723 I LeafText: rebuild chars=457 lines=18 viewport=1440x1622 pages=1
+10-18 19:20:09.723  2723  2723 I LeafText: text view update lines=18 height=1234 slice=0
+10-18 19:20:10.197  2723  2723 I LeafText: onDraw size=1440x1622 pos=0,0 lines=18
+10-18 19:20:13.239  2802  2802 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:13.254  2802  2802 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:13.585  2802  2802 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:20:14.026  2802  2802 D AndroidRuntime: Shutting down VM
+10-18 19:20:17.419  2813  2813 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:17.429  2813  2813 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:17.662  2813  2813 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:20:18.021  2813  2813 D AndroidRuntime: Shutting down VM
+10-18 19:20:24.555  2828  2828 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:24.567  2828  2828 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:26.556  2828  2828 D AndroidRuntime: Shutting down VM
+10-18 19:20:27.937  2839  2839 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:27.950  2839  2839 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:28.291  2839  2839 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:20:28.360  2839  2839 D AndroidRuntime: Shutting down VM
+10-18 19:20:30.232  2723  2723 I LeafPdf : pdf view update bitmap=nullxnull
+10-18 19:20:30.247  2723  2723 I LeafPdf : pdf view update bitmap=nullxnull
+10-18 19:20:30.259  2723  2723 I LeafPdf : onDraw size=1440x2036 pos=0,0 hasBitmap=false
+10-18 19:20:30.260  2723  2723 I LeafPdf : onDraw size=1440x2036 pos=0,0 hasBitmap=false
+10-18 19:20:30.267  2723  2723 I LeafText: configureViewport 1440x2154 session=false
+10-18 19:20:30.583  2723  2744 I LeafPdf : rendered page 0 as 1440x1863
+10-18 19:20:30.591  2723  2745 I LeafPdf : rendered page 1 as 1440x1863
+10-18 19:20:30.594  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
+10-18 19:20:30.630  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
+10-18 19:20:30.631  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=false
+10-18 19:20:30.652  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
+10-18 19:20:30.657  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
+10-18 19:20:40.942  2854  2854 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:40.977  2854  2854 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:42.944  2854  2854 D AndroidRuntime: Shutting down VM
+10-18 19:20:44.429  2865  2865 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:44.441  2865  2865 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:44.766  2865  2865 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-18 19:20:44.888  2865  2865 D AndroidRuntime: Shutting down VM
+10-18 19:20:45.456  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
+10-18 19:20:45.457  2723  2723 I LeafPdf : pdf view update bitmap=1440x1863
+10-18 19:20:45.648  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
+10-18 19:20:45.650  2723  2723 I LeafPdf : onDraw size=1440x1863 pos=0,0 hasBitmap=true
+10-18 19:20:45.702  2723  2723 I LeafText: configureViewport 1440x1930 session=false
+10-18 19:20:50.270  2879  2879 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-18 19:20:50.280  2879  2879 D AndroidRuntime: CheckJNI is OFF
+10-18 19:20:51.890  2879  2879 D AndroidRuntime: Shutting down VM
+10-18 19:20:53.270  2890  2890 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
 --- native crash (tombstone) ---
 (none)
 --- script log ---
 == waiting for device ==
 == installing apks/app/build/outputs/apk/debug/app-debug.apk ==
-apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 25.4 MB/s (27449045 bytes in 1.032s)
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 17.4 MB/s (27465433 bytes in 1.508s)
 Performing Push Install
 	pkg: /data/local/tmp/app-debug.apk
 Success
@@ -116,9 +116,9 @@ Success
 Starting: Intent { cmp=com.leaf.reader/.MainActivity }
 Status: ok
 Activity: com.leaf.reader/.MainActivity
-ThisTime: 3562
-TotalTime: 3562
-WaitTime: 3849
+ThisTime: 5100
+TotalTime: 5100
+WaitTime: 5275
 Complete
 == 1. library ==
 captured 01-library
@@ -155,8 +155,8 @@ tap 'settings' at 1331,2308
 captured 10-settings
 tap 'search' at 841,2308
 captured 11-search
-no node matching 'the'
+tap 'search names, tags, folders and file contents' at 720,560
 captured 12-search-results
-   visible: Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
+   visible: leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | quarterly-report.docx | 1 hit · p1 | Quarterly Report  Leaf keeps this Word document readable without any cloud service… | Search | Library | Recents | Favorites | Search | Device | Settings
 == 7. logs ==
 == 8. native crash reports ==
