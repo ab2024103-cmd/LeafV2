@@ -54,6 +54,7 @@ data class ReaderUiState(
     val showTabs: Boolean = false,
     val showMore: Boolean = false,
     val message: String? = null,
+    val error: String? = null,
     val loading: Boolean = true,
     val lastColor: HighlightColor = HighlightColor.YELLOW,
     val canUndo: Boolean = false,
@@ -113,7 +114,10 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
         closeSession()
         val document = repository.documentById(documentId)
         if (document == null) {
-            _state.value = _state.value.copy(loading = false, message = "Document not found")
+            _state.value = _state.value.copy(
+                loading = false,
+                error = "This document is no longer available. Add it again from the Device tab."
+            )
             return
         }
         val saved = repository.readerState(documentId)
@@ -134,7 +138,8 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
             reflow = reflow,
             theme = theme,
             orientation = orientation,
-            loading = true
+            loading = true,
+            error = null
         )
 
         if (document.kind == com.leaf.reader.model.FileKind.PDF) {
@@ -143,7 +148,10 @@ class ReaderViewModel(private val container: AppContainer) : ViewModel() {
             }
             pdfSession = session
             if (!session.isValid()) {
-                _state.value = _state.value.copy(loading = false, message = "This PDF could not be opened")
+                _state.value = _state.value.copy(
+                    loading = false,
+                    error = "This PDF could not be opened. The file may be damaged or the app no longer has access to it."
+                )
                 return
             }
             _state.value = _state.value.copy(pageCount = session.pageCount)

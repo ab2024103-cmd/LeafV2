@@ -156,6 +156,11 @@ fun ReaderScreen(
             Box(modifier = Modifier.weight(1f)) {
                 if (state.loading) {
                     CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
+                } else if (state.error != null) {
+                    ReaderErrorPanel(
+                        message = state.error.orEmpty(),
+                        onBack = onBack
+                    )
                 } else {
                     PageArea(
                         state = state,
@@ -728,6 +733,31 @@ private fun HighlightBar(
             }
             TextButton(onClick = onDone) { Text("Done") }
         }
+    }
+}
+
+@Composable
+private fun ReaderErrorPanel(message: String, onBack: () -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(32.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = "This document could not be opened",
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.onBackground
+        )
+        Spacer(Modifier.height(8.dp))
+        Text(
+            text = message,
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+        Spacer(Modifier.height(16.dp))
+        androidx.compose.material3.Button(onClick = onBack) { Text("Back to library") }
     }
 }
 

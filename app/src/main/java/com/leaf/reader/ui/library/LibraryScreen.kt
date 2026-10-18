@@ -256,9 +256,14 @@ fun LibraryScreen(
                 item {
                     EmptyState(
                         title = "Your library is empty",
-                        message = "Add a PDF, Word, Excel, PowerPoint, text or EPUB file to start reading. Everything stays on this device.",
+                        message = "Open the Device tab to see every PDF, Word, Excel, PowerPoint, " +
+                            "text and EPUB file already on this phone, or add a file with +. " +
+                            "Nothing is ever copied or uploaded.",
                         action = {
-                            TextButton(onClick = onAddDocuments) { Text("Add documents") }
+                            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                                TextButton(onClick = onAddDocuments) { Text("Add documents") }
+                                TextButton(onClick = onOpenDevice) { Text("Browse device") }
+                            }
                         }
                     )
                 }

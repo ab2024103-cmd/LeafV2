@@ -6,10 +6,13 @@
 # can be reviewed from CI.
 set -u
 
-PKG="com.leaf.reader"
-ACTIVITY="${PKG}/.MainActivity"
 OUT="smoke"
 mkdir -p "${OUT}"
+: > "${OUT}/script.log"
+exec > >(tee -a "${OUT}/script.log") 2>&1
+
+PKG="com.leaf.reader"
+ACTIVITY="${PKG}/.MainActivity"
 
 echo "== waiting for device =="
 adb wait-for-device
@@ -103,6 +106,8 @@ adb shell dumpsys activity activities 2>/dev/null | head -60 > "${OUT}/activitie
   fi
   echo "--- leaf log lines ---"
   grep -iE "leaf|AndroidRuntime|FATAL|PdfRenderer" "${OUT}/logcat.txt" | grep -v "uiautomator" | head -80
+  echo "--- script log ---"
+  cat "${OUT}/script.log" 2>/dev/null
 } > "${OUT}/report.txt" 2>&1
 
 head -40 "${OUT}/report.txt"

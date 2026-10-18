@@ -229,7 +229,6 @@ fun DocumentRow(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .clickable(onClickLabel = "Open $${document.name}") {}
                 .padding(12.dp)
         ) {
             Row(verticalAlignment = Alignment.Top) {
