@@ -1,4 +1,4 @@
-apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 14.0 MB/s (27444043 bytes in 1.867s)
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 20.0 MB/s (27444042 bytes in 1.312s)
 Performing Push Install
 	pkg: /data/local/tmp/app-debug.apk
 Success

@@ -23,92 +23,92 @@ Appearance | App theme | Light | Dark | System | Default reading theme | Auto | 
 leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | field-guide.pdf | 2 hits · p1 | Leaf Field Guide  A tiny sample document shipped with the app.… | Search | Library | Recents | Favorites | Search | Device | Settings
 result: no fatal exception
 --- leaf log lines ---
-10-19 16:26:55.469  2686  2686 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:26:55.480  2686  2686 D AndroidRuntime: CheckJNI is OFF
-10-19 16:26:56.253  2686  2686 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-19 16:26:56.273  1586  1803 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2686
-10-19 16:26:56.285  2686  2686 D AndroidRuntime: Shutting down VM
-10-19 16:26:57.803  2710  2710 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:26:57.815  2710  2710 D AndroidRuntime: CheckJNI is OFF
-10-19 16:26:58.044  2710  2710 D AndroidRuntime: Calling main entry com.android.commands.am.Am
-10-19 16:26:58.071  1586  2058 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
-10-19 16:26:58.278  1586  1729 I ActivityManager: Start proc 2719:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
-10-19 16:27:03.649  1586  1605 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s411ms
-10-19 16:27:03.759  2710  2710 D AndroidRuntime: Shutting down VM
-10-19 16:27:19.546  2750  2750 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:27:19.560  2750  2750 D AndroidRuntime: CheckJNI is OFF
-10-19 16:27:21.682  2750  2750 D AndroidRuntime: Shutting down VM
-10-19 16:27:23.049  2762  2762 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:27:23.060  2762  2762 D AndroidRuntime: CheckJNI is OFF
-10-19 16:27:23.293  2762  2762 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-19 16:27:23.464  2762  2762 D AndroidRuntime: Shutting down VM
-10-19 16:27:32.969  2777  2777 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:27:32.981  2777  2777 D AndroidRuntime: CheckJNI is OFF
-10-19 16:27:34.634  2777  2777 D AndroidRuntime: Shutting down VM
-10-19 16:27:36.003  2788  2788 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:27:36.016  2788  2788 D AndroidRuntime: CheckJNI is OFF
-10-19 16:27:36.255  2788  2788 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-19 16:27:36.301  2788  2788 D AndroidRuntime: Shutting down VM
-10-19 16:27:40.866  2799  2799 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:27:40.879  2799  2799 D AndroidRuntime: CheckJNI is OFF
-10-19 16:27:41.260  2799  2799 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-19 16:27:42.211  2799  2799 D AndroidRuntime: Shutting down VM
-10-19 16:27:45.603  2809  2809 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:27:45.616  2809  2809 D AndroidRuntime: CheckJNI is OFF
-10-19 16:27:45.936  2809  2809 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-19 16:27:46.324  2809  2809 D AndroidRuntime: Shutting down VM
-10-19 16:27:52.812  2825  2825 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:27:52.825  2825  2825 D AndroidRuntime: CheckJNI is OFF
-10-19 16:27:54.738  2825  2825 D AndroidRuntime: Shutting down VM
-10-19 16:27:56.108  2836  2836 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:27:56.119  2836  2836 D AndroidRuntime: CheckJNI is OFF
-10-19 16:27:56.337  2836  2836 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-19 16:27:56.411  2836  2836 D AndroidRuntime: Shutting down VM
-10-19 16:28:08.848  2851  2851 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:28:08.861  2851  2851 D AndroidRuntime: CheckJNI is OFF
-10-19 16:28:10.534  2851  2851 D AndroidRuntime: Shutting down VM
-10-19 16:28:12.149  2862  2862 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:28:12.170  2862  2862 D AndroidRuntime: CheckJNI is OFF
-10-19 16:28:12.540  2862  2862 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-19 16:28:12.761  2862  2862 D AndroidRuntime: Shutting down VM
-10-19 16:28:18.248  2876  2876 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:28:18.261  2876  2876 D AndroidRuntime: CheckJNI is OFF
-10-19 16:28:20.119  2876  2876 D AndroidRuntime: Shutting down VM
-10-19 16:28:21.553  2887  2887 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:28:21.564  2887  2887 D AndroidRuntime: CheckJNI is OFF
-10-19 16:28:21.795  2887  2887 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-19 16:28:21.920  2887  2887 D AndroidRuntime: Shutting down VM
-10-19 16:28:24.974  2902  2902 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
-10-19 16:28:24.986  2902  2902 D AndroidRuntime: CheckJNI is OFF
-10-19 16:28:25.476  2902  2902 D AndroidRuntime: Calling main entry com.android.commands.input.Input
-10-19 16:28:26.577  2902  2902 D AndroidRuntime: Shutting down VM
-10-19 16:28:35.558  2719  2914 E LeafPdf : pdf text extraction failed on page 0
-10-19 16:28:35.558  2719  2914 E LeafPdf : java.lang.StackOverflowError: stack size 9MB
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
-10-19 16:28:35.558  2719  2914 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:42:32.693  2702  2702 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:42:32.705  2702  2702 D AndroidRuntime: CheckJNI is OFF
+10-19 16:42:33.022  2702  2702 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-19 16:42:33.039  1587  1733 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2702
+10-19 16:42:33.043  2702  2702 D AndroidRuntime: Shutting down VM
+10-19 16:42:34.388  2711  2711 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:42:34.399  2711  2711 D AndroidRuntime: CheckJNI is OFF
+10-19 16:42:34.624  2711  2711 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-19 16:42:34.649  1587  1598 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-19 16:42:34.820  1587  1733 I ActivityManager: Start proc 2720:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-19 16:42:40.098  1587  1606 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s298ms
+10-19 16:42:40.256  2711  2711 D AndroidRuntime: Shutting down VM
+10-19 16:42:55.842  2748  2748 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:42:55.856  2748  2748 D AndroidRuntime: CheckJNI is OFF
+10-19 16:42:57.917  2748  2748 D AndroidRuntime: Shutting down VM
+10-19 16:42:59.322  2759  2759 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:42:59.335  2759  2759 D AndroidRuntime: CheckJNI is OFF
+10-19 16:42:59.639  2759  2759 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:42:59.811  2759  2759 D AndroidRuntime: Shutting down VM
+10-19 16:43:09.279  2774  2774 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:09.293  2774  2774 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:10.895  2774  2774 D AndroidRuntime: Shutting down VM
+10-19 16:43:12.400  2785  2785 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:12.444  2785  2785 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:12.858  2785  2785 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:13.014  2785  2785 D AndroidRuntime: Shutting down VM
+10-19 16:43:17.495  2796  2796 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:17.508  2796  2796 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:17.815  2796  2796 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:18.278  2796  2796 D AndroidRuntime: Shutting down VM
+10-19 16:43:21.630  2806  2806 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:21.640  2806  2806 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:21.868  2806  2806 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:22.268  2806  2806 D AndroidRuntime: Shutting down VM
+10-19 16:43:28.866  2822  2822 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:28.878  2822  2822 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:30.855  2822  2822 D AndroidRuntime: Shutting down VM
+10-19 16:43:32.280  2833  2833 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:32.290  2833  2833 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:32.520  2833  2833 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:32.582  2833  2833 D AndroidRuntime: Shutting down VM
+10-19 16:43:45.062  2848  2848 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:45.076  2848  2848 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:47.149  2848  2848 D AndroidRuntime: Shutting down VM
+10-19 16:43:48.589  2859  2859 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:48.603  2859  2859 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:48.931  2859  2859 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:49.079  2859  2859 D AndroidRuntime: Shutting down VM
+10-19 16:43:54.553  2873  2873 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:54.565  2873  2873 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:56.159  2873  2873 D AndroidRuntime: Shutting down VM
+10-19 16:43:57.555  2884  2884 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:57.568  2884  2884 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:57.895  2884  2884 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:58.022  2884  2884 D AndroidRuntime: Shutting down VM
+10-19 16:44:01.205  2902  2902 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:44:01.216  2902  2902 D AndroidRuntime: CheckJNI is OFF
+10-19 16:44:01.730  2902  2902 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:44:02.764  2902  2902 D AndroidRuntime: Shutting down VM
+10-19 16:44:11.729  2720  2913 E LeafPdf : pdf text extraction failed on page 0
+10-19 16:44:11.729  2720  2913 E LeafPdf : java.lang.StackOverflowError: stack size 9MB
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
 --- native crash (tombstone) ---
 (none)
 --- script log ---
 == waiting for device ==
 == installing apks/app/build/outputs/apk/debug/app-debug.apk ==
-apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 14.0 MB/s (27444043 bytes in 1.867s)
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 20.0 MB/s (27444042 bytes in 1.312s)
 Performing Push Install
 	pkg: /data/local/tmp/app-debug.apk
 Success
@@ -116,9 +116,9 @@ Success
 Starting: Intent { cmp=com.leaf.reader/.MainActivity }
 Status: ok
 Activity: com.leaf.reader/.MainActivity
-ThisTime: 5411
-TotalTime: 5411
-WaitTime: 5643
+ThisTime: 5298
+TotalTime: 5298
+WaitTime: 5514
 Complete
 == 1. library ==
 captured 01-library
