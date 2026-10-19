@@ -1,5 +1,6 @@
 package com.leaf.reader.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -25,10 +26,12 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.leaf.reader.BuildConfig
+import com.leaf.reader.R
 import com.leaf.reader.ui.components.SectionHeader
 
 private data class CoverageItem(val title: String, val detail: String)
@@ -82,12 +85,20 @@ fun AboutScreen(state: LibraryState) {
                     elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
                 ) {
                     Column(modifier = Modifier.padding(18.dp)) {
-                        Text(
-                            text = "Leaf",
-                            style = MaterialTheme.typography.headlineSmall,
-                            fontWeight = FontWeight.SemiBold,
-                            color = MaterialTheme.colorScheme.onPrimaryContainer
-                        )
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Image(
+                                painter = painterResource(R.mipmap.ic_launcher),
+                                contentDescription = "Leaf app icon",
+                                modifier = Modifier.size(56.dp)
+                            )
+                            Spacer(Modifier.width(14.dp))
+                            Text(
+                                text = "Leaf",
+                                style = MaterialTheme.typography.headlineSmall,
+                                fontWeight = FontWeight.SemiBold,
+                                color = MaterialTheme.colorScheme.onPrimaryContainer
+                            )
+                        }
                         Spacer(Modifier.height(4.dp))
                         Text(
                             text = "Version ${BuildConfig.VERSION_NAME} · offline reader for Android 6.0+",
