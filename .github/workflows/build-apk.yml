@@ -1,0 +1,190 @@
+name: Build APK
+
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Assemble Leaf APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Android SDK
+        run: |
+          echo "ANDROID_HOME=$ANDROID_HOME"
+          SDKMANAGER="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$SDKMANAGER" ]; then SDKMANAGER="$(command -v sdkmanager)"; fi
+          yes | "$SDKMANAGER" --licenses > /dev/null 2>&1 || true
+          "$SDKMANAGER" --install "platform-tools" "platforms;android-35" "build-tools;35.0.0" 2>&1 | tee sdk-setup.log
+          ls "$ANDROID_HOME/platforms" "$ANDROID_HOME/build-tools"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+          cache-read-only: ${{ github.event_name == 'pull_request' }}
+
+      - name: Create release keystore
+        run: |
+          if [ ! -f leaf-release.jks ]; then
+            keytool -genkeypair -v \
+              -keystore leaf-release.jks \
+              -alias leaf \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass leafleaf -keypass leafleaf \
+              -dname "CN=Leaf, OU=Leaf, O=Leaf, L=Ibadan, ST=Oyo, C=NG"
+          fi
+
+      - name: Build APK
+        run: |
+          set -o pipefail
+          ./gradlew --no-daemon --stacktrace assembleDebug assembleRelease 2>&1 | tee build-log.txt
+
+      - name: Publish compiler errors
+        if: failure()
+        run: |
+          {
+            echo "### Compiler errors"
+            echo '```'
+            grep -E "^e: |error:|FAILURE|Execution failed" build-log.txt || echo "(no compiler errors found)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          mkdir -p .ci
+          grep -E "^e: |error:|FAILURE|Execution failed|Caused by:" build-log.txt > .ci/errors.txt || true
+          tail -n 600 build-log.txt > .ci/build-log.txt || true
+          git config user.name "Leaf CI"
+          git config user.email "ci@leaf.local"
+          git add -f .ci/errors.txt .ci/build-log.txt
+          git commit -m "ci: compiler errors for ${GITHUB_SHA::8}" || true
+          git push origin HEAD:"${GITHUB_REF_NAME}" || true
+
+      - name: Upload APK artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: leaf-apk
+          if-no-files-found: error
+          retention-days: 30
+          path: |
+            app/build/outputs/apk/release/*.apk
+            app/build/outputs/apk/debug/*.apk
+            build-log.txt
+            sdk-setup.log
+
+      - name: Publish release (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          git config user.name "Leaf CI"
+          git config user.email "ci@leaf.local"
+          # The apk is committed on top of the current branch head, so the commit never
+          # clashes with work that was pushed while this build was running.
+          git fetch origin arena/a9b40a6d-leafv2
+          git checkout -B arena/a9b40a6d-leafv2 origin/arena/a9b40a6d-leafv2
+          mkdir -p dist
+          cp app/build/outputs/apk/release/*.apk dist/leaf.apk
+          cp app/build/outputs/apk/debug/*.apk dist/leaf-debug.apk
+          git add -f dist
+          git commit -m "dist: Leaf APK from ${GITHUB_SHA::8}" || true
+          git push origin arena/a9b40a6d-leafv2
+
+      # The release assets are uploaded from the runner: a sandboxed machine cannot
+      # reach uploads.github.com, but a GitHub hosted runner always can.
+      - name: Upload release assets
+        if: always() && startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          mkdir -p dist
+          cp app/build/outputs/apk/release/*.apk dist/leaf.apk
+          cp app/build/outputs/apk/debug/*.apk dist/leaf-debug.apk
+          if gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1; then
+            gh release upload "${GITHUB_REF_NAME}" dist/leaf.apk dist/leaf-debug.apk --clobber
+          else
+            gh release create "${GITHUB_REF_NAME}" dist/leaf.apk dist/leaf-debug.apk \
+              --title "Leaf ${GITHUB_REF_NAME}" \
+              --notes "Offline Leaf reader for Android 6.0+ (API 23) - build ${GITHUB_SHA::8}"
+          fi
+          gh release view "${GITHUB_REF_NAME}" --json assets --jq '.assets[] | "\(.name) \(.size) bytes"'
+
+  emulator:
+    name: Emulator smoke test (Android 6 / API 23)
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Download APKs
+        uses: actions/download-artifact@v4
+        with:
+          name: leaf-apk
+          path: apks
+
+      - name: Run emulator smoke test
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 23
+          arch: x86
+          target: default
+          profile: Nexus 6
+          disable-animations: true
+          emulator-options: -no-window -no-snapshot -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+          script: bash scripts/emulator-smoke.sh
+
+      - name: Publish smoke results
+        if: always()
+        run: |
+          set +e
+          mkdir -p .ci/smoke
+          cp -r smoke/* .ci/smoke/ 2>/dev/null
+          git config user.name "Leaf CI"
+          git config user.email "ci@leaf.local"
+          git add -f .ci/smoke
+          git commit -m "ci: emulator smoke results for ${GITHUB_SHA::8}" || true
+          git push origin HEAD:refs/heads/arena/a9b40a6d-leafv2 || true
+          {
+            echo "### Emulator smoke test"
+            echo '```'
+            cat .ci/smoke/report.txt 2>/dev/null || echo "(no report)"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"

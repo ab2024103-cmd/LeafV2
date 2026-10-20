@@ -1,0 +1,162 @@
+package: com.leaf.reader
+apk: apks/app/build/outputs/apk/debug/app-debug.apk
+screens: 01-library 02-reader-docx 03-scrolled 04-reader-pdf 05-find 06-device 07-search 08-recents 09-favorites 10-settings 12-search-results
+--- 01-library ---
+All (6) | Documents | 6 shown · Date added · Z–A | little-book.epub | 1.8 KB | product-deck.pptx | 2.5 KB | budget.xlsx | 2.1 KB | quarterly-report.docx | 1.2 KB | field-guide.pdf | 1.7 KB | Library | Library | Recents | Favorites | Search | Device | Settings
+--- 02-reader-docx ---
+quarterly-report.docx | Page 1 of 1 | Prev | 100% | Next
+--- 04-reader-pdf ---
+field-guide.pdf | Page 1 of 3 | Prev | 100% | Next
+--- 05-find ---
+field-guide.pdf | Page 2 of 3 | page | 1 of 5 | Prev | 100% | Next
+--- 06-device ---
+Everything on this device | Leaf reads PDF, DOCX, XLSX, PPTX, TXT and EPUB. Choose a folder to browse it — Leaf asks for no permission at all, and your files are never copied. | Choose folder | Pick the storage root once and every supported file below it is listed. Leaf never asks for a storage permission. | No device documents yet | Choose a folder above to see the PDFs, documents, spreadsheets, presentations, text files and books stored on this device. | Device files | Library | Recents | Favorites | Search | Device | Settings
+--- 07-search ---
+Search names, tags, folders and file contents | Quick searches | All PDFs | Added this week | Folder · Work | Tag · important | Word · chapter | Search | Library | Recents | Favorites | Search | Device | Settings
+--- 08-recents ---
+Today | 2 documents | Clear today | field-guide.pdf | 1.7 KB | 66% · p2 | Opened 1m ago | quarterly-report.docx | 1.2 KB | Opened 2m ago | Recents | Library | Recents | Favorites | Search | Device | Settings
+--- 09-favorites ---
+No favorites yet | Star a document from the library, the long-press sheet or the reader to pin it here. | Favorites | Library | Recents | Favorites | Search | Device | Settings
+--- 10-settings ---
+Appearance | App theme | Light | Dark | System | Default reading theme | Auto | Paper | Sepia | Night | OLED | Animations | Page turn and leaf sway transitions | Haptic feedback | Vibration on stars, actions and long presses | Language | English | Settings | Library | Recents | Favorites | Search | Device | Settings
+--- 12-search-results ---
+leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | field-guide.pdf | 2 hits · p1 | Leaf Field Guide  A tiny sample document shipped with the app.… | Search | Library | Recents | Favorites | Search | Device | Settings
+result: no fatal exception
+--- leaf log lines ---
+10-19 16:42:32.693  2702  2702 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:42:32.705  2702  2702 D AndroidRuntime: CheckJNI is OFF
+10-19 16:42:33.022  2702  2702 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-19 16:42:33.039  1587  1733 I ActivityManager: Force stopping com.leaf.reader appid=10055 user=0: from pid 2702
+10-19 16:42:33.043  2702  2702 D AndroidRuntime: Shutting down VM
+10-19 16:42:34.388  2711  2711 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:42:34.399  2711  2711 D AndroidRuntime: CheckJNI is OFF
+10-19 16:42:34.624  2711  2711 D AndroidRuntime: Calling main entry com.android.commands.am.Am
+10-19 16:42:34.649  1587  1598 I ActivityManager: START u0 {flg=0x10000000 cmp=com.leaf.reader/.MainActivity} from uid 0 on display 0
+10-19 16:42:34.820  1587  1733 I ActivityManager: Start proc 2720:com.leaf.reader/u0a55 for activity com.leaf.reader/.MainActivity
+10-19 16:42:40.098  1587  1606 I ActivityManager: Displayed com.leaf.reader/.MainActivity: +5s298ms
+10-19 16:42:40.256  2711  2711 D AndroidRuntime: Shutting down VM
+10-19 16:42:55.842  2748  2748 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:42:55.856  2748  2748 D AndroidRuntime: CheckJNI is OFF
+10-19 16:42:57.917  2748  2748 D AndroidRuntime: Shutting down VM
+10-19 16:42:59.322  2759  2759 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:42:59.335  2759  2759 D AndroidRuntime: CheckJNI is OFF
+10-19 16:42:59.639  2759  2759 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:42:59.811  2759  2759 D AndroidRuntime: Shutting down VM
+10-19 16:43:09.279  2774  2774 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:09.293  2774  2774 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:10.895  2774  2774 D AndroidRuntime: Shutting down VM
+10-19 16:43:12.400  2785  2785 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:12.444  2785  2785 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:12.858  2785  2785 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:13.014  2785  2785 D AndroidRuntime: Shutting down VM
+10-19 16:43:17.495  2796  2796 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:17.508  2796  2796 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:17.815  2796  2796 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:18.278  2796  2796 D AndroidRuntime: Shutting down VM
+10-19 16:43:21.630  2806  2806 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:21.640  2806  2806 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:21.868  2806  2806 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:22.268  2806  2806 D AndroidRuntime: Shutting down VM
+10-19 16:43:28.866  2822  2822 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:28.878  2822  2822 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:30.855  2822  2822 D AndroidRuntime: Shutting down VM
+10-19 16:43:32.280  2833  2833 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:32.290  2833  2833 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:32.520  2833  2833 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:32.582  2833  2833 D AndroidRuntime: Shutting down VM
+10-19 16:43:45.062  2848  2848 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:45.076  2848  2848 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:47.149  2848  2848 D AndroidRuntime: Shutting down VM
+10-19 16:43:48.589  2859  2859 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:48.603  2859  2859 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:48.931  2859  2859 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:49.079  2859  2859 D AndroidRuntime: Shutting down VM
+10-19 16:43:54.553  2873  2873 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:54.565  2873  2873 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:56.159  2873  2873 D AndroidRuntime: Shutting down VM
+10-19 16:43:57.555  2884  2884 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:43:57.568  2884  2884 D AndroidRuntime: CheckJNI is OFF
+10-19 16:43:57.895  2884  2884 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:43:58.022  2884  2884 D AndroidRuntime: Shutting down VM
+10-19 16:44:01.205  2902  2902 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
+10-19 16:44:01.216  2902  2902 D AndroidRuntime: CheckJNI is OFF
+10-19 16:44:01.730  2902  2902 D AndroidRuntime: Calling main entry com.android.commands.input.Input
+10-19 16:44:02.764  2902  2902 D AndroidRuntime: Shutting down VM
+10-19 16:44:11.729  2720  2913 E LeafPdf : pdf text extraction failed on page 0
+10-19 16:44:11.729  2720  2913 E LeafPdf : java.lang.StackOverflowError: stack size 9MB
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at java.io.RandomAccessFile.read(RandomAccessFile.java:272)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.fillBuffer(BufferedRandomAccessFile.java:115)
+10-19 16:44:11.729  2720  2913 E LeafPdf : 	at com.tom_roush.fontbox.ttf.BufferedRandomAccessFile.read(BufferedRandomAccessFile.java:161)
+--- native crash (tombstone) ---
+(none)
+--- script log ---
+== waiting for device ==
+== installing apks/app/build/outputs/apk/debug/app-debug.apk ==
+apks/app/build/outputs/apk/debug/app-debug.apk: 1 file pushed, 0 skipped. 20.0 MB/s (27444042 bytes in 1.312s)
+Performing Push Install
+	pkg: /data/local/tmp/app-debug.apk
+Success
+== launching com.leaf.reader/.MainActivity ==
+Starting: Intent { cmp=com.leaf.reader/.MainActivity }
+Status: ok
+Activity: com.leaf.reader/.MainActivity
+ThisTime: 5298
+TotalTime: 5298
+WaitTime: 5514
+Complete
+== 1. library ==
+captured 01-library
+   visible: All (6) | Documents | 6 shown · Date added · Z–A | little-book.epub | 1.8 KB | product-deck.pptx | 2.5 KB | budget.xlsx | 2.1 KB | quarterly-report.docx | 1.2 KB | field-guide.pdf | 1.7 KB | Library | Library | Recents | Favorites | Search | Device | Settings
+== 2. open a word document ==
+tap 'quarterly-report.docx' at 720,1690
+captured 02-reader-docx
+   visible: quarterly-report.docx | Page 1 of 1 | Prev | 100% | Next
+== 3. back to the library and scroll to the pdf ==
+captured 03-scrolled
+tap 'field-guide.pdf' at 720,1461
+captured 04-reader-pdf
+   visible: field-guide.pdf | Page 1 of 3 | Prev | 100% | Next
+== 4. search inside the pdf ==
+tap 'find in document' at 670,105
+captured 05a-findbar
+tap 'find in document' at 331,322
+captured 05-find
+   visible: field-guide.pdf | Page 2 of 3 | page | 1 of 5 | Prev | 100% | Next
+== 5. the device screen ==
+captured 05b-library
+tap 'device' at 1086,2308
+captured 06-device
+   visible: Everything on this device | Leaf reads PDF, DOCX, XLSX, PPTX, TXT and EPUB. Choose a folder to browse it — Leaf asks for no permission at all, and your files are never copied. | Choose folder | Pick the storage root once and every supported file below it is listed. Leaf never asks for a storage permission. | No device documents yet | Choose a folder above to see the PDFs, documents, spreadsheets, presentations, text files and books stored on this device. | Device files | Library | Recents | Favorites | Search | Device | Settings
+== 6. the other tabs ==
+captured 06b-library
+tap 'search' at 841,2308
+captured 07-search
+tap 'recents' at 352,2308
+captured 08-recents
+tap 'favorites' at 596,2308
+captured 09-favorites
+tap 'settings' at 1331,2308
+captured 10-settings
+tap 'search' at 841,2308
+captured 11-search
+tap 'search names, tags, folders and file contents' at 720,560
+captured 12-search-results
+   visible: leaf | Results | Matching names, tags and folders | leaf-notes.txt | Text · No folder | Inside files | leaf-notes.txt | 2 hits · p1 | # Leaf reading notes  Leaf keeps every document on your own device… | field-guide.pdf | 2 hits · p1 | Leaf Field Guide  A tiny sample document shipped with the app.… | Search | Library | Recents | Favorites | Search | Device | Settings
+== 7. logs ==
+== 8. native crash reports ==
