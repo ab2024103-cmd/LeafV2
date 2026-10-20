@@ -116,9 +116,26 @@ jobs:
           git add -f dist
           git commit -m "dist: Leaf APK from ${GITHUB_SHA::8}" || true
           git push origin arena/a9b40a6d-leafv2
-          gh release create "${GITHUB_REF_NAME}" dist/leaf.apk dist/leaf-debug.apk \
-            --title "Leaf ${GITHUB_REF_NAME}" \
-            --notes "Offline Leaf reader for Android 6.0+ (API 23) - build ${GITHUB_SHA::8}" || true
+
+      # The release assets are uploaded from the runner: a sandboxed machine cannot
+      # reach uploads.github.com, but a GitHub hosted runner always can.
+      - name: Upload release assets
+        if: always() && startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          mkdir -p dist
+          cp app/build/outputs/apk/release/*.apk dist/leaf.apk
+          cp app/build/outputs/apk/debug/*.apk dist/leaf-debug.apk
+          if gh release view "${GITHUB_REF_NAME}" >/dev/null 2>&1; then
+            gh release upload "${GITHUB_REF_NAME}" dist/leaf.apk dist/leaf-debug.apk --clobber
+          else
+            gh release create "${GITHUB_REF_NAME}" dist/leaf.apk dist/leaf-debug.apk \
+              --title "Leaf ${GITHUB_REF_NAME}" \
+              --notes "Offline Leaf reader for Android 6.0+ (API 23) - build ${GITHUB_SHA::8}"
+          fi
+          gh release view "${GITHUB_REF_NAME}" --json assets --jq '.assets[] | "\(.name) \(.size) bytes"'
 
   emulator:
     name: Emulator smoke test (Android 6 / API 23)
